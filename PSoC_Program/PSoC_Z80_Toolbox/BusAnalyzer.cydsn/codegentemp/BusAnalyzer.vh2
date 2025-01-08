@@ -2,7 +2,7 @@
 --	Conversion of BusAnalyzer.v to vh2:
 --
 --	Cypress Semiconductor - WARP Version 6.3 IR 41
---	Sun Dec 29 21:53:20 2024
+--	Wed Jan 08 15:35:05 2025
 --
 
 USE cypress.cypress.all;
@@ -33,59 +33,8 @@ SIGNAL tmpIO_0__Ctrl_Reset_net_0 : bit;
 TERMINAL tmpSIOVREF__Ctrl_Reset_net_0 : bit;
 SIGNAL tmpINTERRUPT_0__Ctrl_Reset_net_0 : bit;
 TERMINAL Net_11 : bit;
-SIGNAL tmpOE__Data_net_7 : bit;
-SIGNAL tmpOE__Data_net_6 : bit;
-SIGNAL tmpOE__Data_net_5 : bit;
-SIGNAL tmpOE__Data_net_4 : bit;
-SIGNAL tmpOE__Data_net_3 : bit;
-SIGNAL tmpOE__Data_net_2 : bit;
-SIGNAL tmpOE__Data_net_1 : bit;
-SIGNAL tmpOE__Data_net_0 : bit;
-SIGNAL tmpFB_7__Data_net_7 : bit;
-SIGNAL tmpFB_7__Data_net_6 : bit;
-SIGNAL tmpFB_7__Data_net_5 : bit;
-SIGNAL tmpFB_7__Data_net_4 : bit;
-SIGNAL tmpFB_7__Data_net_3 : bit;
-SIGNAL tmpFB_7__Data_net_2 : bit;
-SIGNAL tmpFB_7__Data_net_1 : bit;
-SIGNAL tmpFB_7__Data_net_0 : bit;
-SIGNAL tmpIO_7__Data_net_7 : bit;
-SIGNAL tmpIO_7__Data_net_6 : bit;
-SIGNAL tmpIO_7__Data_net_5 : bit;
-SIGNAL tmpIO_7__Data_net_4 : bit;
-SIGNAL tmpIO_7__Data_net_3 : bit;
-SIGNAL tmpIO_7__Data_net_2 : bit;
-SIGNAL tmpIO_7__Data_net_1 : bit;
-SIGNAL tmpIO_7__Data_net_0 : bit;
-TERMINAL tmpSIOVREF__Data_net_0 : bit;
-SIGNAL tmpINTERRUPT_0__Data_net_0 : bit;
-SIGNAL tmpOE__Addr_LSB_net_7 : bit;
-SIGNAL tmpOE__Addr_LSB_net_6 : bit;
-SIGNAL tmpOE__Addr_LSB_net_5 : bit;
-SIGNAL tmpOE__Addr_LSB_net_4 : bit;
-SIGNAL tmpOE__Addr_LSB_net_3 : bit;
-SIGNAL tmpOE__Addr_LSB_net_2 : bit;
-SIGNAL tmpOE__Addr_LSB_net_1 : bit;
-SIGNAL tmpOE__Addr_LSB_net_0 : bit;
-SIGNAL tmpFB_7__Addr_LSB_net_7 : bit;
-SIGNAL tmpFB_7__Addr_LSB_net_6 : bit;
-SIGNAL tmpFB_7__Addr_LSB_net_5 : bit;
-SIGNAL tmpFB_7__Addr_LSB_net_4 : bit;
-SIGNAL tmpFB_7__Addr_LSB_net_3 : bit;
-SIGNAL tmpFB_7__Addr_LSB_net_2 : bit;
-SIGNAL tmpFB_7__Addr_LSB_net_1 : bit;
-SIGNAL tmpFB_7__Addr_LSB_net_0 : bit;
-SIGNAL tmpIO_7__Addr_LSB_net_7 : bit;
-SIGNAL tmpIO_7__Addr_LSB_net_6 : bit;
-SIGNAL tmpIO_7__Addr_LSB_net_5 : bit;
-SIGNAL tmpIO_7__Addr_LSB_net_4 : bit;
-SIGNAL tmpIO_7__Addr_LSB_net_3 : bit;
-SIGNAL tmpIO_7__Addr_LSB_net_2 : bit;
-SIGNAL tmpIO_7__Addr_LSB_net_1 : bit;
-SIGNAL tmpIO_7__Addr_LSB_net_0 : bit;
-TERMINAL tmpSIOVREF__Addr_LSB_net_0 : bit;
-SIGNAL tmpINTERRUPT_0__Addr_LSB_net_0 : bit;
 SIGNAL \UART:Net_9\ : bit;
+SIGNAL Net_29 : bit;
 SIGNAL \UART:Net_61\ : bit;
 SIGNAL \UART:BUART:clock_op\ : bit;
 SIGNAL \UART:BUART:reset_reg\ : bit;
@@ -103,7 +52,6 @@ SIGNAL Net_30 : bit;
 SIGNAL \UART:BUART:txn\ : bit;
 SIGNAL Net_34 : bit;
 SIGNAL \UART:BUART:tx_interrupt_out\ : bit;
-SIGNAL Net_29 : bit;
 SIGNAL \UART:BUART:rx_interrupt_out\ : bit;
 SIGNAL \UART:BUART:tx_state_1\ : bit;
 SIGNAL \UART:BUART:tx_state_0\ : bit;
@@ -855,158 +803,6 @@ GND_1:cy_annotation_universal_v1_0
 		port_names=>"T1",
 		width=>1)
 	PORT MAP(connect=>Net_11);
-Data:cy_psoc3_pins_v1_10
-	GENERIC MAP(id=>"1923ed0c-b60a-436c-97d0-c77134b512c4",
-		drive_mode=>"111111111111111111111111",
-		ibuf_enabled=>"11111111",
-		init_dr_st=>"11111111",
-		input_sync=>"00000000",
-		input_clk_en=>'0',
-		input_sync_mode=>"00000000",
-		intr_mode=>"0000000000000000",
-		invert_in_clock=>'0',
-		invert_in_clock_en=>'0',
-		invert_in_reset=>'0',
-		invert_out_clock=>'0',
-		invert_out_clock_en=>'0',
-		invert_out_reset=>'0',
-		io_voltage=>",,,,,,,",
-		layout_mode=>"CONTIGUOUS",
-		output_conn=>"00000000",
-		output_sync=>"00000000",
-		output_clk_en=>'0',
-		output_mode=>"00000000",
-		output_reset=>'0',
-		output_clock_mode=>"00000000",
-		oe_sync=>"00000000",
-		oe_conn=>"00000000",
-		oe_reset=>'0',
-		pin_aliases=>",,,,,,,",
-		pin_mode=>"BBBBBBBB",
-		por_state=>4,
-		sio_group_cnt=>0,
-		sio_hifreq=>"00000000",
-		sio_hyst=>"11111111",
-		sio_ibuf=>"00000000",
-		sio_info=>"0000000000000000",
-		sio_obuf=>"00000000",
-		sio_refsel=>"00000000",
-		sio_vtrip=>"00000000",
-		sio_vohsel=>"00000000",
-		slew_rate=>"00000000",
-		spanning=>'0',
-		sw_only=>'0',
-		vtrip=>"0000000000000000",
-		width=>8,
-		port_alias_required=>'0',
-		port_alias_group=>"",
-		use_annotation=>"00000000",
-		pa_in_clock=>-1,
-		pa_in_clock_en=>-1,
-		pa_in_reset=>-1,
-		pa_out_clock=>-1,
-		pa_out_clock_en=>-1,
-		pa_out_reset=>-1,
-		ovt_needed=>"00000000",
-		ovt_slew_control=>"0000000000000000",
-		ovt_hyst_trim=>"00000000",
-		input_buffer_sel=>"0000000000000000")
-	PORT MAP(oe=>(tmpOE__Clk_net_0, tmpOE__Clk_net_0, tmpOE__Clk_net_0, tmpOE__Clk_net_0,
-			tmpOE__Clk_net_0, tmpOE__Clk_net_0, tmpOE__Clk_net_0, tmpOE__Clk_net_0),
-		y=>(zero, zero, zero, zero,
-			zero, zero, zero, zero),
-		fb=>(tmpFB_7__Data_net_7, tmpFB_7__Data_net_6, tmpFB_7__Data_net_5, tmpFB_7__Data_net_4,
-			tmpFB_7__Data_net_3, tmpFB_7__Data_net_2, tmpFB_7__Data_net_1, tmpFB_7__Data_net_0),
-		analog=>(open, open, open, open,
-			open, open, open, open),
-		io=>(tmpIO_7__Data_net_7, tmpIO_7__Data_net_6, tmpIO_7__Data_net_5, tmpIO_7__Data_net_4,
-			tmpIO_7__Data_net_3, tmpIO_7__Data_net_2, tmpIO_7__Data_net_1, tmpIO_7__Data_net_0),
-		siovref=>(tmpSIOVREF__Data_net_0),
-		annotation=>(open, open, open, open,
-			open, open, open, open),
-		in_clock=>zero,
-		in_clock_en=>tmpOE__Clk_net_0,
-		in_reset=>zero,
-		out_clock=>zero,
-		out_clock_en=>tmpOE__Clk_net_0,
-		out_reset=>zero,
-		interrupt=>tmpINTERRUPT_0__Data_net_0);
-Addr_LSB:cy_psoc3_pins_v1_10
-	GENERIC MAP(id=>"7c245cda-0a8f-4041-bb05-f4508c9ad190",
-		drive_mode=>"001001001001001001001001",
-		ibuf_enabled=>"11111111",
-		init_dr_st=>"00000000",
-		input_sync=>"00000000",
-		input_clk_en=>'0',
-		input_sync_mode=>"00000000",
-		intr_mode=>"0000000000000000",
-		invert_in_clock=>'0',
-		invert_in_clock_en=>'0',
-		invert_in_reset=>'0',
-		invert_out_clock=>'0',
-		invert_out_clock_en=>'0',
-		invert_out_reset=>'0',
-		io_voltage=>",,,,,,,",
-		layout_mode=>"CONTIGUOUS",
-		output_conn=>"00000000",
-		output_sync=>"00000000",
-		output_clk_en=>'0',
-		output_mode=>"00000000",
-		output_reset=>'0',
-		output_clock_mode=>"00000000",
-		oe_sync=>"00000000",
-		oe_conn=>"00000000",
-		oe_reset=>'0',
-		pin_aliases=>",,,,,,,",
-		pin_mode=>"IIIIIIII",
-		por_state=>4,
-		sio_group_cnt=>0,
-		sio_hifreq=>"00000000",
-		sio_hyst=>"11111111",
-		sio_ibuf=>"00000000",
-		sio_info=>"0000000000000000",
-		sio_obuf=>"00000000",
-		sio_refsel=>"00000000",
-		sio_vtrip=>"00000000",
-		sio_vohsel=>"00000000",
-		slew_rate=>"00000000",
-		spanning=>'0',
-		sw_only=>'0',
-		vtrip=>"0000000000000000",
-		width=>8,
-		port_alias_required=>'0',
-		port_alias_group=>"",
-		use_annotation=>"00000000",
-		pa_in_clock=>-1,
-		pa_in_clock_en=>-1,
-		pa_in_reset=>-1,
-		pa_out_clock=>-1,
-		pa_out_clock_en=>-1,
-		pa_out_reset=>-1,
-		ovt_needed=>"00000000",
-		ovt_slew_control=>"0000000000000000",
-		ovt_hyst_trim=>"00000000",
-		input_buffer_sel=>"0000000000000000")
-	PORT MAP(oe=>(tmpOE__Clk_net_0, tmpOE__Clk_net_0, tmpOE__Clk_net_0, tmpOE__Clk_net_0,
-			tmpOE__Clk_net_0, tmpOE__Clk_net_0, tmpOE__Clk_net_0, tmpOE__Clk_net_0),
-		y=>(zero, zero, zero, zero,
-			zero, zero, zero, zero),
-		fb=>(tmpFB_7__Addr_LSB_net_7, tmpFB_7__Addr_LSB_net_6, tmpFB_7__Addr_LSB_net_5, tmpFB_7__Addr_LSB_net_4,
-			tmpFB_7__Addr_LSB_net_3, tmpFB_7__Addr_LSB_net_2, tmpFB_7__Addr_LSB_net_1, tmpFB_7__Addr_LSB_net_0),
-		analog=>(open, open, open, open,
-			open, open, open, open),
-		io=>(tmpIO_7__Addr_LSB_net_7, tmpIO_7__Addr_LSB_net_6, tmpIO_7__Addr_LSB_net_5, tmpIO_7__Addr_LSB_net_4,
-			tmpIO_7__Addr_LSB_net_3, tmpIO_7__Addr_LSB_net_2, tmpIO_7__Addr_LSB_net_1, tmpIO_7__Addr_LSB_net_0),
-		siovref=>(tmpSIOVREF__Addr_LSB_net_0),
-		annotation=>(open, open, open, open,
-			open, open, open, open),
-		in_clock=>zero,
-		in_clock_en=>tmpOE__Clk_net_0,
-		in_reset=>zero,
-		out_clock=>zero,
-		out_clock_en=>tmpOE__Clk_net_0,
-		out_reset=>zero,
-		interrupt=>tmpINTERRUPT_0__Addr_LSB_net_0);
 \UART:IntClock\:cy_clock_v1_0
 	GENERIC MAP(cy_registers=>"",
 		id=>"b0162966-0060-4af5-82d1-fcb491ad7619/be0a0e37-ad17-42ca-b5a1-1a654d736358",
@@ -1017,6 +813,10 @@ Addr_LSB:cy_psoc3_pins_v1_10
 		is_digital=>'1')
 	PORT MAP(clock_out=>\UART:Net_9\,
 		dig_domain_out=>open);
+\UART:RXInternalInterrupt\:cy_isr_v1_0
+	GENERIC MAP(int_type=>"10",
+		is_nmi=>'0')
+	PORT MAP(int_signal=>Net_29);
 \UART:BUART:ClkSync\:cy_psoc3_udb_clock_enable_v1_0
 	GENERIC MAP(sync_mode=>'1')
 	PORT MAP(clock_in=>\UART:Net_9\,

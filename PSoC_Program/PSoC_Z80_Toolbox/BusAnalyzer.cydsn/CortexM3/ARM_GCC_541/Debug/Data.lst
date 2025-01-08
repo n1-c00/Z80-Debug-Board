@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\nicoz\AppData\Local\Temp\ccCL7Frx.s 			page 1
+ARM GAS  C:\Users\Tizian\AppData\Local\Temp\ccYOt5xf.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\nicoz\AppData\Local\Temp\ccCL7Frx.s 			page 1
   28:Generated_Source\PSoC5/Data.c **** *
   29:Generated_Source\PSoC5/Data.c **** * \brief Writes the value to the physical port (data output register), masking
   30:Generated_Source\PSoC5/Data.c **** *  and shifting the bits appropriately. 
-ARM GAS  C:\Users\nicoz\AppData\Local\Temp\ccCL7Frx.s 			page 2
+ARM GAS  C:\Users\Tizian\AppData\Local\Temp\ccYOt5xf.s 			page 2
 
 
   31:Generated_Source\PSoC5/Data.c **** *
@@ -107,7 +107,7 @@ ARM GAS  C:\Users\nicoz\AppData\Local\Temp\ccCL7Frx.s 			page 1
   41              	.L3:
   42              		.align	2
   43              	.L2:
-  44 0008 50510040 		.word	1073762640
+  44 0008 00510040 		.word	1073762560
   45              		.cfi_endproc
   46              	.LFE0:
   47              		.size	Data_Write, .-Data_Write
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\nicoz\AppData\Local\Temp\ccCL7Frx.s 			page 1
   52              		.thumb_func
   53              		.type	Data_SetDriveMode, %function
   54              	Data_SetDriveMode:
-ARM GAS  C:\Users\nicoz\AppData\Local\Temp\ccCL7Frx.s 			page 3
+ARM GAS  C:\Users\Tizian\AppData\Local\Temp\ccYOt5xf.s 			page 3
 
 
   55              	.LFB1:
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\nicoz\AppData\Local\Temp\ccCL7Frx.s 			page 1
   94:Generated_Source\PSoC5/Data.c **** 	CyPins_SetPinDriveMode(Data_2, mode);
   76              		.loc 1 94 0
   77 001c 0132     		adds	r2, r2, #1
-ARM GAS  C:\Users\nicoz\AppData\Local\Temp\ccCL7Frx.s 			page 4
+ARM GAS  C:\Users\Tizian\AppData\Local\Temp\ccYOt5xf.s 			page 4
 
 
   78 001e 1378     		ldrb	r3, [r2]	@ zero_extendqisi2
@@ -224,7 +224,7 @@ ARM GAS  C:\Users\nicoz\AppData\Local\Temp\ccCL7Frx.s 			page 1
  113              	.L6:
  114 0066 00BF     		.align	2
  115              	.L5:
- 116 0068 28500040 		.word	1073762344
+ 116 0068 00500040 		.word	1073762304
  117              		.cfi_endproc
  118              	.LFE1:
  119              		.size	Data_SetDriveMode, .-Data_SetDriveMode
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\nicoz\AppData\Local\Temp\ccCL7Frx.s 			page 1
  127              	.LFB2:
  100:Generated_Source\PSoC5/Data.c **** }
  101:Generated_Source\PSoC5/Data.c **** 
-ARM GAS  C:\Users\nicoz\AppData\Local\Temp\ccCL7Frx.s 			page 5
+ARM GAS  C:\Users\Tizian\AppData\Local\Temp\ccYOt5xf.s 			page 5
 
 
  102:Generated_Source\PSoC5/Data.c **** 
@@ -276,7 +276,7 @@ ARM GAS  C:\Users\nicoz\AppData\Local\Temp\ccCL7Frx.s 			page 1
  138              	.L9:
  139 0006 00BF     		.align	2
  140              	.L8:
- 141 0008 51510040 		.word	1073762641
+ 141 0008 01510040 		.word	1073762561
  142              		.cfi_endproc
  143              	.LFE2:
  144              		.size	Data_Read, .-Data_Read
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\nicoz\AppData\Local\Temp\ccCL7Frx.s 			page 1
  131:Generated_Source\PSoC5/Data.c **** *  the correct bits according to the width and bit position of the component 
  132:Generated_Source\PSoC5/Data.c **** *  instance. 
  133:Generated_Source\PSoC5/Data.c **** *
-ARM GAS  C:\Users\nicoz\AppData\Local\Temp\ccCL7Frx.s 			page 6
+ARM GAS  C:\Users\Tizian\AppData\Local\Temp\ccYOt5xf.s 			page 6
 
 
  134:Generated_Source\PSoC5/Data.c **** * The data output register controls the signal applied to the physical pin in 
@@ -332,7 +332,7 @@ ARM GAS  C:\Users\nicoz\AppData\Local\Temp\ccCL7Frx.s 			page 1
  163              	.L12:
  164 0006 00BF     		.align	2
  165              	.L11:
- 166 0008 50510040 		.word	1073762640
+ 166 0008 00510040 		.word	1073762560
  167              		.cfi_endproc
  168              	.LFE3:
  169              		.size	Data_ReadDataReg, .-Data_ReadDataReg
@@ -346,48 +346,48 @@ ARM GAS  C:\Users\nicoz\AppData\Local\Temp\ccCL7Frx.s 			page 1
  177 0006 00000000 		.4byte	.Ldebug_abbrev0
  178 000a 04       		.byte	0x4
  179 000b 01       		.uleb128 0x1
- 180 000c CA000000 		.4byte	.LASF20
+ 180 000c 3A000000 		.4byte	.LASF20
  181 0010 0C       		.byte	0xc
- 182 0011 89010000 		.4byte	.LASF21
- 183 0015 1C000000 		.4byte	.LASF22
+ 182 0011 F9000000 		.4byte	.LASF21
+ 183 0015 65010000 		.4byte	.LASF22
  184 0019 00000000 		.4byte	.Ldebug_ranges0+0
  185 001d 00000000 		.4byte	0
  186 0021 00000000 		.4byte	.Ldebug_line0
  187 0025 02       		.uleb128 0x2
  188 0026 01       		.byte	0x1
  189 0027 06       		.byte	0x6
- 190 0028 0E020000 		.4byte	.LASF0
+ 190 0028 E6010000 		.4byte	.LASF0
  191 002c 02       		.uleb128 0x2
-ARM GAS  C:\Users\nicoz\AppData\Local\Temp\ccCL7Frx.s 			page 7
+ARM GAS  C:\Users\Tizian\AppData\Local\Temp\ccYOt5xf.s 			page 7
 
 
  192 002d 01       		.byte	0x1
  193 002e 08       		.byte	0x8
- 194 002f BC000000 		.4byte	.LASF1
+ 194 002f 2C000000 		.4byte	.LASF1
  195 0033 02       		.uleb128 0x2
  196 0034 02       		.byte	0x2
  197 0035 05       		.byte	0x5
- 198 0036 F5010000 		.4byte	.LASF2
+ 198 0036 CD010000 		.4byte	.LASF2
  199 003a 02       		.uleb128 0x2
  200 003b 02       		.byte	0x2
  201 003c 07       		.byte	0x7
- 202 003d 6F010000 		.4byte	.LASF3
+ 202 003d DF000000 		.4byte	.LASF3
  203 0041 02       		.uleb128 0x2
  204 0042 04       		.byte	0x4
  205 0043 05       		.byte	0x5
- 206 0044 05020000 		.4byte	.LASF4
+ 206 0044 DD010000 		.4byte	.LASF4
  207 0048 02       		.uleb128 0x2
  208 0049 04       		.byte	0x4
  209 004a 07       		.byte	0x7
- 210 004b 5D010000 		.4byte	.LASF5
+ 210 004b CD000000 		.4byte	.LASF5
  211 004f 02       		.uleb128 0x2
  212 0050 08       		.byte	0x8
  213 0051 05       		.byte	0x5
- 214 0052 D0010000 		.4byte	.LASF6
+ 214 0052 40010000 		.4byte	.LASF6
  215 0056 02       		.uleb128 0x2
  216 0057 08       		.byte	0x8
  217 0058 07       		.byte	0x7
- 218 0059 B4010000 		.4byte	.LASF7
+ 218 0059 24010000 		.4byte	.LASF7
  219 005d 03       		.uleb128 0x3
  220 005e 04       		.byte	0x4
  221 005f 05       		.byte	0x5
@@ -395,30 +395,30 @@ ARM GAS  C:\Users\nicoz\AppData\Local\Temp\ccCL7Frx.s 			page 1
  223 0064 02       		.uleb128 0x2
  224 0065 04       		.byte	0x4
  225 0066 07       		.byte	0x7
- 226 0067 A7010000 		.4byte	.LASF8
+ 226 0067 17010000 		.4byte	.LASF8
  227 006b 04       		.uleb128 0x4
- 228 006c FF010000 		.4byte	.LASF12
+ 228 006c D7010000 		.4byte	.LASF12
  229 0070 02       		.byte	0x2
  230 0071 E901     		.2byte	0x1e9
  231 0073 2C000000 		.4byte	0x2c
  232 0077 02       		.uleb128 0x2
  233 0078 04       		.byte	0x4
  234 0079 04       		.byte	0x4
- 235 007a B6000000 		.4byte	.LASF9
+ 235 007a 26000000 		.4byte	.LASF9
  236 007e 02       		.uleb128 0x2
  237 007f 08       		.byte	0x8
  238 0080 04       		.byte	0x4
- 239 0081 82010000 		.4byte	.LASF10
+ 239 0081 F2000000 		.4byte	.LASF10
  240 0085 02       		.uleb128 0x2
  241 0086 01       		.byte	0x1
  242 0087 08       		.byte	0x8
- 243 0088 DE010000 		.4byte	.LASF11
+ 243 0088 4E010000 		.4byte	.LASF11
  244 008c 04       		.uleb128 0x4
- 245 008d 58010000 		.4byte	.LASF13
+ 245 008d C8000000 		.4byte	.LASF13
  246 0091 02       		.byte	0x2
  247 0092 9302     		.2byte	0x293
  248 0094 98000000 		.4byte	0x98
-ARM GAS  C:\Users\nicoz\AppData\Local\Temp\ccCL7Frx.s 			page 8
+ARM GAS  C:\Users\Tizian\AppData\Local\Temp\ccYOt5xf.s 			page 8
 
 
  249 0098 05       		.uleb128 0x5
@@ -447,7 +447,7 @@ ARM GAS  C:\Users\nicoz\AppData\Local\Temp\ccCL7Frx.s 			page 1
  272 00ca 00       		.byte	0
  273 00cb 00       		.byte	0
  274 00cc 06       		.uleb128 0x6
- 275 00cd E3010000 		.4byte	.LASF15
+ 275 00cd 53010000 		.4byte	.LASF15
  276 00d1 01       		.byte	0x1
  277 00d2 5A       		.byte	0x5a
  278 00d3 00000000 		.4byte	.LFB1
@@ -456,14 +456,14 @@ ARM GAS  C:\Users\nicoz\AppData\Local\Temp\ccCL7Frx.s 			page 1
  281 00dc 9C       		.byte	0x9c
  282 00dd F1000000 		.4byte	0xf1
  283 00e1 09       		.uleb128 0x9
- 284 00e2 CB010000 		.4byte	.LASF17
+ 284 00e2 3B010000 		.4byte	.LASF17
  285 00e6 01       		.byte	0x1
  286 00e7 5A       		.byte	0x5a
  287 00e8 6B000000 		.4byte	0x6b
  288 00ec 00000000 		.4byte	.LLST0
  289 00f0 00       		.byte	0
  290 00f1 0A       		.uleb128 0xa
- 291 00f2 AC000000 		.4byte	.LASF18
+ 291 00f2 1C000000 		.4byte	.LASF18
  292 00f6 01       		.byte	0x1
  293 00f7 78       		.byte	0x78
  294 00f8 6B000000 		.4byte	0x6b
@@ -472,13 +472,13 @@ ARM GAS  C:\Users\nicoz\AppData\Local\Temp\ccCL7Frx.s 			page 1
  297 0104 01       		.uleb128 0x1
  298 0105 9C       		.byte	0x9c
  299 0106 0A       		.uleb128 0xa
- 300 0107 1A020000 		.4byte	.LASF19
+ 300 0107 F2010000 		.4byte	.LASF19
  301 010b 01       		.byte	0x1
  302 010c 94       		.byte	0x94
  303 010d 6B000000 		.4byte	0x6b
  304 0111 00000000 		.4byte	.LFB3
  305 0115 0C000000 		.4byte	.LFE3-.LFB3
-ARM GAS  C:\Users\nicoz\AppData\Local\Temp\ccCL7Frx.s 			page 9
+ARM GAS  C:\Users\Tizian\AppData\Local\Temp\ccYOt5xf.s 			page 9
 
 
  306 0119 01       		.uleb128 0x1
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\nicoz\AppData\Local\Temp\ccCL7Frx.s 			page 1
  360 0031 05       		.uleb128 0x5
  361 0032 49       		.uleb128 0x49
  362 0033 13       		.uleb128 0x13
-ARM GAS  C:\Users\nicoz\AppData\Local\Temp\ccCL7Frx.s 			page 10
+ARM GAS  C:\Users\Tizian\AppData\Local\Temp\ccYOt5xf.s 			page 10
 
 
  363 0034 00       		.byte	0
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\nicoz\AppData\Local\Temp\ccCL7Frx.s 			page 1
  417 006b 3A       		.uleb128 0x3a
  418 006c 0B       		.uleb128 0xb
  419 006d 3B       		.uleb128 0x3b
-ARM GAS  C:\Users\nicoz\AppData\Local\Temp\ccCL7Frx.s 			page 11
+ARM GAS  C:\Users\Tizian\AppData\Local\Temp\ccYOt5xf.s 			page 11
 
 
  420 006e 0B       		.uleb128 0xb
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\nicoz\AppData\Local\Temp\ccCL7Frx.s 			page 1
  474 000a 50       		.byte	0x50
  475 000b 08000000 		.4byte	.LVL3
  476 000f 6C000000 		.4byte	.LFE1
-ARM GAS  C:\Users\nicoz\AppData\Local\Temp\ccCL7Frx.s 			page 12
+ARM GAS  C:\Users\Tizian\AppData\Local\Temp\ccYOt5xf.s 			page 12
 
 
  477 0013 0400     		.2byte	0x4
@@ -716,131 +716,128 @@ ARM GAS  C:\Users\nicoz\AppData\Local\Temp\ccCL7Frx.s 			page 1
  522 0011 73746174 		.ascii	"staticBits\000"
  522      69634269 
  522      747300
- 523              	.LASF22:
- 524 001c 433A5C55 		.ascii	"C:\\Users\\nicoz\\OneDrive - HTL Anichstrasse\\Doku"
-ARM GAS  C:\Users\nicoz\AppData\Local\Temp\ccCL7Frx.s 			page 13
+ 523              	.LASF18:
+ 524 001c 44617461 		.ascii	"Data_Read\000"
+ARM GAS  C:\Users\Tizian\AppData\Local\Temp\ccYOt5xf.s 			page 13
 
 
- 524      73657273 
- 524      5C6E6963 
- 524      6F7A5C4F 
- 524      6E654472 
- 525 004b 6D656E74 		.ascii	"mente\\Schule\\Werkstaette\\SJ2024_25\\PsoC_Z80Boar"
- 525      655C5363 
- 525      68756C65 
- 525      5C576572 
- 525      6B737461 
- 526 007a 645C5053 		.ascii	"d\\PSoC_Program\\PSoC_Z80_Toolbox\\BusAnalyzer.cyds"
- 526      6F435F50 
- 526      726F6772 
- 526      616D5C50 
- 526      536F435F 
- 527 00aa 6E00     		.ascii	"n\000"
- 528              	.LASF18:
- 529 00ac 44617461 		.ascii	"Data_Read\000"
- 529      5F526561 
- 529      6400
- 530              	.LASF9:
- 531 00b6 666C6F61 		.ascii	"float\000"
- 531      7400
- 532              	.LASF1:
- 533 00bc 756E7369 		.ascii	"unsigned char\000"
- 533      676E6564 
- 533      20636861 
- 533      7200
- 534              	.LASF20:
- 535 00ca 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
- 535      43313120 
- 535      352E342E 
- 535      31203230 
- 535      31363036 
- 536 00fd 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m3 -mthumb -g -O"
- 536      20726576 
- 536      6973696F 
- 536      6E203233 
- 536      37373135 
- 537 0130 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
- 537      66756E63 
- 537      74696F6E 
- 537      2D736563 
- 537      74696F6E 
- 538              	.LASF13:
- 539 0158 72656738 		.ascii	"reg8\000"
- 539      00
- 540              	.LASF5:
- 541 015d 6C6F6E67 		.ascii	"long unsigned int\000"
- 541      20756E73 
- 541      69676E65 
- 541      6420696E 
- 541      7400
- 542              	.LASF3:
- 543 016f 73686F72 		.ascii	"short unsigned int\000"
- 543      7420756E 
- 543      7369676E 
- 543      65642069 
-ARM GAS  C:\Users\nicoz\AppData\Local\Temp\ccCL7Frx.s 			page 14
+ 524      5F526561 
+ 524      6400
+ 525              	.LASF9:
+ 526 0026 666C6F61 		.ascii	"float\000"
+ 526      7400
+ 527              	.LASF1:
+ 528 002c 756E7369 		.ascii	"unsigned char\000"
+ 528      676E6564 
+ 528      20636861 
+ 528      7200
+ 529              	.LASF20:
+ 530 003a 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
+ 530      43313120 
+ 530      352E342E 
+ 530      31203230 
+ 530      31363036 
+ 531 006d 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m3 -mthumb -g -O"
+ 531      20726576 
+ 531      6973696F 
+ 531      6E203233 
+ 531      37373135 
+ 532 00a0 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
+ 532      66756E63 
+ 532      74696F6E 
+ 532      2D736563 
+ 532      74696F6E 
+ 533              	.LASF13:
+ 534 00c8 72656738 		.ascii	"reg8\000"
+ 534      00
+ 535              	.LASF5:
+ 536 00cd 6C6F6E67 		.ascii	"long unsigned int\000"
+ 536      20756E73 
+ 536      69676E65 
+ 536      6420696E 
+ 536      7400
+ 537              	.LASF3:
+ 538 00df 73686F72 		.ascii	"short unsigned int\000"
+ 538      7420756E 
+ 538      7369676E 
+ 538      65642069 
+ 538      6E7400
+ 539              	.LASF10:
+ 540 00f2 646F7562 		.ascii	"double\000"
+ 540      6C6500
+ 541              	.LASF21:
+ 542 00f9 47656E65 		.ascii	"Generated_Source\\PSoC5\\Data.c\000"
+ 542      72617465 
+ 542      645F536F 
+ 542      75726365 
+ 542      5C50536F 
+ 543              	.LASF8:
+ 544 0117 756E7369 		.ascii	"unsigned int\000"
+ 544      676E6564 
+ 544      20696E74 
+ 544      00
+ 545              	.LASF7:
+ 546 0124 6C6F6E67 		.ascii	"long long unsigned int\000"
+ARM GAS  C:\Users\Tizian\AppData\Local\Temp\ccYOt5xf.s 			page 14
 
 
- 543      6E7400
- 544              	.LASF10:
- 545 0182 646F7562 		.ascii	"double\000"
- 545      6C6500
- 546              	.LASF21:
- 547 0189 47656E65 		.ascii	"Generated_Source\\PSoC5\\Data.c\000"
- 547      72617465 
- 547      645F536F 
- 547      75726365 
- 547      5C50536F 
- 548              	.LASF8:
- 549 01a7 756E7369 		.ascii	"unsigned int\000"
- 549      676E6564 
- 549      20696E74 
- 549      00
- 550              	.LASF7:
- 551 01b4 6C6F6E67 		.ascii	"long long unsigned int\000"
- 551      206C6F6E 
- 551      6720756E 
- 551      7369676E 
- 551      65642069 
- 552              	.LASF17:
- 553 01cb 6D6F6465 		.ascii	"mode\000"
- 553      00
- 554              	.LASF6:
- 555 01d0 6C6F6E67 		.ascii	"long long int\000"
- 555      206C6F6E 
- 555      6720696E 
- 555      7400
- 556              	.LASF11:
- 557 01de 63686172 		.ascii	"char\000"
- 557      00
- 558              	.LASF15:
- 559 01e3 44617461 		.ascii	"Data_SetDriveMode\000"
- 559      5F536574 
- 559      44726976 
- 559      654D6F64 
- 559      6500
- 560              	.LASF2:
- 561 01f5 73686F72 		.ascii	"short int\000"
- 561      7420696E 
- 561      7400
- 562              	.LASF12:
- 563 01ff 75696E74 		.ascii	"uint8\000"
- 563      3800
- 564              	.LASF4:
- 565 0205 6C6F6E67 		.ascii	"long int\000"
- 565      20696E74 
- 565      00
- 566              	.LASF0:
- 567 020e 7369676E 		.ascii	"signed char\000"
- 567      65642063 
- 567      68617200 
- 568              	.LASF19:
- 569 021a 44617461 		.ascii	"Data_ReadDataReg\000"
- 569      5F526561 
- 569      64446174 
-ARM GAS  C:\Users\nicoz\AppData\Local\Temp\ccCL7Frx.s 			page 15
+ 546      206C6F6E 
+ 546      6720756E 
+ 546      7369676E 
+ 546      65642069 
+ 547              	.LASF17:
+ 548 013b 6D6F6465 		.ascii	"mode\000"
+ 548      00
+ 549              	.LASF6:
+ 550 0140 6C6F6E67 		.ascii	"long long int\000"
+ 550      206C6F6E 
+ 550      6720696E 
+ 550      7400
+ 551              	.LASF11:
+ 552 014e 63686172 		.ascii	"char\000"
+ 552      00
+ 553              	.LASF15:
+ 554 0153 44617461 		.ascii	"Data_SetDriveMode\000"
+ 554      5F536574 
+ 554      44726976 
+ 554      654D6F64 
+ 554      6500
+ 555              	.LASF22:
+ 556 0165 433A5C55 		.ascii	"C:\\Users\\Tizian\\Documents\\HTL\\24_25\\PBE\\Z80-"
+ 556      73657273 
+ 556      5C54697A 
+ 556      69616E5C 
+ 556      446F6375 
+ 557 0191 44656275 		.ascii	"Debug-Board\\PSoC_Program\\PSoC_Z80_Toolbox\\BusAna"
+ 557      672D426F 
+ 557      6172645C 
+ 557      50536F43 
+ 557      5F50726F 
+ 558 01c1 6C797A65 		.ascii	"lyzer.cydsn\000"
+ 558      722E6379 
+ 558      64736E00 
+ 559              	.LASF2:
+ 560 01cd 73686F72 		.ascii	"short int\000"
+ 560      7420696E 
+ 560      7400
+ 561              	.LASF12:
+ 562 01d7 75696E74 		.ascii	"uint8\000"
+ 562      3800
+ 563              	.LASF4:
+ 564 01dd 6C6F6E67 		.ascii	"long int\000"
+ 564      20696E74 
+ 564      00
+ 565              	.LASF0:
+ 566 01e6 7369676E 		.ascii	"signed char\000"
+ 566      65642063 
+ 566      68617200 
+ 567              	.LASF19:
+ 568 01f2 44617461 		.ascii	"Data_ReadDataReg\000"
+ 568      5F526561 
+ 568      64446174 
+ 568      61526567 
+ 568      00
+ 569              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran
+ARM GAS  C:\Users\Tizian\AppData\Local\Temp\ccYOt5xf.s 			page 15
 
 
- 569      61526567 
- 569      00
- 570              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran
