@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CyXmlSerializer>
+<!--This file is machine generated and read. It is not intended to be edited by hand.-->
+<!--Due to this, there is no schema for this file.-->
+<CyGuid_843a90a4-0c4b-4e44-991d-05e7fb117a21 type_name="CyDesigner.Common.ProjMgmt.Model.CyPrjMgmtWrkspcCustomData" version="4">
+<CyGuid_fdba8dfd-b15b-4469-9bbb-9e40c3e70997 type_name="CyDesigner.Common.Base.CyCustomData" version="2">
+<userData>
+<dataGuid v="1b906a0f-a7b6-4e4d-a428-82f98b53cb35">
+<CyGuid_1b906a0f-a7b6-4e4d-a428-82f98b53cb35 type_name="CyDesigner.Common.ProjMgmt.GUI.CyExplorerWindow+CyExplorerWindowState" version="3" SelectedTab="Source">
+<TreeKeys>
+<v>Source</v>
+<v>Components</v>
+<v>Output</v>
+</TreeKeys>
+<TreeStates>
+<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="">
+<ExpandedNodeIds>
+<v>PSoC_Z80_Toolbox</v>
+<v>PSoC_Z80_Toolbox\BusAnalyzer</v>
+<v>PSoC_Z80_Toolbox\BusAnalyzer\TopDesign</v>
+<v>PSoC_Z80_Toolbox\BusAnalyzer\BusAnalyzer.cydwr</v>
+<v>PSoC_Z80_Toolbox\BusAnalyzer\BusAnalyzer.cydwr\Pins</v>
+<v>PSoC_Z80_Toolbox\BusAnalyzer\BusAnalyzer.cydwr\Analog</v>
+<v>PSoC_Z80_Toolbox\BusAnalyzer\BusAnalyzer.cydwr\Clocks</v>
+<v>PSoC_Z80_Toolbox\BusAnalyzer\BusAnalyzer.cydwr\Interrupts</v>
+<v>PSoC_Z80_Toolbox\BusAnalyzer\BusAnalyzer.cydwr\DMA</v>
+<v>PSoC_Z80_Toolbox\BusAnalyzer\BusAnalyzer.cydwr\System</v>
+<v>PSoC_Z80_Toolbox\BusAnalyzer\BusAnalyzer.cydwr\Directives</v>
+<v>PSoC_Z80_Toolbox\BusAnalyzer\BusAnalyzer.cydwr\Flash Security</v>
+<v>PSoC_Z80_Toolbox\BusAnalyzer\BusAnalyzer.cydwr\EEPROM</v>
+<v>PSoC_Z80_Toolbox\BusAnalyzer\Header Files</v>
+<v>PSoC_Z80_Toolbox\BusAnalyzer\Header Files\cyapicallbacks.h</v>
+<v>PSoC_Z80_Toolbox\BusAnalyzer\Source Files</v>
+<v>PSoC_Z80_Toolbox\BusAnalyzer\Source Files\main.c</v>
+<v>PSoC_Z80_Toolbox\BusAnalyzer\Generated_Source</v>
+<v>PSoC_Z80_Toolbox\BusAnalyzer\Generated_Source\PSoC5</v>
+</ExpandedNodeIds>
+<VisibleNodeIds>
+<v>PSoC_Z80_Toolbox</v>
+<v>PSoC_Z80_Toolbox\BusAnalyzer</v>
+<v>PSoC_Z80_Toolbox\BusAnalyzer\TopDesign</v>
+<v>PSoC_Z80_Toolbox\BusAnalyzer\BusAnalyzer.cydwr</v>
+<v>PSoC_Z80_Toolbox\BusAnalyzer\BusAnalyzer.cydwr\Pins</v>
+<v>PSoC_Z80_Toolbox\BusAnalyzer\BusAnalyzer.cydwr\Analog</v>
+<v>PSoC_Z80_Toolbox\BusAnalyzer\BusAnalyzer.cydwr\Clocks</v>
+<v>PSoC_Z80_Toolbox\BusAnalyzer\BusAnalyzer.cydwr\Interrupts</v>
+<v>PSoC_Z80_Toolbox\BusAnalyzer\BusAnalyzer.cydwr\DMA</v>
+<v>PSoC_Z80_Toolbox\BusAnalyzer\BusAnalyzer.cydwr\System</v>
+<v>PSoC_Z80_Toolbox\BusAnalyzer\BusAnalyzer.cydwr\Directives</v>
+<v>PSoC_Z80_Toolbox\BusAnalyzer\BusAnalyzer.cydwr\Flash Security</v>
+<v>PSoC_Z80_Toolbox\BusAnalyzer\BusAnalyzer.cydwr\EEPROM</v>
+<v>PSoC_Z80_Toolbox\BusAnalyzer\Header Files</v>
+<v>PSoC_Z80_Toolbox\BusAnalyzer\Header Files\cyapicallbacks.h</v>
+<v>PSoC_Z80_Toolbox\BusAnalyzer\Source Files</v>
+<v>PSoC_Z80_Toolbox\BusAnalyzer\Source Files\main.c</v>
+<v>PSoC_Z80_Toolbox\BusAnalyzer\Generated_Source</v>
+<v>PSoC_Z80_Toolbox\BusAnalyzer\Generated_Source\PSoC5</v>
+<v>PSoC_Z80_Toolbox\BusAnalyzer\Generated_Source\PSoC5\Addr_LSB</v>
+<v>PSoC_Z80_Toolbox\BusAnalyzer\Generated_Source\PSoC5\Clk</v>
+<v>PSoC_Z80_Toolbox\BusAnalyzer\Generated_Source\PSoC5\Clock_Ctrl</v>
+<v>PSoC_Z80_Toolbox\BusAnalyzer\Generated_Source\PSoC5\Ctrl_M1</v>
+<v>PSoC_Z80_Toolbox\BusAnalyzer\Generated_Source\PSoC5\Ctrl_MREQ</v>
+<v>PSoC_Z80_Toolbox\BusAnalyzer\Generated_Source\PSoC5\Ctrl_RD</v>
+<v>PSoC_Z80_Toolbox\BusAnalyzer\Generated_Source\PSoC5\Ctrl_Reset</v>
+<v>PSoC_Z80_Toolbox\BusAnalyzer\Generated_Source\PSoC5\Ctrl_WR</v>
+<v>PSoC_Z80_Toolbox\BusAnalyzer\Generated_Source\PSoC5\cy_boot</v>
+<v>PSoC_Z80_Toolbox\BusAnalyzer\Generated_Source\PSoC5\Data</v>
+<v>PSoC_Z80_Toolbox\BusAnalyzer\Generated_Source\PSoC5\Em_EEPROM_Dynamic</v>
+<v>PSoC_Z80_Toolbox\BusAnalyzer\Generated_Source\PSoC5\isr_1</v>
+<v>PSoC_Z80_Toolbox\BusAnalyzer\Generated_Source\PSoC5\isr_2</v>
+<v>PSoC_Z80_Toolbox\BusAnalyzer\Generated_Source\PSoC5\UART</v>
+<v>PSoC_Z80_Toolbox\BusAnalyzer\Generated_Source\PSoC5\UART_IntClock</v>
+<v>PSoC_Z80_Toolbox\BusAnalyzer\Generated_Source\PSoC5\User_Button</v>
+<v>PSoC_Z80_Toolbox\BusAnalyzer\Generated_Source\PSoC5\Z80_Clock</v>
+<v>PSoC_Z80_Toolbox\BusAnalyzer\Generated_Source\PSoC5\cycodeshareexport.ld</v>
+<v>PSoC_Z80_Toolbox\BusAnalyzer\Generated_Source\PSoC5\cycodeshareimport.ld</v>
+<v>PSoC_Z80_Toolbox\BusAnalyzer\Generated_Source\PSoC5\cycodeshareimport.scat</v>
+<v>PSoC_Z80_Toolbox\BusAnalyzer\Generated_Source\PSoC5\cydevice.h</v>
+<v>PSoC_Z80_Toolbox\BusAnalyzer\Generated_Source\PSoC5\cydevice_trm.h</v>
+<v>PSoC_Z80_Toolbox\BusAnalyzer\Generated_Source\PSoC5\cydevicegnu.inc</v>
+<v>PSoC_Z80_Toolbox\BusAnalyzer\Generated_Source\PSoC5\cydevicegnu_trm.inc</v>
+<v>PSoC_Z80_Toolbox\BusAnalyzer\Generated_Source\PSoC5\cydeviceiar.inc</v>
+<v>PSoC_Z80_Toolbox\BusAnalyzer\Generated_Source\PSoC5\cydeviceiar_trm.inc</v>
+<v>PSoC_Z80_Toolbox\BusAnalyzer\Generated_Source\PSoC5\cydevicerv.inc</v>
+<v>PSoC_Z80_Toolbox\BusAnalyzer\Generated_Source\PSoC5\cydevicerv_trm.inc</v>
+</VisibleNodeIds>
+</CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
+<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="">
+<ExpandedNodeIds>
+<v>PSoC_Z80_Toolbox</v>
+<v>PSoC_Z80_Toolbox\BusAnalyzer</v>
+<v>PSoC_Z80_Toolbox\BusAnalyzer\TopDesign</v>
+<v>PSoC_Z80_Toolbox\BusAnalyzer\TopDesign\TopDesign.cysch</v>
+</ExpandedNodeIds>
+<VisibleNodeIds>
+<v>PSoC_Z80_Toolbox</v>
+<v>PSoC_Z80_Toolbox\BusAnalyzer</v>
+<v>PSoC_Z80_Toolbox\BusAnalyzer\TopDesign</v>
+<v>PSoC_Z80_Toolbox\BusAnalyzer\TopDesign\TopDesign.cysch</v>
+</VisibleNodeIds>
+</CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
+<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="">
+<ExpandedNodeIds>
+<v>PSoC_Z80_Toolbox</v>
+<v>PSoC_Z80_Toolbox\BusAnalyzer</v>
+<v>PSoC_Z80_Toolbox\BusAnalyzer\CortexM3</v>
+<v>PSoC_Z80_Toolbox\BusAnalyzer\CortexM3\ARM_GCC_541</v>
+<v>PSoC_Z80_Toolbox\BusAnalyzer\CortexM3\ARM_GCC_541\Debug</v>
+<v>PSoC_Z80_Toolbox\BusAnalyzer\CortexM3\ARM_GCC_541\Debug\Listing Files</v>
+<v>PSoC_Z80_Toolbox\BusAnalyzer\CortexM3\ARM_GCC_541\Debug\Listing Files\Addr_LSB.lst</v>
+<v>PSoC_Z80_Toolbox\BusAnalyzer\CortexM3\ARM_GCC_541\Debug\Listing Files\Clk.lst</v>
+<v>PSoC_Z80_Toolbox\BusAnalyzer\CortexM3\ARM_GCC_541\Debug\Listing Files\Clock_Ctrl.lst</v>
+<v>PSoC_Z80_Toolbox\BusAnalyzer\CortexM3\ARM_GCC_541\Debug\Listing Files\Clock_Ctrl_PM.lst</v>
+<v>PSoC_Z80_Toolbox\BusAnalyzer\CortexM3\ARM_GCC_541\Debug\Listing Files\Cm3Start.lst</v>
+<v>PSoC_Z80_Toolbox\BusAnalyzer\CortexM3\ARM_GCC_541\Debug\Listing Files\Ctrl_M1.lst</v>
+<v>PSoC_Z80_Toolbox\BusAnalyzer\CortexM3\ARM_GCC_541\Debug\Listing Files\Ctrl_MREQ.lst</v>
+<v>PSoC_Z80_Toolbox\BusAnalyzer\CortexM3\ARM_GCC_541\Debug\Listing Files\Ctrl_RD.lst</v>
+<v>PSoC_Z80_Toolbox\BusAnalyzer\CortexM3\ARM_GCC_541\Debug\Listing Files\Ctrl_Reset.lst</v>
+<v>PSoC_Z80_Toolbox\BusAnalyzer\CortexM3\ARM_GCC_541\Debug\Listing Files\Ctrl_WR.lst</v>
+<v>PSoC_Z80_Toolbox\BusAnalyzer\CortexM3\ARM_GCC_541\Debug\Listing Files\cy_em_eeprom.lst</v>
+<v>PSoC_Z80_Toolbox\BusAnalyzer\CortexM3\ARM_GCC_541\Debug\Listing Files\CyBootAsmGnu.lst</v>
+<v>PSoC_Z80_Toolbox\BusAnalyzer\CortexM3\ARM_GCC_541\Debug\Listing Files\CyDmac.lst</v>
+<v>PSoC_Z80_Toolbox\BusAnalyzer\CortexM3\ARM_GCC_541\Debug\Listing Files\cyfitter_cfg.lst</v>
+<v>PSoC_Z80_Toolbox\BusAnalyzer\CortexM3\ARM_GCC_541\Debug\Listing Files\CyFlash.lst</v>
+<v>PSoC_Z80_Toolbox\BusAnalyzer\CortexM3\ARM_GCC_541\Debug\Listing Files\CyLib.lst</v>
+<v>PSoC_Z80_Toolbox\BusAnalyzer\CortexM3\ARM_GCC_541\Debug\Listing Files\cymetadata.lst</v>
+<v>PSoC_Z80_Toolbox\BusAnalyzer\CortexM3\ARM_GCC_541\Debug\Listing Files\cyPm.lst</v>
+<v>PSoC_Z80_Toolbox\BusAnalyzer\CortexM3\ARM_GCC_541\Debug\Listing Files\CySpc.lst</v>
+<v>PSoC_Z80_Toolbox\BusAnalyzer\CortexM3\ARM_GCC_541\Debug\Listing Files\cyutils.lst</v>
+<v>PSoC_Z80_Toolbox\BusAnalyzer\CortexM3\ARM_GCC_541\Debug\Listing Files\Data.lst</v>
+<v>PSoC_Z80_Toolbox\BusAnalyzer\CortexM3\ARM_GCC_541\Debug\Listing Files\isr_1.lst</v>
+<v>PSoC_Z80_Toolbox\BusAnalyzer\CortexM3\ARM_GCC_541\Debug\Listing Files\isr_2.lst</v>
+<v>PSoC_Z80_Toolbox\BusAnalyzer\CortexM3\ARM_GCC_541\Debug\Listing Files\main.lst</v>
+<v>PSoC_Z80_Toolbox\BusAnalyzer\CortexM3\ARM_GCC_541\Debug\Listing Files\UART.lst</v>
+<v>PSoC_Z80_Toolbox\BusAnalyzer\CortexM3\ARM_GCC_541\Debug\Listing Files\UART_BOOT.lst</v>
+<v>PSoC_Z80_Toolbox\BusAnalyzer\CortexM3\ARM_GCC_541\Debug\Listing Files\UART_INT.lst</v>
+<v>PSoC_Z80_Toolbox\BusAnalyzer\CortexM3\ARM_GCC_541\Debug\Listing Files\UART_IntClock.lst</v>
+<v>PSoC_Z80_Toolbox\BusAnalyzer\CortexM3\ARM_GCC_541\Debug\Listing Files\UART_PM.lst</v>
+<v>PSoC_Z80_Toolbox\BusAnalyzer\CortexM3\ARM_GCC_541\Debug\Listing Files\User_Button.lst</v>
+<v>PSoC_Z80_Toolbox\BusAnalyzer\CortexM3\ARM_GCC_541\Debug\Listing Files\Z80_Clock.lst</v>
+<v>PSoC_Z80_Toolbox\BusAnalyzer\CortexM3\ARM_GCC_541\Debug\BusAnalyzer.elf</v>
+<v>PSoC_Z80_Toolbox\BusAnalyzer\CortexM3\ARM_GCC_541\Debug\BusAnalyzer.hex</v>
+<v>PSoC_Z80_Toolbox\BusAnalyzer\CortexM3\ARM_GCC_541\Debug\BusAnalyzer.map</v>
+<v>PSoC_Z80_Toolbox\BusAnalyzer\BusAnalyzer.gpdsc</v>
+<v>PSoC_Z80_Toolbox\BusAnalyzer\BusAnalyzer.rpt</v>
+<v>PSoC_Z80_Toolbox\BusAnalyzer\BusAnalyzer_timing.html</v>
+</ExpandedNodeIds>
+<VisibleNodeIds>
+<v>PSoC_Z80_Toolbox</v>
+<v>PSoC_Z80_Toolbox\BusAnalyzer</v>
+<v>PSoC_Z80_Toolbox\BusAnalyzer\CortexM3</v>
+<v>PSoC_Z80_Toolbox\BusAnalyzer\CortexM3\ARM_GCC_541</v>
+<v>PSoC_Z80_Toolbox\BusAnalyzer\CortexM3\ARM_GCC_541\Debug</v>
+<v>PSoC_Z80_Toolbox\BusAnalyzer\CortexM3\ARM_GCC_541\Debug\Listing Files</v>
+<v>PSoC_Z80_Toolbox\BusAnalyzer\CortexM3\ARM_GCC_541\Debug\Listing Files\Addr_LSB.lst</v>
+<v>PSoC_Z80_Toolbox\BusAnalyzer\CortexM3\ARM_GCC_541\Debug\Listing Files\Clk.lst</v>
+<v>PSoC_Z80_Toolbox\BusAnalyzer\CortexM3\ARM_GCC_541\Debug\Listing Files\Clock_Ctrl.lst</v>
+<v>PSoC_Z80_Toolbox\BusAnalyzer\CortexM3\ARM_GCC_541\Debug\Listing Files\Clock_Ctrl_PM.lst</v>
+<v>PSoC_Z80_Toolbox\BusAnalyzer\CortexM3\ARM_GCC_541\Debug\Listing Files\Cm3Start.lst</v>
+<v>PSoC_Z80_Toolbox\BusAnalyzer\CortexM3\ARM_GCC_541\Debug\Listing Files\Ctrl_M1.lst</v>
+<v>PSoC_Z80_Toolbox\BusAnalyzer\CortexM3\ARM_GCC_541\Debug\Listing Files\Ctrl_MREQ.lst</v>
+<v>PSoC_Z80_Toolbox\BusAnalyzer\CortexM3\ARM_GCC_541\Debug\Listing Files\Ctrl_RD.lst</v>
+<v>PSoC_Z80_Toolbox\BusAnalyzer\CortexM3\ARM_GCC_541\Debug\Listing Files\Ctrl_Reset.lst</v>
+<v>PSoC_Z80_Toolbox\BusAnalyzer\CortexM3\ARM_GCC_541\Debug\Listing Files\Ctrl_WR.lst</v>
+<v>PSoC_Z80_Toolbox\BusAnalyzer\CortexM3\ARM_GCC_541\Debug\Listing Files\cy_em_eeprom.lst</v>
+<v>PSoC_Z80_Toolbox\BusAnalyzer\CortexM3\ARM_GCC_541\Debug\Listing Files\CyBootAsmGnu.lst</v>
+<v>PSoC_Z80_Toolbox\BusAnalyzer\CortexM3\ARM_GCC_541\Debug\Listing Files\CyDmac.lst</v>
+<v>PSoC_Z80_Toolbox\BusAnalyzer\CortexM3\ARM_GCC_541\Debug\Listing Files\cyfitter_cfg.lst</v>
+<v>PSoC_Z80_Toolbox\BusAnalyzer\CortexM3\ARM_GCC_541\Debug\Listing Files\CyFlash.lst</v>
+<v>PSoC_Z80_Toolbox\BusAnalyzer\CortexM3\ARM_GCC_541\Debug\Listing Files\CyLib.lst</v>
+<v>PSoC_Z80_Toolbox\BusAnalyzer\CortexM3\ARM_GCC_541\Debug\Listing Files\cymetadata.lst</v>
+<v>PSoC_Z80_Toolbox\BusAnalyzer\CortexM3\ARM_GCC_541\Debug\Listing Files\cyPm.lst</v>
+<v>PSoC_Z80_Toolbox\BusAnalyzer\CortexM3\ARM_GCC_541\Debug\Listing Files\CySpc.lst</v>
+<v>PSoC_Z80_Toolbox\BusAnalyzer\CortexM3\ARM_GCC_541\Debug\Listing Files\cyutils.lst</v>
+<v>PSoC_Z80_Toolbox\BusAnalyzer\CortexM3\ARM_GCC_541\Debug\Listing Files\Data.lst</v>
+<v>PSoC_Z80_Toolbox\BusAnalyzer\CortexM3\ARM_GCC_541\Debug\Listing Files\isr_1.lst</v>
+<v>PSoC_Z80_Toolbox\BusAnalyzer\CortexM3\ARM_GCC_541\Debug\Listing Files\isr_2.lst</v>
+<v>PSoC_Z80_Toolbox\BusAnalyzer\CortexM3\ARM_GCC_541\Debug\Listing Files\main.lst</v>
+<v>PSoC_Z80_Toolbox\BusAnalyzer\CortexM3\ARM_GCC_541\Debug\Listing Files\UART.lst</v>
+<v>PSoC_Z80_Toolbox\BusAnalyzer\CortexM3\ARM_GCC_541\Debug\Listing Files\UART_BOOT.lst</v>
+<v>PSoC_Z80_Toolbox\BusAnalyzer\CortexM3\ARM_GCC_541\Debug\Listing Files\UART_INT.lst</v>
+<v>PSoC_Z80_Toolbox\BusAnalyzer\CortexM3\ARM_GCC_541\Debug\Listing Files\UART_IntClock.lst</v>
+<v>PSoC_Z80_Toolbox\BusAnalyzer\CortexM3\ARM_GCC_541\Debug\Listing Files\UART_PM.lst</v>
+<v>PSoC_Z80_Toolbox\BusAnalyzer\CortexM3\ARM_GCC_541\Debug\Listing Files\User_Button.lst</v>
+<v>PSoC_Z80_Toolbox\BusAnalyzer\CortexM3\ARM_GCC_541\Debug\Listing Files\Z80_Clock.lst</v>
+<v>PSoC_Z80_Toolbox\BusAnalyzer\CortexM3\ARM_GCC_541\Debug\BusAnalyzer.elf</v>
+<v>PSoC_Z80_Toolbox\BusAnalyzer\CortexM3\ARM_GCC_541\Debug\BusAnalyzer.hex</v>
+<v>PSoC_Z80_Toolbox\BusAnalyzer\CortexM3\ARM_GCC_541\Debug\BusAnalyzer.map</v>
+<v>PSoC_Z80_Toolbox\BusAnalyzer\BusAnalyzer.gpdsc</v>
+<v>PSoC_Z80_Toolbox\BusAnalyzer\BusAnalyzer.rpt</v>
+<v>PSoC_Z80_Toolbox\BusAnalyzer\BusAnalyzer_timing.html</v>
+</VisibleNodeIds>
+</CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
+</TreeStates>
+<TreeKeysV2>
+<v>Datasheet</v>
+</TreeKeysV2>
+<TreeStatesV2>
+<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="">
+<ExpandedNodeIds>
+<v>PSoC_Z80_Toolbox</v>
+<v>PSoC_Z80_Toolbox\BusAnalyzer</v>
+<v>PSoC_Z80_Toolbox\BusAnalyzer\PSoC 5LP Architecture TRM</v>
+<v>PSoC_Z80_Toolbox\BusAnalyzer\CY8C58LP Family Datasheet</v>
+<v>PSoC_Z80_Toolbox\BusAnalyzer\System Reference Guides</v>
+<v>PSoC_Z80_Toolbox\BusAnalyzer\System Reference Guides\cy_boot_v6_10</v>
+<v>PSoC_Z80_Toolbox\BusAnalyzer\cy_clock_v2_20.pdf</v>
+<v>PSoC_Z80_Toolbox\BusAnalyzer\cy_isr_v1_71</v>
+<v>PSoC_Z80_Toolbox\BusAnalyzer\cy_isr_v1_71\cy_isr_v1_71.pdf</v>
+<v>PSoC_Z80_Toolbox\BusAnalyzer\cy_pins_v2_20</v>
+<v>PSoC_Z80_Toolbox\BusAnalyzer\cy_pins_v2_20\cy_pins_v2_20.pdf</v>
+<v>PSoC_Z80_Toolbox\BusAnalyzer\CyControlReg_v1_80.pdf</v>
+<v>PSoC_Z80_Toolbox\BusAnalyzer\Gnd_v1_0.pdf</v>
+<v>PSoC_Z80_Toolbox\BusAnalyzer\mux_v1_10.pdf</v>
+<v>PSoC_Z80_Toolbox\BusAnalyzer\SwitchSPST_v1_0.pdf</v>
+<v>PSoC_Z80_Toolbox\BusAnalyzer\UART_v2_50.pdf</v>
+</ExpandedNodeIds>
+<VisibleNodeIds>
+<v>PSoC_Z80_Toolbox</v>
+<v>PSoC_Z80_Toolbox\BusAnalyzer</v>
+<v>PSoC_Z80_Toolbox\BusAnalyzer\PSoC 5LP Architecture TRM</v>
+<v>PSoC_Z80_Toolbox\BusAnalyzer\CY8C58LP Family Datasheet</v>
+<v>PSoC_Z80_Toolbox\BusAnalyzer\System Reference Guides</v>
+<v>PSoC_Z80_Toolbox\BusAnalyzer\System Reference Guides\cy_boot_v6_10</v>
+<v>PSoC_Z80_Toolbox\BusAnalyzer\cy_clock_v2_20.pdf</v>
+<v>PSoC_Z80_Toolbox\BusAnalyzer\cy_isr_v1_71</v>
+<v>PSoC_Z80_Toolbox\BusAnalyzer\cy_isr_v1_71\cy_isr_v1_71.pdf</v>
+<v>PSoC_Z80_Toolbox\BusAnalyzer\cy_pins_v2_20</v>
+<v>PSoC_Z80_Toolbox\BusAnalyzer\cy_pins_v2_20\cy_pins_v2_20.pdf</v>
+<v>PSoC_Z80_Toolbox\BusAnalyzer\CyControlReg_v1_80.pdf</v>
+<v>PSoC_Z80_Toolbox\BusAnalyzer\Gnd_v1_0.pdf</v>
+<v>PSoC_Z80_Toolbox\BusAnalyzer\mux_v1_10.pdf</v>
+<v>PSoC_Z80_Toolbox\BusAnalyzer\SwitchSPST_v1_0.pdf</v>
+<v>PSoC_Z80_Toolbox\BusAnalyzer\UART_v2_50.pdf</v>
+</VisibleNodeIds>
+</CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
+</TreeStatesV2>
+</CyGuid_1b906a0f-a7b6-4e4d-a428-82f98b53cb35>
+</dataGuid>
+</userData>
+</CyGuid_fdba8dfd-b15b-4469-9bbb-9e40c3e70997>
+<Unloaded />
+<OpenDocs>
+<name v=".\BusAnalyzer.cydsn\TopDesign\TopDesign.cysch" />
+<name v=".\BusAnalyzer.cydsn\BusAnalyzer.cydwr" />
+<name v=".\BusAnalyzer.cydsn\main.c" />
+</OpenDocs>
+<OpenDocsLayout><![CDATA[<?xml version="1.0"?><!--
+
+  Actipro Docking/MDI for WinForms
+  Copyright (c) 2001-2016 Actipro Software LLC.  All rights reserved.
+  http://www.actiprosoftware.com
+
+--><DocumentLayout Version="1.0"><LayoutData><TabbedMdiRootContainer Orientation="Vertical"><TabbedMdiContainer Size="1874, 698" SelectedTabbedMdiWindow="117cddcd-a045-44a6-9e09-f28a3d7fd99e"><DocumentWindow Key="C:\Users\nicoz\OneDrive - HTL Anichstrasse\Dokumente\Schule\Werkstaette\SJ2024_25\PsoC_Z80Board\PSoC_Program\PSoC_Z80_Toolbox\BusAnalyzer.cydsn\TopDesign\TopDesign.cysch" Guid="1671e0b7-fbeb-430b-bc33-03ed31530127" /><DocumentWindow Key="C:\Users\nicoz\OneDrive - HTL Anichstrasse\Dokumente\Schule\Werkstaette\SJ2024_25\PsoC_Z80Board\PSoC_Program\PSoC_Z80_Toolbox\BusAnalyzer.cydsn\BusAnalyzer.cydwr" Guid="e422d5b8-6746-405d-a9d9-dd5be172dfdf" /><DocumentWindow Key="C:\Users\nicoz\OneDrive - HTL Anichstrasse\Dokumente\Schule\Werkstaette\SJ2024_25\PsoC_Z80Board\PSoC_Program\PSoC_Z80_Toolbox\BusAnalyzer.cydsn\main.c" Guid="117cddcd-a045-44a6-9e09-f28a3d7fd99e" /><ToolWindow Key="Start Page:bd4649ab-da6b-4d04-a663-c722b8bf99db:Start Page" Guid="3f43dd5a-e0e1-4082-89ad-aa084be6210b" /></TabbedMdiContainer></TabbedMdiRootContainer><FloatingContainers /></LayoutData></DocumentLayout>]]></OpenDocsLayout>
+<config v="" />
+<AutoUpdate v="true" />
+</CyGuid_843a90a4-0c4b-4e44-991d-05e7fb117a21>
+</CyXmlSerializer>

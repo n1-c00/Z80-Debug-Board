@@ -1,0 +1,90 @@
+C:/Users/nicoz/OneDrive\ -\ HTL\ Anichstrasse/Dokumente/Schule/Werkstaette/SJ2024_25/PsoC_Z80Board/PSoC_Program/PSoC_Z80_Toolbox/BusAnalyzer.cydsn/CortexM3/ARM_GCC_541/Debug/main.o : C:/Users/nicoz/OneDrive\ -\ HTL\ Anichstrasse/Dokumente/Schule/Werkstaette/SJ2024_25/PsoC_Z80Board/PSoC_Program/PSoC_Z80_Toolbox/BusAnalyzer.cydsn/Generated_Source/PSoC5/Addr_LSB.h C:/Users/nicoz/OneDrive\ -\ HTL\ Anichstrasse/Dokumente/Schule/Werkstaette/SJ2024_25/PsoC_Z80Board/PSoC_Program/PSoC_Z80_Toolbox/BusAnalyzer.cydsn/Generated_Source/PSoC5/Addr_LSB_aliases.h C:/Users/nicoz/OneDrive\ -\ HTL\ Anichstrasse/Dokumente/Schule/Werkstaette/SJ2024_25/PsoC_Z80Board/PSoC_Program/PSoC_Z80_Toolbox/BusAnalyzer.cydsn/Generated_Source/PSoC5/Clk.h C:/Users/nicoz/OneDrive\ -\ HTL\ Anichstrasse/Dokumente/Schule/Werkstaette/SJ2024_25/PsoC_Z80Board/PSoC_Program/PSoC_Z80_Toolbox/BusAnalyzer.cydsn/Generated_Source/PSoC5/Clk_aliases.h C:/Users/nicoz/OneDrive\ -\ HTL\ Anichstrasse/Dokumente/Schule/Werkstaette/SJ2024_25/PsoC_Z80Board/PSoC_Program/PSoC_Z80_Toolbox/BusAnalyzer.cydsn/Generated_Source/PSoC5/Clock_Ctrl.h C:/Users/nicoz/OneDrive\ -\ HTL\ Anichstrasse/Dokumente/Schule/Werkstaette/SJ2024_25/PsoC_Z80Board/PSoC_Program/PSoC_Z80_Toolbox/BusAnalyzer.cydsn/Generated_Source/PSoC5/Ctrl_M1.h C:/Users/nicoz/OneDrive\ -\ HTL\ Anichstrasse/Dokumente/Schule/Werkstaette/SJ2024_25/PsoC_Z80Board/PSoC_Program/PSoC_Z80_Toolbox/BusAnalyzer.cydsn/Generated_Source/PSoC5/Ctrl_M1_aliases.h C:/Users/nicoz/OneDrive\ -\ HTL\ Anichstrasse/Dokumente/Schule/Werkstaette/SJ2024_25/PsoC_Z80Board/PSoC_Program/PSoC_Z80_Toolbox/BusAnalyzer.cydsn/Generated_Source/PSoC5/Ctrl_MREQ.h C:/Users/nicoz/OneDrive\ -\ HTL\ Anichstrasse/Dokumente/Schule/Werkstaette/SJ2024_25/PsoC_Z80Board/PSoC_Program/PSoC_Z80_Toolbox/BusAnalyzer.cydsn/Generated_Source/PSoC5/Ctrl_MREQ_aliases.h C:/Users/nicoz/OneDrive\ -\ HTL\ Anichstrasse/Dokumente/Schule/Werkstaette/SJ2024_25/PsoC_Z80Board/PSoC_Program/PSoC_Z80_Toolbox/BusAnalyzer.cydsn/Generated_Source/PSoC5/Ctrl_RD.h C:/Users/nicoz/OneDrive\ -\ HTL\ Anichstrasse/Dokumente/Schule/Werkstaette/SJ2024_25/PsoC_Z80Board/PSoC_Program/PSoC_Z80_Toolbox/BusAnalyzer.cydsn/Generated_Source/PSoC5/Ctrl_RD_aliases.h C:/Users/nicoz/OneDrive\ -\ HTL\ Anichstrasse/Dokumente/Schule/Werkstaette/SJ2024_25/PsoC_Z80Board/PSoC_Program/PSoC_Z80_Toolbox/BusAnalyzer.cydsn/Generated_Source/PSoC5/Ctrl_Reset.h C:/Users/nicoz/OneDrive\ -\ HTL\ Anichstrasse/Dokumente/Schule/Werkstaette/SJ2024_25/PsoC_Z80Board/PSoC_Program/PSoC_Z80_Toolbox/BusAnalyzer.cydsn/Generated_Source/PSoC5/Ctrl_Reset_aliases.h C:/Users/nicoz/OneDrive\ -\ HTL\ Anichstrasse/Dokumente/Schule/Werkstaette/SJ2024_25/PsoC_Z80Board/PSoC_Program/PSoC_Z80_Toolbox/BusAnalyzer.cydsn/Generated_Source/PSoC5/Ctrl_WR.h C:/Users/nicoz/OneDrive\ -\ HTL\ Anichstrasse/Dokumente/Schule/Werkstaette/SJ2024_25/PsoC_Z80Board/PSoC_Program/PSoC_Z80_Toolbox/BusAnalyzer.cydsn/Generated_Source/PSoC5/Ctrl_WR_aliases.h C:/Users/nicoz/OneDrive\ -\ HTL\ Anichstrasse/Dokumente/Schule/Werkstaette/SJ2024_25/PsoC_Z80Board/PSoC_Program/PSoC_Z80_Toolbox/BusAnalyzer.cydsn/Generated_Source/PSoC5/CyDmac.h C:/Users/nicoz/OneDrive\ -\ HTL\ Anichstrasse/Dokumente/Schule/Werkstaette/SJ2024_25/PsoC_Z80Board/PSoC_Program/PSoC_Z80_Toolbox/BusAnalyzer.cydsn/Generated_Source/PSoC5/CyFlash.h C:/Users/nicoz/OneDrive\ -\ HTL\ Anichstrasse/Dokumente/Schule/Werkstaette/SJ2024_25/PsoC_Z80Board/PSoC_Program/PSoC_Z80_Toolbox/BusAnalyzer.cydsn/Generated_Source/PSoC5/CyLib.h C:/Users/nicoz/OneDrive\ -\ HTL\ Anichstrasse/Dokumente/Schule/Werkstaette/SJ2024_25/PsoC_Z80Board/PSoC_Program/PSoC_Z80_Toolbox/BusAnalyzer.cydsn/Generated_Source/PSoC5/CySpc.h C:/Users/nicoz/OneDrive\ -\ HTL\ Anichstrasse/Dokumente/Schule/Werkstaette/SJ2024_25/PsoC_Z80Board/PSoC_Program/PSoC_Z80_Toolbox/BusAnalyzer.cydsn/Generated_Source/PSoC5/Data.h C:/Users/nicoz/OneDrive\ -\ HTL\ Anichstrasse/Dokumente/Schule/Werkstaette/SJ2024_25/PsoC_Z80Board/PSoC_Program/PSoC_Z80_Toolbox/BusAnalyzer.cydsn/Generated_Source/PSoC5/Data_aliases.h C:/Users/nicoz/OneDrive\ -\ HTL\ Anichstrasse/Dokumente/Schule/Werkstaette/SJ2024_25/PsoC_Z80Board/PSoC_Program/PSoC_Z80_Toolbox/BusAnalyzer.cydsn/Generated_Source/PSoC5/UART.h C:/Users/nicoz/OneDrive\ -\ HTL\ Anichstrasse/Dokumente/Schule/Werkstaette/SJ2024_25/PsoC_Z80Board/PSoC_Program/PSoC_Z80_Toolbox/BusAnalyzer.cydsn/Generated_Source/PSoC5/UART_IntClock.h C:/Users/nicoz/OneDrive\ -\ HTL\ Anichstrasse/Dokumente/Schule/Werkstaette/SJ2024_25/PsoC_Z80Board/PSoC_Program/PSoC_Z80_Toolbox/BusAnalyzer.cydsn/Generated_Source/PSoC5/User_Button.h C:/Users/nicoz/OneDrive\ -\ HTL\ Anichstrasse/Dokumente/Schule/Werkstaette/SJ2024_25/PsoC_Z80Board/PSoC_Program/PSoC_Z80_Toolbox/BusAnalyzer.cydsn/Generated_Source/PSoC5/User_Button_aliases.h C:/Users/nicoz/OneDrive\ -\ HTL\ Anichstrasse/Dokumente/Schule/Werkstaette/SJ2024_25/PsoC_Z80Board/PSoC_Program/PSoC_Z80_Toolbox/BusAnalyzer.cydsn/Generated_Source/PSoC5/Z80_Clock.h C:/Users/nicoz/OneDrive\ -\ HTL\ Anichstrasse/Dokumente/Schule/Werkstaette/SJ2024_25/PsoC_Z80Board/PSoC_Program/PSoC_Z80_Toolbox/BusAnalyzer.cydsn/Generated_Source/PSoC5/cmsis_armcc.h C:/Users/nicoz/OneDrive\ -\ HTL\ Anichstrasse/Dokumente/Schule/Werkstaette/SJ2024_25/PsoC_Z80Board/PSoC_Program/PSoC_Z80_Toolbox/BusAnalyzer.cydsn/Generated_Source/PSoC5/cmsis_compiler.h C:/Users/nicoz/OneDrive\ -\ HTL\ Anichstrasse/Dokumente/Schule/Werkstaette/SJ2024_25/PsoC_Z80Board/PSoC_Program/PSoC_Z80_Toolbox/BusAnalyzer.cydsn/Generated_Source/PSoC5/cmsis_gcc.h C:/Users/nicoz/OneDrive\ -\ HTL\ Anichstrasse/Dokumente/Schule/Werkstaette/SJ2024_25/PsoC_Z80Board/PSoC_Program/PSoC_Z80_Toolbox/BusAnalyzer.cydsn/Generated_Source/PSoC5/core_cm3.h C:/Users/nicoz/OneDrive\ -\ HTL\ Anichstrasse/Dokumente/Schule/Werkstaette/SJ2024_25/PsoC_Z80Board/PSoC_Program/PSoC_Z80_Toolbox/BusAnalyzer.cydsn/Generated_Source/PSoC5/core_cm3_psoc5.h C:/Users/nicoz/OneDrive\ -\ HTL\ Anichstrasse/Dokumente/Schule/Werkstaette/SJ2024_25/PsoC_Z80Board/PSoC_Program/PSoC_Z80_Toolbox/BusAnalyzer.cydsn/Generated_Source/PSoC5/cyPm.h C:/Users/nicoz/OneDrive\ -\ HTL\ Anichstrasse/Dokumente/Schule/Werkstaette/SJ2024_25/PsoC_Z80Board/PSoC_Program/PSoC_Z80_Toolbox/BusAnalyzer.cydsn/Generated_Source/PSoC5/cy_em_eeprom.h C:/Users/nicoz/OneDrive\ -\ HTL\ Anichstrasse/Dokumente/Schule/Werkstaette/SJ2024_25/PsoC_Z80Board/PSoC_Program/PSoC_Z80_Toolbox/BusAnalyzer.cydsn/Generated_Source/PSoC5/cydevice.h C:/Users/nicoz/OneDrive\ -\ HTL\ Anichstrasse/Dokumente/Schule/Werkstaette/SJ2024_25/PsoC_Z80Board/PSoC_Program/PSoC_Z80_Toolbox/BusAnalyzer.cydsn/Generated_Source/PSoC5/cydevice_trm.h C:/Users/nicoz/OneDrive\ -\ HTL\ Anichstrasse/Dokumente/Schule/Werkstaette/SJ2024_25/PsoC_Z80Board/PSoC_Program/PSoC_Z80_Toolbox/BusAnalyzer.cydsn/Generated_Source/PSoC5/cydisabledsheets.h C:/Users/nicoz/OneDrive\ -\ HTL\ Anichstrasse/Dokumente/Schule/Werkstaette/SJ2024_25/PsoC_Z80Board/PSoC_Program/PSoC_Z80_Toolbox/BusAnalyzer.cydsn/Generated_Source/PSoC5/cyfitter.h C:/Users/nicoz/OneDrive\ -\ HTL\ Anichstrasse/Dokumente/Schule/Werkstaette/SJ2024_25/PsoC_Z80Board/PSoC_Program/PSoC_Z80_Toolbox/BusAnalyzer.cydsn/Generated_Source/PSoC5/cyfitter_cfg.h C:/Users/nicoz/OneDrive\ -\ HTL\ Anichstrasse/Dokumente/Schule/Werkstaette/SJ2024_25/PsoC_Z80Board/PSoC_Program/PSoC_Z80_Toolbox/BusAnalyzer.cydsn/Generated_Source/PSoC5/cypins.h C:/Users/nicoz/OneDrive\ -\ HTL\ Anichstrasse/Dokumente/Schule/Werkstaette/SJ2024_25/PsoC_Z80Board/PSoC_Program/PSoC_Z80_Toolbox/BusAnalyzer.cydsn/Generated_Source/PSoC5/cytypes.h C:/Users/nicoz/OneDrive\ -\ HTL\ Anichstrasse/Dokumente/Schule/Werkstaette/SJ2024_25/PsoC_Z80Board/PSoC_Program/PSoC_Z80_Toolbox/BusAnalyzer.cydsn/Generated_Source/PSoC5/isr_1.h C:/Users/nicoz/OneDrive\ -\ HTL\ Anichstrasse/Dokumente/Schule/Werkstaette/SJ2024_25/PsoC_Z80Board/PSoC_Program/PSoC_Z80_Toolbox/BusAnalyzer.cydsn/Generated_Source/PSoC5/isr_2.h C:/Users/nicoz/OneDrive\ -\ HTL\ Anichstrasse/Dokumente/Schule/Werkstaette/SJ2024_25/PsoC_Z80Board/PSoC_Program/PSoC_Z80_Toolbox/BusAnalyzer.cydsn/Generated_Source/PSoC5/project.h C:/Users/nicoz/OneDrive\ -\ HTL\ Anichstrasse/Dokumente/Schule/Werkstaette/SJ2024_25/PsoC_Z80Board/PSoC_Program/PSoC_Z80_Toolbox/BusAnalyzer.cydsn/main.c 
+
+C:/Users/nicoz/OneDrive\ -\ HTL\ Anichstrasse/Dokumente/Schule/Werkstaette/SJ2024_25/PsoC_Z80Board/PSoC_Program/PSoC_Z80_Toolbox/BusAnalyzer.cydsn/Generated_Source/PSoC5/Addr_LSB.h : 
+
+C:/Users/nicoz/OneDrive\ -\ HTL\ Anichstrasse/Dokumente/Schule/Werkstaette/SJ2024_25/PsoC_Z80Board/PSoC_Program/PSoC_Z80_Toolbox/BusAnalyzer.cydsn/Generated_Source/PSoC5/Addr_LSB_aliases.h : 
+
+C:/Users/nicoz/OneDrive\ -\ HTL\ Anichstrasse/Dokumente/Schule/Werkstaette/SJ2024_25/PsoC_Z80Board/PSoC_Program/PSoC_Z80_Toolbox/BusAnalyzer.cydsn/Generated_Source/PSoC5/Clk.h : 
+
+C:/Users/nicoz/OneDrive\ -\ HTL\ Anichstrasse/Dokumente/Schule/Werkstaette/SJ2024_25/PsoC_Z80Board/PSoC_Program/PSoC_Z80_Toolbox/BusAnalyzer.cydsn/Generated_Source/PSoC5/Clk_aliases.h : 
+
+C:/Users/nicoz/OneDrive\ -\ HTL\ Anichstrasse/Dokumente/Schule/Werkstaette/SJ2024_25/PsoC_Z80Board/PSoC_Program/PSoC_Z80_Toolbox/BusAnalyzer.cydsn/Generated_Source/PSoC5/Clock_Ctrl.h : 
+
+C:/Users/nicoz/OneDrive\ -\ HTL\ Anichstrasse/Dokumente/Schule/Werkstaette/SJ2024_25/PsoC_Z80Board/PSoC_Program/PSoC_Z80_Toolbox/BusAnalyzer.cydsn/Generated_Source/PSoC5/Ctrl_M1.h : 
+
+C:/Users/nicoz/OneDrive\ -\ HTL\ Anichstrasse/Dokumente/Schule/Werkstaette/SJ2024_25/PsoC_Z80Board/PSoC_Program/PSoC_Z80_Toolbox/BusAnalyzer.cydsn/Generated_Source/PSoC5/Ctrl_M1_aliases.h : 
+
+C:/Users/nicoz/OneDrive\ -\ HTL\ Anichstrasse/Dokumente/Schule/Werkstaette/SJ2024_25/PsoC_Z80Board/PSoC_Program/PSoC_Z80_Toolbox/BusAnalyzer.cydsn/Generated_Source/PSoC5/Ctrl_MREQ.h : 
+
+C:/Users/nicoz/OneDrive\ -\ HTL\ Anichstrasse/Dokumente/Schule/Werkstaette/SJ2024_25/PsoC_Z80Board/PSoC_Program/PSoC_Z80_Toolbox/BusAnalyzer.cydsn/Generated_Source/PSoC5/Ctrl_MREQ_aliases.h : 
+
+C:/Users/nicoz/OneDrive\ -\ HTL\ Anichstrasse/Dokumente/Schule/Werkstaette/SJ2024_25/PsoC_Z80Board/PSoC_Program/PSoC_Z80_Toolbox/BusAnalyzer.cydsn/Generated_Source/PSoC5/Ctrl_RD.h : 
+
+C:/Users/nicoz/OneDrive\ -\ HTL\ Anichstrasse/Dokumente/Schule/Werkstaette/SJ2024_25/PsoC_Z80Board/PSoC_Program/PSoC_Z80_Toolbox/BusAnalyzer.cydsn/Generated_Source/PSoC5/Ctrl_RD_aliases.h : 
+
+C:/Users/nicoz/OneDrive\ -\ HTL\ Anichstrasse/Dokumente/Schule/Werkstaette/SJ2024_25/PsoC_Z80Board/PSoC_Program/PSoC_Z80_Toolbox/BusAnalyzer.cydsn/Generated_Source/PSoC5/Ctrl_Reset.h : 
+
+C:/Users/nicoz/OneDrive\ -\ HTL\ Anichstrasse/Dokumente/Schule/Werkstaette/SJ2024_25/PsoC_Z80Board/PSoC_Program/PSoC_Z80_Toolbox/BusAnalyzer.cydsn/Generated_Source/PSoC5/Ctrl_Reset_aliases.h : 
+
+C:/Users/nicoz/OneDrive\ -\ HTL\ Anichstrasse/Dokumente/Schule/Werkstaette/SJ2024_25/PsoC_Z80Board/PSoC_Program/PSoC_Z80_Toolbox/BusAnalyzer.cydsn/Generated_Source/PSoC5/Ctrl_WR.h : 
+
+C:/Users/nicoz/OneDrive\ -\ HTL\ Anichstrasse/Dokumente/Schule/Werkstaette/SJ2024_25/PsoC_Z80Board/PSoC_Program/PSoC_Z80_Toolbox/BusAnalyzer.cydsn/Generated_Source/PSoC5/Ctrl_WR_aliases.h : 
+
+C:/Users/nicoz/OneDrive\ -\ HTL\ Anichstrasse/Dokumente/Schule/Werkstaette/SJ2024_25/PsoC_Z80Board/PSoC_Program/PSoC_Z80_Toolbox/BusAnalyzer.cydsn/Generated_Source/PSoC5/CyDmac.h : 
+
+C:/Users/nicoz/OneDrive\ -\ HTL\ Anichstrasse/Dokumente/Schule/Werkstaette/SJ2024_25/PsoC_Z80Board/PSoC_Program/PSoC_Z80_Toolbox/BusAnalyzer.cydsn/Generated_Source/PSoC5/CyFlash.h : 
+
+C:/Users/nicoz/OneDrive\ -\ HTL\ Anichstrasse/Dokumente/Schule/Werkstaette/SJ2024_25/PsoC_Z80Board/PSoC_Program/PSoC_Z80_Toolbox/BusAnalyzer.cydsn/Generated_Source/PSoC5/CyLib.h : 
+
+C:/Users/nicoz/OneDrive\ -\ HTL\ Anichstrasse/Dokumente/Schule/Werkstaette/SJ2024_25/PsoC_Z80Board/PSoC_Program/PSoC_Z80_Toolbox/BusAnalyzer.cydsn/Generated_Source/PSoC5/CySpc.h : 
+
+C:/Users/nicoz/OneDrive\ -\ HTL\ Anichstrasse/Dokumente/Schule/Werkstaette/SJ2024_25/PsoC_Z80Board/PSoC_Program/PSoC_Z80_Toolbox/BusAnalyzer.cydsn/Generated_Source/PSoC5/Data.h : 
+
+C:/Users/nicoz/OneDrive\ -\ HTL\ Anichstrasse/Dokumente/Schule/Werkstaette/SJ2024_25/PsoC_Z80Board/PSoC_Program/PSoC_Z80_Toolbox/BusAnalyzer.cydsn/Generated_Source/PSoC5/Data_aliases.h : 
+
+C:/Users/nicoz/OneDrive\ -\ HTL\ Anichstrasse/Dokumente/Schule/Werkstaette/SJ2024_25/PsoC_Z80Board/PSoC_Program/PSoC_Z80_Toolbox/BusAnalyzer.cydsn/Generated_Source/PSoC5/UART.h : 
+
+C:/Users/nicoz/OneDrive\ -\ HTL\ Anichstrasse/Dokumente/Schule/Werkstaette/SJ2024_25/PsoC_Z80Board/PSoC_Program/PSoC_Z80_Toolbox/BusAnalyzer.cydsn/Generated_Source/PSoC5/UART_IntClock.h : 
+
+C:/Users/nicoz/OneDrive\ -\ HTL\ Anichstrasse/Dokumente/Schule/Werkstaette/SJ2024_25/PsoC_Z80Board/PSoC_Program/PSoC_Z80_Toolbox/BusAnalyzer.cydsn/Generated_Source/PSoC5/User_Button.h : 
+
+C:/Users/nicoz/OneDrive\ -\ HTL\ Anichstrasse/Dokumente/Schule/Werkstaette/SJ2024_25/PsoC_Z80Board/PSoC_Program/PSoC_Z80_Toolbox/BusAnalyzer.cydsn/Generated_Source/PSoC5/User_Button_aliases.h : 
+
+C:/Users/nicoz/OneDrive\ -\ HTL\ Anichstrasse/Dokumente/Schule/Werkstaette/SJ2024_25/PsoC_Z80Board/PSoC_Program/PSoC_Z80_Toolbox/BusAnalyzer.cydsn/Generated_Source/PSoC5/Z80_Clock.h : 
+
+C:/Users/nicoz/OneDrive\ -\ HTL\ Anichstrasse/Dokumente/Schule/Werkstaette/SJ2024_25/PsoC_Z80Board/PSoC_Program/PSoC_Z80_Toolbox/BusAnalyzer.cydsn/Generated_Source/PSoC5/cmsis_armcc.h : 
+
+C:/Users/nicoz/OneDrive\ -\ HTL\ Anichstrasse/Dokumente/Schule/Werkstaette/SJ2024_25/PsoC_Z80Board/PSoC_Program/PSoC_Z80_Toolbox/BusAnalyzer.cydsn/Generated_Source/PSoC5/cmsis_compiler.h : 
+
+C:/Users/nicoz/OneDrive\ -\ HTL\ Anichstrasse/Dokumente/Schule/Werkstaette/SJ2024_25/PsoC_Z80Board/PSoC_Program/PSoC_Z80_Toolbox/BusAnalyzer.cydsn/Generated_Source/PSoC5/cmsis_gcc.h : 
+
+C:/Users/nicoz/OneDrive\ -\ HTL\ Anichstrasse/Dokumente/Schule/Werkstaette/SJ2024_25/PsoC_Z80Board/PSoC_Program/PSoC_Z80_Toolbox/BusAnalyzer.cydsn/Generated_Source/PSoC5/core_cm3.h : 
+
+C:/Users/nicoz/OneDrive\ -\ HTL\ Anichstrasse/Dokumente/Schule/Werkstaette/SJ2024_25/PsoC_Z80Board/PSoC_Program/PSoC_Z80_Toolbox/BusAnalyzer.cydsn/Generated_Source/PSoC5/core_cm3_psoc5.h : 
+
+C:/Users/nicoz/OneDrive\ -\ HTL\ Anichstrasse/Dokumente/Schule/Werkstaette/SJ2024_25/PsoC_Z80Board/PSoC_Program/PSoC_Z80_Toolbox/BusAnalyzer.cydsn/Generated_Source/PSoC5/cyPm.h : 
+
+C:/Users/nicoz/OneDrive\ -\ HTL\ Anichstrasse/Dokumente/Schule/Werkstaette/SJ2024_25/PsoC_Z80Board/PSoC_Program/PSoC_Z80_Toolbox/BusAnalyzer.cydsn/Generated_Source/PSoC5/cy_em_eeprom.h : 
+
+C:/Users/nicoz/OneDrive\ -\ HTL\ Anichstrasse/Dokumente/Schule/Werkstaette/SJ2024_25/PsoC_Z80Board/PSoC_Program/PSoC_Z80_Toolbox/BusAnalyzer.cydsn/Generated_Source/PSoC5/cydevice.h : 
+
+C:/Users/nicoz/OneDrive\ -\ HTL\ Anichstrasse/Dokumente/Schule/Werkstaette/SJ2024_25/PsoC_Z80Board/PSoC_Program/PSoC_Z80_Toolbox/BusAnalyzer.cydsn/Generated_Source/PSoC5/cydevice_trm.h : 
+
+C:/Users/nicoz/OneDrive\ -\ HTL\ Anichstrasse/Dokumente/Schule/Werkstaette/SJ2024_25/PsoC_Z80Board/PSoC_Program/PSoC_Z80_Toolbox/BusAnalyzer.cydsn/Generated_Source/PSoC5/cydisabledsheets.h : 
+
+C:/Users/nicoz/OneDrive\ -\ HTL\ Anichstrasse/Dokumente/Schule/Werkstaette/SJ2024_25/PsoC_Z80Board/PSoC_Program/PSoC_Z80_Toolbox/BusAnalyzer.cydsn/Generated_Source/PSoC5/cyfitter.h : 
+
+C:/Users/nicoz/OneDrive\ -\ HTL\ Anichstrasse/Dokumente/Schule/Werkstaette/SJ2024_25/PsoC_Z80Board/PSoC_Program/PSoC_Z80_Toolbox/BusAnalyzer.cydsn/Generated_Source/PSoC5/cyfitter_cfg.h : 
+
+C:/Users/nicoz/OneDrive\ -\ HTL\ Anichstrasse/Dokumente/Schule/Werkstaette/SJ2024_25/PsoC_Z80Board/PSoC_Program/PSoC_Z80_Toolbox/BusAnalyzer.cydsn/Generated_Source/PSoC5/cypins.h : 
+
+C:/Users/nicoz/OneDrive\ -\ HTL\ Anichstrasse/Dokumente/Schule/Werkstaette/SJ2024_25/PsoC_Z80Board/PSoC_Program/PSoC_Z80_Toolbox/BusAnalyzer.cydsn/Generated_Source/PSoC5/cytypes.h : 
+
+C:/Users/nicoz/OneDrive\ -\ HTL\ Anichstrasse/Dokumente/Schule/Werkstaette/SJ2024_25/PsoC_Z80Board/PSoC_Program/PSoC_Z80_Toolbox/BusAnalyzer.cydsn/Generated_Source/PSoC5/isr_1.h : 
+
+C:/Users/nicoz/OneDrive\ -\ HTL\ Anichstrasse/Dokumente/Schule/Werkstaette/SJ2024_25/PsoC_Z80Board/PSoC_Program/PSoC_Z80_Toolbox/BusAnalyzer.cydsn/Generated_Source/PSoC5/isr_2.h : 
+
+C:/Users/nicoz/OneDrive\ -\ HTL\ Anichstrasse/Dokumente/Schule/Werkstaette/SJ2024_25/PsoC_Z80Board/PSoC_Program/PSoC_Z80_Toolbox/BusAnalyzer.cydsn/Generated_Source/PSoC5/project.h : 
+
+C:/Users/nicoz/OneDrive\ -\ HTL\ Anichstrasse/Dokumente/Schule/Werkstaette/SJ2024_25/PsoC_Z80Board/PSoC_Program/PSoC_Z80_Toolbox/BusAnalyzer.cydsn/main.c : 
+

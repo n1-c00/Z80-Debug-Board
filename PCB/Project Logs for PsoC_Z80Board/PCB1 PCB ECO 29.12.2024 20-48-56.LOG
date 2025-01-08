@@ -1,0 +1,113 @@
+Removed Pin From Net: NetName=5V Pin=Connector-5V
+Removed Pin From Net: NetName=5V Pin=Connector-5V
+Removed Pin From Net: NetName=/BUSRQ Pin=Connector-A0
+Removed Pin From Net: NetName=/BUSACK Pin=Connector-A1
+Removed Pin From Net: NetName=Clock Pin=Connector-A2
+Removed Pin From Net: NetName=/Reset_Z80 Pin=Connector-A3
+Removed Pin From Net: NetName=D0 Pin=Connector-D0_RX
+Removed Pin From Net: NetName=D1 Pin=Connector-D1_TX
+Removed Pin From Net: NetName=D2 Pin=Connector-D2
+Removed Pin From Net: NetName=D3 Pin=Connector-D3
+Removed Pin From Net: NetName=D4 Pin=Connector-D4
+Removed Pin From Net: NetName=D5 Pin=Connector-D5
+Removed Pin From Net: NetName=D6 Pin=Connector-D6
+Removed Pin From Net: NetName=D7 Pin=Connector-D7
+Removed Pin From Net: NetName=/Read Pin=Connector-D8
+Removed Pin From Net: NetName=/Write Pin=Connector-D9
+Removed Pin From Net: NetName=/IOREQ Pin=Connector-D10
+Removed Pin From Net: NetName=/MREQ Pin=Connector-D11_MOSI
+Removed Pin From Net: NetName=/MREQ Pin=Connector-D11_MOSI
+Removed Pin From Net: NetName=/WAIT Pin=Connector-D12_MISO
+Removed Pin From Net: NetName=/WAIT Pin=Connector-D12_MISO
+Removed Pin From Net: NetName=/M1 Pin=Connector-D13_SCK
+Removed Pin From Net: NetName=/M1 Pin=Connector-D13_SCK
+Removed Pin From Net: NetName=GND Pin=Connector-GND
+Removed Pin From Net: NetName=GND Pin=Connector-GND
+Removed Pin From Net: NetName=GND Pin=Connector-GND
+Removed Pin From Net: NetName=GND Pin=Connector-GND
+Removed Pin From Net: NetName=Reset_Master Pin=Connector-RESET
+Removed Pin From Net: NetName=Reset_Master Pin=Connector-RESET
+Removed Pin From Net: NetName=5V Pin=R0-2
+Removed Pin From Net: NetName=5V Pin=R9-2
+Removed Member From Class: ClassName=Sheet1 Member=Connector
+Removed Member From Class: ClassName=Sheet1 Member=R0
+Change Component Comment : Designator=R9 Old Comment=10k New Comment=200R
+Change component parameters: Designator = "R9" ("R9"); Footprint = "R_SMD_R0805"; UniqueID = "\YJUQKTPS" ("\YJUQKTPS")
+Change component parameters (AddParameter): Name = "LatestRevisionDate"; Value = "07-Sep-2019"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Published"; Value = "21-Feb-2011"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Usage"; Value = "only permitted for non-commercial purposes at HTL I Innsbruck"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Value"; Value = "200R"; VariantName = "[No Variations]"
+Added Component: Designator=R10(R_SMD_R0805)
+Add component (AddParameter): Name = "LatestRevisionDate"; Value = "07-Sep-2019"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Published"; Value = "21-Feb-2011"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Usage"; Value = "only permitted for non-commercial purposes at HTL I Innsbruck"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = "200R"; VariantName = "[No Variations]"
+Added Component: Designator=Shield(Arduino)
+Add component (AddParameter): Name = "LatestRevisionDate"; Value = "07-Sep-2019"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Published"; Value = "19-Jul-2014"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Publisher"; Value = "Michael Kupfner"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Usage"; Value = "only permitted for non-commercial purposes at HTL I Innsbruck"; VariantName = "[No Variations]"
+Added Pin To Net: NetName=5V Pin=R9-1
+Added Pin To Net: NetName=5V Pin=R10-1
+Added Pin To Net: NetName=Reset_Master Pin=Shield-1
+Added Pin To Net: NetName=5V Pin=Shield-3
+Added Pin To Net: NetName=GND Pin=Shield-4
+Added Pin To Net: NetName=GND Pin=Shield-5
+Added Pin To Net: NetName=/BUSRQ Pin=Shield-7
+Added Pin To Net: NetName=/BUSACK Pin=Shield-8
+Added Pin To Net: NetName=Clock Pin=Shield-9
+Added Pin To Net: NetName=/Reset_Z80 Pin=Shield-10
+Added Pin To Net: NetName=D0 Pin=Shield-13
+Added Pin To Net: NetName=D1 Pin=Shield-14
+Added Pin To Net: NetName=D2 Pin=Shield-15
+Added Pin To Net: NetName=D3 Pin=Shield-16
+Added Pin To Net: NetName=D4 Pin=Shield-17
+Added Pin To Net: NetName=D5 Pin=Shield-18
+Added Pin To Net: NetName=D6 Pin=Shield-19
+Added Pin To Net: NetName=D7 Pin=Shield-20
+Added Pin To Net: NetName=/Read Pin=Shield-21
+Added Pin To Net: NetName=/Write Pin=Shield-22
+Added Pin To Net: NetName=/IOREQ Pin=Shield-23
+Added Pin To Net: NetName=/MREQ Pin=Shield-24
+Added Pin To Net: NetName=/WAIT Pin=Shield-25
+Added Pin To Net: NetName=/M1 Pin=Shield-26
+Added Pin To Net: NetName=GND Pin=Shield-27
+Add Pin To Net: Unknown Pin: Pin U2-1
+Add Pin To Net: Unknown Pin: Pin U2-2
+Add Pin To Net: Unknown Pin: Pin U2-3
+Add Pin To Net: Unknown Pin: Pin U2-4
+Add Pin To Net: Unknown Pin: Pin U2-5
+Add Pin To Net: Unknown Pin: Pin U2-6
+Add Pin To Net: Unknown Pin: Pin U2-7
+Add Pin To Net: Unknown Pin: Pin U2-8
+Add Pin To Net: Unknown Pin: Pin U2-9
+Add Pin To Net: Unknown Pin: Pin U2-10
+Add Pin To Net: Unknown Pin: Pin U2-11
+Add Pin To Net: Unknown Pin: Pin U2-12
+Add Pin To Net: Unknown Pin: Pin U2-13
+Add Pin To Net: Unknown Pin: Pin U2-14
+Add Pin To Net: Unknown Pin: Pin U2-15
+Add Pin To Net: Unknown Pin: Pin U2-16
+Add Pin To Net: Unknown Pin: Pin U2-17
+Add Pin To Net: Unknown Pin: Pin U2-18
+Add Pin To Net: Unknown Pin: Pin U2-19
+Add Pin To Net: Unknown Pin: Pin U2-21
+Add Pin To Net: Unknown Pin: Pin U2-22
+Add Pin To Net: Unknown Pin: Pin U2-23
+Add Pin To Net: Unknown Pin: Pin U2-24
+Add Pin To Net: Unknown Pin: Pin U2-25
+Add Pin To Net: Unknown Pin: Pin U2-26
+Add Pin To Net: Unknown Pin: Pin U2-27
+Add Pin To Net: Unknown Pin: Pin U2-28
+Added Pin To Net: NetName=A15 Pin=U3-16
+Added Pin To Net: NetName=NetR9_2 Pin=R9-2
+Added Pin To Net: NetName=NetR9_2 Pin=Shield-11
+Added Pin To Net: NetName=NetR9_2 Pin=U3-10
+Added Net: Name=NetR9_2
+Added Pin To Net: NetName=NetR10_2 Pin=R10-2
+Added Pin To Net: NetName=NetR10_2 Pin=Shield-12
+Added Pin To Net: NetName=NetR10_2 Pin=U3-9
+Added Net: Name=NetR10_2
+Added Member To Class: ClassName=Sheet1 Member=Component R10 200R
+Added Member To Class: ClassName=Sheet1 Member=Component Shield Arduino
+Add Class Member: Failed to add class member : Component U2 Specific Part tbd

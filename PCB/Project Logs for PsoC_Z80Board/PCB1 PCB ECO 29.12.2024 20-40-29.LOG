@@ -1,0 +1,308 @@
+Added Component: Designator=*(MCP23018)
+Added Component: Designator=C1(C_RM2-025X075)
+Add component (AddParameter): Name = "LatestRevisionDate"; Value = "07-Sep-2019"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Published"; Value = "21-Feb-2011"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Rated Voltage"; Value = "50V"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Usage"; Value = "only permitted for non-commercial purposes at HTL I Innsbruck"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = "100nF"; VariantName = "[No Variations]"
+Added Component: Designator=C2(C_RM2-025X075)
+Add component (AddParameter): Name = "LatestRevisionDate"; Value = "07-Sep-2019"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Published"; Value = "21-Feb-2011"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Rated Voltage"; Value = "50V"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Usage"; Value = "only permitted for non-commercial purposes at HTL I Innsbruck"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = "100nF"; VariantName = "[No Variations]"
+Added Component: Designator=C3(C_RM2-025X075)
+Add component (AddParameter): Name = "LatestRevisionDate"; Value = "07-Sep-2019"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Published"; Value = "21-Feb-2011"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Rated Voltage"; Value = "50V"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Usage"; Value = "only permitted for non-commercial purposes at HTL I Innsbruck"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = "100nF"; VariantName = "[No Variations]"
+Added Component: Designator=D1(SMD_0805_CHIP-LED - RED)
+Add component (AddParameter): Name = "LatestRevisionDate"; Value = "21-Jun-2015"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Published"; Value = "29-Mar-2017"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "SimulationModellSource"; Value = "Miscellaneous Devices"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Usage"; Value = "only permitted for non-commercial purposes at HTL I Innsbruck"; VariantName = "[No Variations]"
+Added Component: Designator=D2(SMD_0805_CHIP-LED - RED)
+Add component (AddParameter): Name = "LatestRevisionDate"; Value = "21-Jun-2015"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Published"; Value = "29-Mar-2017"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "SimulationModellSource"; Value = "Miscellaneous Devices"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Usage"; Value = "only permitted for non-commercial purposes at HTL I Innsbruck"; VariantName = "[No Variations]"
+Added Component: Designator=D3(SMD_0805_CHIP-LED - GREEN)
+Add component (AddParameter): Name = "LatestRevisionDate"; Value = "21-Jun-2015"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Published"; Value = "29-Mar-2017"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "SimulationModellSource"; Value = "Miscellaneous Devices"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Usage"; Value = "only permitted for non-commercial purposes at HTL I Innsbruck"; VariantName = "[No Variations]"
+Added Component: Designator=D4(SMD_0805_CHIP-LED - YELLOW)
+Add component (AddParameter): Name = "LatestRevisionDate"; Value = "21-Jun-2015"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Published"; Value = "29-Mar-2017"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "SimulationModellSource"; Value = "Miscellaneous Devices"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Usage"; Value = "only permitted for non-commercial purposes at HTL I Innsbruck"; VariantName = "[No Variations]"
+Added Component: Designator=D5(SMD_0805_CHIP-LED - RED)
+Add component (AddParameter): Name = "LatestRevisionDate"; Value = "21-Jun-2015"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Published"; Value = "29-Mar-2017"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "SimulationModellSource"; Value = "Miscellaneous Devices"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Usage"; Value = "only permitted for non-commercial purposes at HTL I Innsbruck"; VariantName = "[No Variations]"
+Added Component: Designator=D6(SMD_0805_CHIP-LED - RED)
+Add component (AddParameter): Name = "LatestRevisionDate"; Value = "21-Jun-2015"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Published"; Value = "29-Mar-2017"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "SimulationModellSource"; Value = "Miscellaneous Devices"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Usage"; Value = "only permitted for non-commercial purposes at HTL I Innsbruck"; VariantName = "[No Variations]"
+Added Component: Designator=D7(SMD_0805_CHIP-LED - GREEN)
+Add component (AddParameter): Name = "LatestRevisionDate"; Value = "21-Jun-2015"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Published"; Value = "29-Mar-2017"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "SimulationModellSource"; Value = "Miscellaneous Devices"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Usage"; Value = "only permitted for non-commercial purposes at HTL I Innsbruck"; VariantName = "[No Variations]"
+Added Component: Designator=D8(SMD_0805_CHIP-LED - YELLOW)
+Add component (AddParameter): Name = "LatestRevisionDate"; Value = "21-Jun-2015"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Published"; Value = "29-Mar-2017"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "SimulationModellSource"; Value = "Miscellaneous Devices"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Usage"; Value = "only permitted for non-commercial purposes at HTL I Innsbruck"; VariantName = "[No Variations]"
+Added Component: Designator=Interrupts(HDR1X3)
+Add component (AddParameter): Name = "LatestRevisionDate"; Value = "17-Jul-2002"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "LatestRevisionNote"; Value = "Re-released for DXP Platform."; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Publisher"; Value = "Altium Limited"; VariantName = "[No Variations]"
+Added Component: Designator=LED(R_SMD_R1206)
+Add component (AddParameter): Name = "LatestRevisionDate"; Value = "07-Sep-2019"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Published"; Value = "21-Feb-2011"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Usage"; Value = "only permitted for non-commercial purposes at HTL I Innsbruck"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = "0R"; VariantName = "[No Variations]"
+Added Component: Designator=R1(R_SMD_R0805)
+Add component (AddParameter): Name = "LatestRevisionDate"; Value = "07-Sep-2019"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Published"; Value = "21-Feb-2011"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Usage"; Value = "only permitted for non-commercial purposes at HTL I Innsbruck"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = "200R"; VariantName = "[No Variations]"
+Added Component: Designator=R2(R_SMD_R0805)
+Add component (AddParameter): Name = "LatestRevisionDate"; Value = "07-Sep-2019"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Published"; Value = "21-Feb-2011"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Usage"; Value = "only permitted for non-commercial purposes at HTL I Innsbruck"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = "200R"; VariantName = "[No Variations]"
+Added Component: Designator=R3(R_SMD_R0805)
+Add component (AddParameter): Name = "LatestRevisionDate"; Value = "07-Sep-2019"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Published"; Value = "21-Feb-2011"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Usage"; Value = "only permitted for non-commercial purposes at HTL I Innsbruck"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = "160R"; VariantName = "[No Variations]"
+Added Component: Designator=R4(R_SMD_R0805)
+Add component (AddParameter): Name = "LatestRevisionDate"; Value = "07-Sep-2019"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Published"; Value = "21-Feb-2011"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Usage"; Value = "only permitted for non-commercial purposes at HTL I Innsbruck"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = "160R"; VariantName = "[No Variations]"
+Added Component: Designator=R5(R_SMD_R0805)
+Add component (AddParameter): Name = "LatestRevisionDate"; Value = "07-Sep-2019"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Published"; Value = "21-Feb-2011"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Usage"; Value = "only permitted for non-commercial purposes at HTL I Innsbruck"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = "200R"; VariantName = "[No Variations]"
+Added Component: Designator=R6(R_SMD_R0805)
+Add component (AddParameter): Name = "LatestRevisionDate"; Value = "07-Sep-2019"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Published"; Value = "21-Feb-2011"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Usage"; Value = "only permitted for non-commercial purposes at HTL I Innsbruck"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = "200R"; VariantName = "[No Variations]"
+Added Component: Designator=R7(R_SMD_R0805)
+Add component (AddParameter): Name = "LatestRevisionDate"; Value = "07-Sep-2019"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Published"; Value = "21-Feb-2011"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Usage"; Value = "only permitted for non-commercial purposes at HTL I Innsbruck"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = "160R"; VariantName = "[No Variations]"
+Added Component: Designator=R8(R_SMD_R0805)
+Add component (AddParameter): Name = "LatestRevisionDate"; Value = "07-Sep-2019"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Published"; Value = "21-Feb-2011"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Usage"; Value = "only permitted for non-commercial purposes at HTL I Innsbruck"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = "160R"; VariantName = "[No Variations]"
+Added Component: Designator=Shield(Arduino)
+Add component (AddParameter): Name = "LatestRevisionDate"; Value = "07-Sep-2019"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Published"; Value = "19-Jul-2014"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Publisher"; Value = "Michael Kupfner"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Usage"; Value = "only permitted for non-commercial purposes at HTL I Innsbruck"; VariantName = "[No Variations]"
+Added Component: Designator=U(Z80)
+Added Pin To Net: NetName=/BUSACK Pin=D3-K
+Added Pin To Net: NetName=/BUSACK Pin=Shield-8
+Added Pin To Net: NetName=/BUSACK Pin=U-23
+Added Net: Name=/BUSACK
+Added Pin To Net: NetName=/BUSRQ Pin=D7-K
+Added Pin To Net: NetName=/BUSRQ Pin=Shield-7
+Added Pin To Net: NetName=/BUSRQ Pin=U-25
+Added Net: Name=/BUSRQ
+Added Pin To Net: NetName=/IOREQ Pin=D1-K
+Added Pin To Net: NetName=/IOREQ Pin=Shield-23
+Added Pin To Net: NetName=/IOREQ Pin=U-20
+Added Net: Name=/IOREQ
+Added Pin To Net: NetName=/M1 Pin=D4-K
+Added Pin To Net: NetName=/M1 Pin=Shield-26
+Added Pin To Net: NetName=/M1 Pin=U-27
+Added Net: Name=/M1
+Added Pin To Net: NetName=/MREQ Pin=D5-K
+Added Pin To Net: NetName=/MREQ Pin=Shield-24
+Added Pin To Net: NetName=/MREQ Pin=U-19
+Added Net: Name=/MREQ
+Added Pin To Net: NetName=/Read Pin=D6-K
+Added Pin To Net: NetName=/Read Pin=Shield-21
+Added Pin To Net: NetName=/Read Pin=U-21
+Added Net: Name=/Read
+Added Pin To Net: NetName=/Reset_Z80 Pin=Shield-10
+Added Pin To Net: NetName=/Reset_Z80 Pin=U-26
+Added Net: Name=/Reset_Z80
+Added Pin To Net: NetName=/WAIT Pin=Shield-25
+Added Pin To Net: NetName=/WAIT Pin=U-24
+Added Net: Name=/WAIT
+Added Pin To Net: NetName=/Write Pin=D2-K
+Added Pin To Net: NetName=/Write Pin=Shield-22
+Added Pin To Net: NetName=/Write Pin=U-22
+Added Net: Name=/Write
+Added Pin To Net: NetName=5V Pin=*-8
+Added Pin To Net: NetName=5V Pin=C1-2
+Added Pin To Net: NetName=5V Pin=C2-2
+Added Pin To Net: NetName=5V Pin=C3-2
+Added Pin To Net: NetName=5V Pin=LED-1
+Added Pin To Net: NetName=5V Pin=Shield-3
+Added Pin To Net: NetName=5V Pin=U-11
+Added Net: Name=5V
+Added Pin To Net: NetName=A0 Pin=*-15
+Added Pin To Net: NetName=A0 Pin=U-30
+Added Net: Name=A0
+Added Pin To Net: NetName=A1 Pin=*-16
+Added Pin To Net: NetName=A1 Pin=U-31
+Added Net: Name=A1
+Added Pin To Net: NetName=A2 Pin=*-17
+Added Pin To Net: NetName=A2 Pin=U-32
+Added Net: Name=A2
+Added Pin To Net: NetName=A3 Pin=*-18
+Added Pin To Net: NetName=A3 Pin=U-33
+Added Net: Name=A3
+Added Pin To Net: NetName=A4 Pin=*-19
+Added Pin To Net: NetName=A4 Pin=U-34
+Added Net: Name=A4
+Added Pin To Net: NetName=A5 Pin=*-20
+Added Pin To Net: NetName=A5 Pin=U-35
+Added Net: Name=A5
+Added Pin To Net: NetName=A6 Pin=*-21
+Added Pin To Net: NetName=A6 Pin=U-36
+Added Net: Name=A6
+Added Pin To Net: NetName=A7 Pin=*-22
+Added Pin To Net: NetName=A7 Pin=U-37
+Added Net: Name=A7
+Added Pin To Net: NetName=A8 Pin=*-1
+Added Pin To Net: NetName=A8 Pin=U-38
+Added Net: Name=A8
+Added Pin To Net: NetName=A9 Pin=*-2
+Added Pin To Net: NetName=A9 Pin=U-39
+Added Net: Name=A9
+Added Pin To Net: NetName=A10 Pin=*-3
+Added Pin To Net: NetName=A10 Pin=U-40
+Added Net: Name=A10
+Added Pin To Net: NetName=A11 Pin=*-4
+Added Pin To Net: NetName=A11 Pin=U-1
+Added Net: Name=A11
+Added Pin To Net: NetName=A12 Pin=*-5
+Added Pin To Net: NetName=A12 Pin=U-2
+Added Net: Name=A12
+Added Pin To Net: NetName=A13 Pin=*-6
+Added Pin To Net: NetName=A13 Pin=U-3
+Added Net: Name=A13
+Added Pin To Net: NetName=A14 Pin=*-7
+Added Pin To Net: NetName=A14 Pin=U-4
+Added Net: Name=A14
+Added Pin To Net: NetName=A15 Pin=*-16
+Added Pin To Net: NetName=A15 Pin=U-5
+Added Net: Name=A15
+Added Pin To Net: NetName=Clock Pin=D8-K
+Added Pin To Net: NetName=Clock Pin=Shield-9
+Added Pin To Net: NetName=Clock Pin=U-6
+Added Net: Name=Clock
+Added Pin To Net: NetName=D0 Pin=Shield-13
+Added Pin To Net: NetName=D0 Pin=U-14
+Added Net: Name=D0
+Added Pin To Net: NetName=D1 Pin=Shield-14
+Added Pin To Net: NetName=D1 Pin=U-15
+Added Net: Name=D1
+Added Pin To Net: NetName=D2 Pin=Shield-15
+Added Pin To Net: NetName=D2 Pin=U-12
+Added Net: Name=D2
+Added Pin To Net: NetName=D3 Pin=Shield-16
+Added Pin To Net: NetName=D3 Pin=U-8
+Added Net: Name=D3
+Added Pin To Net: NetName=D4 Pin=Shield-17
+Added Pin To Net: NetName=D4 Pin=U-7
+Added Net: Name=D4
+Added Pin To Net: NetName=D5 Pin=Shield-18
+Added Pin To Net: NetName=D5 Pin=U-9
+Added Net: Name=D5
+Added Pin To Net: NetName=D6 Pin=Shield-19
+Added Pin To Net: NetName=D6 Pin=U-10
+Added Net: Name=D6
+Added Pin To Net: NetName=D7 Pin=Shield-20
+Added Pin To Net: NetName=D7 Pin=U-13
+Added Net: Name=D7
+Added Pin To Net: NetName=GND Pin=*-11
+Added Pin To Net: NetName=GND Pin=*-23
+Added Pin To Net: NetName=GND Pin=C1-1
+Added Pin To Net: NetName=GND Pin=C2-1
+Added Pin To Net: NetName=GND Pin=C3-1
+Added Pin To Net: NetName=GND Pin=Shield-4
+Added Pin To Net: NetName=GND Pin=Shield-5
+Added Pin To Net: NetName=GND Pin=Shield-27
+Added Pin To Net: NetName=GND Pin=U-29
+Added Net: Name=GND
+Added Pin To Net: NetName=LED_5V Pin=LED-2
+Added Pin To Net: NetName=LED_5V Pin=R1-2
+Added Pin To Net: NetName=LED_5V Pin=R2-2
+Added Pin To Net: NetName=LED_5V Pin=R3-2
+Added Pin To Net: NetName=LED_5V Pin=R4-2
+Added Pin To Net: NetName=LED_5V Pin=R5-2
+Added Pin To Net: NetName=LED_5V Pin=R6-2
+Added Pin To Net: NetName=LED_5V Pin=R7-2
+Added Pin To Net: NetName=LED_5V Pin=R8-2
+Added Net: Name=LED_5V
+Added Pin To Net: NetName=Net*_9 Pin=*-9
+Added Pin To Net: NetName=Net*_9 Pin=Shield-12
+Added Net: Name=Net*_9
+Added Pin To Net: NetName=Net*_10 Pin=*-10
+Added Pin To Net: NetName=Net*_10 Pin=Shield-11
+Added Net: Name=Net*_10
+Added Pin To Net: NetName=NetD1_A Pin=D1-A
+Added Pin To Net: NetName=NetD1_A Pin=R1-1
+Added Net: Name=NetD1_A
+Added Pin To Net: NetName=NetD2_A Pin=D2-A
+Added Pin To Net: NetName=NetD2_A Pin=R2-1
+Added Net: Name=NetD2_A
+Added Pin To Net: NetName=NetD3_A Pin=D3-A
+Added Pin To Net: NetName=NetD3_A Pin=R3-1
+Added Net: Name=NetD3_A
+Added Pin To Net: NetName=NetD4_A Pin=D4-A
+Added Pin To Net: NetName=NetD4_A Pin=R4-1
+Added Net: Name=NetD4_A
+Added Pin To Net: NetName=NetD5_A Pin=D5-A
+Added Pin To Net: NetName=NetD5_A Pin=R5-1
+Added Net: Name=NetD5_A
+Added Pin To Net: NetName=NetD6_A Pin=D6-A
+Added Pin To Net: NetName=NetD6_A Pin=R6-1
+Added Net: Name=NetD6_A
+Added Pin To Net: NetName=NetD7_A Pin=D7-A
+Added Pin To Net: NetName=NetD7_A Pin=R7-1
+Added Net: Name=NetD7_A
+Added Pin To Net: NetName=NetD8_A Pin=D8-A
+Added Pin To Net: NetName=NetD8_A Pin=R8-1
+Added Net: Name=NetD8_A
+Added Pin To Net: NetName=NetInterrupts_1 Pin=Interrupts-1
+Added Pin To Net: NetName=NetInterrupts_1 Pin=U-16
+Added Net: Name=NetInterrupts_1
+Added Pin To Net: NetName=NetInterrupts_2 Pin=Interrupts-2
+Added Pin To Net: NetName=NetInterrupts_2 Pin=U-17
+Added Net: Name=NetInterrupts_2
+Added Pin To Net: NetName=NetInterrupts_3 Pin=Interrupts-3
+Added Pin To Net: NetName=NetInterrupts_3 Pin=U-18
+Added Net: Name=NetInterrupts_3
+Added Pin To Net: NetName=Reset_Master Pin=*-12
+Added Pin To Net: NetName=Reset_Master Pin=Shield-1
+Added Net: Name=Reset_Master
+Added Class: Name=Sheet1
+Added Rule: Name=Schematic Supply Nets
+Added Rule: Name=Schematic Supply Nets_1
+Added Rule: Name=Schematic Supply Nets_2
+Added Rule: Name=Schematic Supply Nets_3
+Added Rule: Name=Schematic Supply Nets_4
+Added Rule: Name=Schematic Supply Nets_5
+Added Rule: Name=Schematic Supply Nets_6
+Added Rule: Name=Schematic Supply Nets_7
+Added Rule: Name=Schematic Supply Nets_8
+Added Rule: Name=Schematic Supply Nets_9
+Added Rule: Name=Schematic Supply Nets_10
+Added Rule: Name=Schematic Supply Nets_11
+Added Rule: Name=Schematic Supply Nets_12
