@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\nicoz\AppData\Local\Temp\ccQGMc1U.s 			page 1
+ARM GAS  C:\Users\Tizian\AppData\Local\Temp\ccFyqBo1.s 			page 1
 
 
    1              		.syntax unified
@@ -28,7 +28,7 @@ ARM GAS  C:\Users\nicoz\AppData\Local\Temp\ccQGMc1U.s 			page 1
   25              	Clock_ISR:
   26              	.LFB64:
   27              		.file 1 "main.c"
-   1:main.c        **** /* ========================================
+   1:main.c        ****  /* ========================================
    2:main.c        ****  *
    3:main.c        ****  * Copyright YOUR COMPANY, THE YEAR
    4:main.c        ****  * All Rights Reserved
@@ -43,24 +43,26 @@ ARM GAS  C:\Users\nicoz\AppData\Local\Temp\ccQGMc1U.s 			page 1
   13:main.c        **** #include <stdio.h>
   14:main.c        **** uint8_t scan, input, cnt;
   15:main.c        **** uint8_t data, addr;
-  16:main.c        **** uint8_t CMD[4] = {0xC3, 0x12, 0x34};
+  16:main.c        **** uint8_t write;
   17:main.c        **** 
-  18:main.c        **** char out[] = {};
+  18:main.c        **** uint8_t rxData[]={};
   19:main.c        **** 
-  20:main.c        **** 
+  20:main.c        **** char out[] = {};
   21:main.c        **** 
-  22:main.c        **** CY_ISR(Clock_ISR){
-  28              		.loc 1 22 0
+  22:main.c        **** 
+  23:main.c        **** 
+  24:main.c        **** CY_ISR(Clock_ISR){
+  28              		.loc 1 24 0
   29              		.cfi_startproc
   30              		@ args = 0, pretend = 0, frame = 0
   31              		@ frame_needed = 0, uses_anonymous_args = 0
   32              		@ link register save eliminated.
-  23:main.c        ****     scan = 1;
-  33              		.loc 1 23 0
+  25:main.c        ****     scan = 1;
+ARM GAS  C:\Users\Tizian\AppData\Local\Temp\ccFyqBo1.s 			page 2
+
+
+  33              		.loc 1 25 0
   34 0000 0122     		movs	r2, #1
-ARM GAS  C:\Users\nicoz\AppData\Local\Temp\ccQGMc1U.s 			page 2
-
-
   35 0002 014B     		ldr	r3, .L2
   36 0004 1A70     		strb	r2, [r3]
   37 0006 7047     		bx	lr
@@ -71,1620 +73,1633 @@ ARM GAS  C:\Users\nicoz\AppData\Local\Temp\ccQGMc1U.s 			page 1
   42              		.cfi_endproc
   43              	.LFE64:
   44              		.size	Clock_ISR, .-Clock_ISR
-  45              		.section	.text.UART_RX_ISR,"ax",%progbits
+  45              		.section	.text.main,"ax",%progbits
   46              		.align	2
-  47              		.global	UART_RX_ISR
+  47              		.global	main
   48              		.thumb
   49              		.thumb_func
-  50              		.type	UART_RX_ISR, %function
-  51              	UART_RX_ISR:
+  50              		.type	main, %function
+  51              	main:
   52              	.LFB65:
-  24:main.c        **** }
-  25:main.c        **** CY_ISR(UART_RX_ISR){
-  53              		.loc 1 25 0
+  26:main.c        **** }
+  27:main.c        **** 
+  28:main.c        **** int main(void)
+  29:main.c        **** {
+  53              		.loc 1 29 0
   54              		.cfi_startproc
-  55              		@ args = 0, pretend = 0, frame = 0
-  56              		@ frame_needed = 0, uses_anonymous_args = 0
-  57 0000 08B5     		push	{r3, lr}
-  58              		.cfi_def_cfa_offset 8
-  59              		.cfi_offset 3, -8
-  60              		.cfi_offset 14, -4
-  26:main.c        ****     //fetch Input from UART-Buffer
-  27:main.c        ****     input = UART_GetChar();
-  61              		.loc 1 27 0
-  62 0002 FFF7FEFF 		bl	UART_GetChar
-  63              	.LVL0:
-  64 0006 0A4B     		ldr	r3, .L9
-  65 0008 1870     		strb	r0, [r3]
-  28:main.c        ****     
-  29:main.c        ****     //take action depending on the char that was sent
-  30:main.c        ****     switch(input){
-  66              		.loc 1 30 0
-  67 000a 6328     		cmp	r0, #99
-  68 000c 02D0     		beq	.L6
-  69 000e 7328     		cmp	r0, #115
-  70 0010 04D0     		beq	.L7
-  71 0012 08BD     		pop	{r3, pc}
-  72              	.L6:
-  31:main.c        ****         case 0: break; //no new data sent
-  32:main.c        ****         case 'c': Clock_Ctrl_Write(0b01); break; //set mux to the clock and pull the other input lo
-  73              		.loc 1 32 0
-  74 0014 0120     		movs	r0, #1
-  75 0016 FFF7FEFF 		bl	Clock_Ctrl_Write
-  76              	.LVL1:
-  77 001a 08BD     		pop	{r3, pc}
-  78              	.L7:
-  33:main.c        ****         case 's': Clock_Ctrl_Write(0b10); CyDelay(10); Clock_Ctrl_Write(0b11); break; //pulse the l
-  79              		.loc 1 33 0
-  80 001c 0220     		movs	r0, #2
-  81 001e FFF7FEFF 		bl	Clock_Ctrl_Write
-ARM GAS  C:\Users\nicoz\AppData\Local\Temp\ccQGMc1U.s 			page 3
+  55              		@ Volatile: function does not return.
+  56              		@ args = 0, pretend = 0, frame = 0
+  57              		@ frame_needed = 0, uses_anonymous_args = 0
+  58 0000 08B5     		push	{r3, lr}
+  59              		.cfi_def_cfa_offset 8
+  60              		.cfi_offset 3, -8
+  61              		.cfi_offset 14, -4
+  30:main.c        ****     isr_1_StartEx(Clock_ISR);
+  62              		.loc 1 30 0
+  63 0002 6B48     		ldr	r0, .L25
+  64 0004 FFF7FEFF 		bl	isr_1_StartEx
+  65              	.LVL0:
+  31:main.c        ****     isr_1_ClearPending();
+  66              		.loc 1 31 0
+  67 0008 FFF7FEFF 		bl	isr_1_ClearPending
+  68              	.LVL1:
+  32:main.c        ****     
+  33:main.c        ****     CyGlobalIntEnable; /* Enable global interrupts. */
+  69              		.loc 1 33 0
+  70              		.syntax unified
+  71              	@ 33 "main.c" 1
+  72 000c 62B6     		CPSIE   i
+  73              	@ 0 "" 2
+  34:main.c        **** 
+  35:main.c        ****     
+  36:main.c        ****     //start up Uart
+  37:main.c        ****     UART_Start();
+  74              		.loc 1 37 0
+  75              		.thumb
+  76              		.syntax unified
+  77 000e FFF7FEFF 		bl	UART_Start
+ARM GAS  C:\Users\Tizian\AppData\Local\Temp\ccFyqBo1.s 			page 3
 
 
-  82              	.LVL2:
-  83 0022 0A20     		movs	r0, #10
-  84 0024 FFF7FEFF 		bl	CyDelay
-  85              	.LVL3:
-  86 0028 0320     		movs	r0, #3
-  87 002a FFF7FEFF 		bl	Clock_Ctrl_Write
-  88              	.LVL4:
-  89 002e 08BD     		pop	{r3, pc}
-  90              	.L10:
-  91              		.align	2
-  92              	.L9:
-  93 0030 00000000 		.word	input
-  94              		.cfi_endproc
-  95              	.LFE65:
-  96              		.size	UART_RX_ISR, .-UART_RX_ISR
-  97              		.section	.text.main,"ax",%progbits
-  98              		.align	2
-  99              		.global	main
- 100              		.thumb
- 101              		.thumb_func
- 102              		.type	main, %function
- 103              	main:
- 104              	.LFB66:
-  34:main.c        ****         default: break;
-  35:main.c        ****         }
-  36:main.c        **** }
-  37:main.c        **** 
-  38:main.c        **** int main(void)
-  39:main.c        **** {
- 105              		.loc 1 39 0
- 106              		.cfi_startproc
- 107              		@ Volatile: function does not return.
- 108              		@ args = 0, pretend = 0, frame = 0
- 109              		@ frame_needed = 0, uses_anonymous_args = 0
- 110 0000 08B5     		push	{r3, lr}
- 111              		.cfi_def_cfa_offset 8
- 112              		.cfi_offset 3, -8
- 113              		.cfi_offset 14, -4
-  40:main.c        ****     isr_1_StartEx(Clock_ISR);
- 114              		.loc 1 40 0
- 115 0002 4F48     		ldr	r0, .L23
- 116 0004 FFF7FEFF 		bl	isr_1_StartEx
- 117              	.LVL5:
-  41:main.c        ****     isr_1_ClearPending();
- 118              		.loc 1 41 0
- 119 0008 FFF7FEFF 		bl	isr_1_ClearPending
- 120              	.LVL6:
-  42:main.c        ****     
-  43:main.c        ****     isr_2_StartEx(UART_RX_ISR);
- 121              		.loc 1 43 0
- 122 000c 4D48     		ldr	r0, .L23+4
- 123 000e FFF7FEFF 		bl	isr_2_StartEx
- 124              	.LVL7:
-  44:main.c        ****     isr_2_ClearPending();
- 125              		.loc 1 44 0
- 126 0012 FFF7FEFF 		bl	isr_2_ClearPending
- 127              	.LVL8:
-ARM GAS  C:\Users\nicoz\AppData\Local\Temp\ccQGMc1U.s 			page 4
+  78              	.LVL2:
+  38:main.c        ****     UART_PutString("***Simple Script for reading Data- and Address-Bus of a Zilog Z80***\nPress 'c'
+  79              		.loc 1 38 0
+  80 0012 6848     		ldr	r0, .L25+4
+  81 0014 FFF7FEFF 		bl	UART_PutString
+  82              	.LVL3:
+  39:main.c        ****     UART_PutString(" Addr | Data | M1 | RD | WR | MREQ");
+  83              		.loc 1 39 0
+  84 0018 6748     		ldr	r0, .L25+8
+  85 001a FFF7FEFF 		bl	UART_PutString
+  86              	.LVL4:
+  40:main.c        ****     
+  41:main.c        ****     //Data_Write(0x00);
+  42:main.c        **** 
+  43:main.c        ****     
+  44:main.c        ****     //default the clock to single step
+  45:main.c        ****     Clock_Ctrl_Write(0b11);
+  87              		.loc 1 45 0
+  88 001e 0320     		movs	r0, #3
+  89 0020 FFF7FEFF 		bl	Clock_Ctrl_Write
+  90              	.LVL5:
+  91              	.L23:
+  46:main.c        ****     
+  47:main.c        ****     for(;;)
+  48:main.c        ****     {
+  49:main.c        ****         //fetch Input from UART-Buffer
+  50:main.c        ****         input = UART_GetChar();
+  92              		.loc 1 50 0
+  93 0024 FFF7FEFF 		bl	UART_GetChar
+  94              	.LVL6:
+  95 0028 644B     		ldr	r3, .L25+12
+  96 002a 1870     		strb	r0, [r3]
+  51:main.c        ****         
+  52:main.c        ****         //take action depending on the char that was sent
+  53:main.c        ****         switch(input){
+  97              		.loc 1 53 0
+  98 002c 7328     		cmp	r0, #115
+  99 002e 07D0     		beq	.L6
+ 100 0030 7728     		cmp	r0, #119
+ 101 0032 0FD0     		beq	.L7
+ 102 0034 6328     		cmp	r0, #99
+ 103 0036 19D1     		bne	.L5
+  54:main.c        ****         case 0: break; //no new data sent
+  55:main.c        ****         case 'c': Clock_Ctrl_Write(0b01); break; //set mux to the clock and pull the other input lo
+ 104              		.loc 1 55 0
+ 105 0038 0120     		movs	r0, #1
+ 106 003a FFF7FEFF 		bl	Clock_Ctrl_Write
+ 107              	.LVL7:
+ 108 003e 15E0     		b	.L5
+ 109              	.L6:
+  56:main.c        ****         case 's': Clock_Ctrl_Write(0b10); CyDelay(10); Clock_Ctrl_Write(0b11); break; //pulse the l
+ 110              		.loc 1 56 0
+ 111 0040 0220     		movs	r0, #2
+ 112 0042 FFF7FEFF 		bl	Clock_Ctrl_Write
+ 113              	.LVL8:
+ 114 0046 0A20     		movs	r0, #10
+ 115 0048 FFF7FEFF 		bl	CyDelay
+ARM GAS  C:\Users\Tizian\AppData\Local\Temp\ccFyqBo1.s 			page 4
 
 
-  45:main.c        ****     
-  46:main.c        ****     CyGlobalIntEnable; /* Enable global interrupts. */
- 128              		.loc 1 46 0
- 129              		.syntax unified
- 130              	@ 46 "main.c" 1
- 131 0016 62B6     		CPSIE   i
- 132              	@ 0 "" 2
-  47:main.c        **** 
-  48:main.c        ****     
-  49:main.c        ****     //start up Uart
-  50:main.c        ****     UART_Start();
- 133              		.loc 1 50 0
- 134              		.thumb
- 135              		.syntax unified
- 136 0018 FFF7FEFF 		bl	UART_Start
- 137              	.LVL9:
-  51:main.c        ****     UART_PutString("***Simple Script for reading Data- and Address-Bus of a Zilog Z80***\nPress 'c'
- 138              		.loc 1 51 0
- 139 001c 4A48     		ldr	r0, .L23+8
- 140 001e FFF7FEFF 		bl	UART_PutString
- 141              	.LVL10:
-  52:main.c        ****     UART_PutString(" Addr | Data | M1 | RD | WR | MREQ");
- 142              		.loc 1 52 0
- 143 0022 4A48     		ldr	r0, .L23+12
- 144 0024 FFF7FEFF 		bl	UART_PutString
- 145              	.LVL11:
-  53:main.c        ****     
-  54:main.c        ****     Data_Write(0x00);
- 146              		.loc 1 54 0
- 147 0028 0020     		movs	r0, #0
- 148 002a FFF7FEFF 		bl	Data_Write
- 149              	.LVL12:
-  55:main.c        **** 
-  56:main.c        ****     
-  57:main.c        ****     //default the clock to single step
-  58:main.c        ****     Clock_Ctrl_Write(0b11);
- 150              		.loc 1 58 0
- 151 002e 0320     		movs	r0, #3
- 152 0030 FFF7FEFF 		bl	Clock_Ctrl_Write
- 153              	.LVL13:
- 154              	.L12:
-  59:main.c        ****     
-  60:main.c        ****     for(;;)
-  61:main.c        ****     {
-  62:main.c        ****         //when a new clock pulse is sent to the Z80, scan the Data and Address Lines and put the to
-  63:main.c        ****         if(scan == 1){
- 155              		.loc 1 63 0
- 156 0034 464B     		ldr	r3, .L23+16
- 157 0036 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
- 158 0038 012B     		cmp	r3, #1
- 159 003a FBD1     		bne	.L12
-  64:main.c        ****             //rest the scan flag
-  65:main.c        ****             scan = 0;
- 160              		.loc 1 65 0
- 161 003c 0022     		movs	r2, #0
- 162 003e 444B     		ldr	r3, .L23+16
- 163 0040 1A70     		strb	r2, [r3]
-ARM GAS  C:\Users\nicoz\AppData\Local\Temp\ccQGMc1U.s 			page 5
+ 116              	.LVL9:
+ 117 004c 0320     		movs	r0, #3
+ 118 004e FFF7FEFF 		bl	Clock_Ctrl_Write
+ 119              	.LVL10:
+ 120 0052 0BE0     		b	.L5
+ 121              	.L7:
+  57:main.c        ****         case 'w': Clock_Ctrl_Write(0b11); write = 1; cnt = 0; UART_PutString("Please put your Progr
+ 122              		.loc 1 57 0
+ 123 0054 0320     		movs	r0, #3
+ 124 0056 FFF7FEFF 		bl	Clock_Ctrl_Write
+ 125              	.LVL11:
+ 126 005a 0122     		movs	r2, #1
+ 127 005c 584B     		ldr	r3, .L25+16
+ 128 005e 1A70     		strb	r2, [r3]
+ 129 0060 0022     		movs	r2, #0
+ 130 0062 584B     		ldr	r3, .L25+20
+ 131 0064 1A70     		strb	r2, [r3]
+ 132 0066 5848     		ldr	r0, .L25+24
+ 133 0068 FFF7FEFF 		bl	UART_PutString
+ 134              	.LVL12:
+ 135              	.L5:
+  58:main.c        ****         default: break;
+  59:main.c        ****         }
+  60:main.c        ****         
+  61:main.c        ****         //when a new clock pulse is sent to the Z80, scan the Data and Address Lines and put the to
+  62:main.c        ****         if(scan == 1){
+ 136              		.loc 1 62 0
+ 137 006c 574B     		ldr	r3, .L25+28
+ 138 006e 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
+ 139 0070 012B     		cmp	r3, #1
+ 140 0072 40F09780 		bne	.L19
+  63:main.c        ****             //rest the scan flag
+  64:main.c        ****             scan = 0;
+ 141              		.loc 1 64 0
+ 142 0076 0022     		movs	r2, #0
+ 143 0078 544B     		ldr	r3, .L25+28
+ 144 007a 1A70     		strb	r2, [r3]
+  65:main.c        ****             
+  66:main.c        ****             //read the data- and address-bus and add them to the out string
+  67:main.c        ****             data = 1; //Data_Read();
+ 145              		.loc 1 67 0
+ 146 007c 0123     		movs	r3, #1
+ 147 007e 5449     		ldr	r1, .L25+32
+ 148 0080 0B70     		strb	r3, [r1]
+  68:main.c        ****             addr = 0; //Addr_LSB_Read();
+ 149              		.loc 1 68 0
+ 150 0082 5449     		ldr	r1, .L25+36
+ 151 0084 0A70     		strb	r2, [r1]
+  69:main.c        ****             sprintf(out, "\n  %2x  |  %2x  ", addr, data);
+ 152              		.loc 1 69 0
+ 153 0086 5449     		ldr	r1, .L25+40
+ 154 0088 5448     		ldr	r0, .L25+44
+ 155 008a FFF7FEFF 		bl	sprintf
+ 156              	.LVL13:
+  70:main.c        ****             
+  71:main.c        ****             //check the control signals and add an x in the corresponding row
+  72:main.c        ****             if(!Ctrl_M1_Read()){strcat(out, "| x  ");}else{strcat(out, "|    ");}
+ARM GAS  C:\Users\Tizian\AppData\Local\Temp\ccFyqBo1.s 			page 5
 
 
-  66:main.c        ****             
-  67:main.c        ****             //read the data- and address-bus and add them to the out string
-  68:main.c        ****             data = Data_Read();
- 164              		.loc 1 68 0
- 165 0042 FFF7FEFF 		bl	Data_Read
- 166              	.LVL14:
- 167 0046 434C     		ldr	r4, .L23+20
- 168 0048 2070     		strb	r0, [r4]
-  69:main.c        ****             addr = Addr_LSB_Read();
- 169              		.loc 1 69 0
- 170 004a FFF7FEFF 		bl	Addr_LSB_Read
- 171              	.LVL15:
- 172 004e 0246     		mov	r2, r0
- 173 0050 414B     		ldr	r3, .L23+24
- 174 0052 1870     		strb	r0, [r3]
-  70:main.c        ****             sprintf(out, "\n  %2x  |  %2x  ", addr, data);
- 175              		.loc 1 70 0
- 176 0054 2378     		ldrb	r3, [r4]	@ zero_extendqisi2
- 177 0056 4149     		ldr	r1, .L23+28
- 178 0058 4148     		ldr	r0, .L23+32
- 179 005a FFF7FEFF 		bl	sprintf
- 180              	.LVL16:
-  71:main.c        ****             
-  72:main.c        ****             //check the control signals and add an x in the corresponding row
-  73:main.c        ****             if(!Ctrl_M1_Read()){strcat(out, "| x  ");}else{strcat(out, "|    ");}
- 181              		.loc 1 73 0
- 182 005e FFF7FEFF 		bl	Ctrl_M1_Read
- 183              	.LVL17:
- 184 0062 58B9     		cbnz	r0, .L13
- 185              		.loc 1 73 0 is_stmt 0 discriminator 1
- 186 0064 3E4C     		ldr	r4, .L23+32
- 187 0066 2046     		mov	r0, r4
- 188 0068 FFF7FEFF 		bl	strlen
- 189              	.LVL18:
- 190 006c 0246     		mov	r2, r0
- 191 006e 2118     		adds	r1, r4, r0
- 192 0070 3C4B     		ldr	r3, .L23+36
- 193 0072 1868     		ldr	r0, [r3]	@ unaligned
- 194 0074 A050     		str	r0, [r4, r2]	@ unaligned
- 195 0076 9B88     		ldrh	r3, [r3, #4]	@ unaligned
- 196 0078 8B80     		strh	r3, [r1, #4]	@ unaligned
- 197 007a 0AE0     		b	.L14
- 198              	.L13:
- 199              		.loc 1 73 0 discriminator 2
- 200 007c 384C     		ldr	r4, .L23+32
- 201 007e 2046     		mov	r0, r4
- 202 0080 FFF7FEFF 		bl	strlen
- 203              	.LVL19:
- 204 0084 0246     		mov	r2, r0
- 205 0086 2118     		adds	r1, r4, r0
- 206 0088 374B     		ldr	r3, .L23+40
- 207 008a 1868     		ldr	r0, [r3]	@ unaligned
- 208 008c A050     		str	r0, [r4, r2]	@ unaligned
- 209 008e 9B88     		ldrh	r3, [r3, #4]	@ unaligned
- 210 0090 8B80     		strh	r3, [r1, #4]	@ unaligned
- 211              	.L14:
-  74:main.c        ****             if(!Ctrl_RD_Read()){strcat(out, "| x  ");}else{strcat(out, "|    ");}
-ARM GAS  C:\Users\nicoz\AppData\Local\Temp\ccQGMc1U.s 			page 6
+ 157              		.loc 1 72 0
+ 158 008e FFF7FEFF 		bl	Ctrl_M1_Read
+ 159              	.LVL14:
+ 160 0092 58B9     		cbnz	r0, .L10
+ 161              		.loc 1 72 0 is_stmt 0 discriminator 1
+ 162 0094 514C     		ldr	r4, .L25+44
+ 163 0096 2046     		mov	r0, r4
+ 164 0098 FFF7FEFF 		bl	strlen
+ 165              	.LVL15:
+ 166 009c 0246     		mov	r2, r0
+ 167 009e 2118     		adds	r1, r4, r0
+ 168 00a0 4F4B     		ldr	r3, .L25+48
+ 169 00a2 1868     		ldr	r0, [r3]	@ unaligned
+ 170 00a4 A050     		str	r0, [r4, r2]	@ unaligned
+ 171 00a6 9B88     		ldrh	r3, [r3, #4]	@ unaligned
+ 172 00a8 8B80     		strh	r3, [r1, #4]	@ unaligned
+ 173 00aa 0AE0     		b	.L11
+ 174              	.L10:
+ 175              		.loc 1 72 0 discriminator 2
+ 176 00ac 4B4C     		ldr	r4, .L25+44
+ 177 00ae 2046     		mov	r0, r4
+ 178 00b0 FFF7FEFF 		bl	strlen
+ 179              	.LVL16:
+ 180 00b4 0246     		mov	r2, r0
+ 181 00b6 2118     		adds	r1, r4, r0
+ 182 00b8 4A4B     		ldr	r3, .L25+52
+ 183 00ba 1868     		ldr	r0, [r3]	@ unaligned
+ 184 00bc A050     		str	r0, [r4, r2]	@ unaligned
+ 185 00be 9B88     		ldrh	r3, [r3, #4]	@ unaligned
+ 186 00c0 8B80     		strh	r3, [r1, #4]	@ unaligned
+ 187              	.L11:
+  73:main.c        ****             if(!Ctrl_RD_Read()){strcat(out, "| x  ");}else{strcat(out, "|    ");}
+ 188              		.loc 1 73 0 is_stmt 1
+ 189 00c2 FFF7FEFF 		bl	Ctrl_RD_Read
+ 190              	.LVL17:
+ 191 00c6 58B9     		cbnz	r0, .L12
+ 192              		.loc 1 73 0 is_stmt 0 discriminator 1
+ 193 00c8 444C     		ldr	r4, .L25+44
+ 194 00ca 2046     		mov	r0, r4
+ 195 00cc FFF7FEFF 		bl	strlen
+ 196              	.LVL18:
+ 197 00d0 0246     		mov	r2, r0
+ 198 00d2 2118     		adds	r1, r4, r0
+ 199 00d4 424B     		ldr	r3, .L25+48
+ 200 00d6 1868     		ldr	r0, [r3]	@ unaligned
+ 201 00d8 A050     		str	r0, [r4, r2]	@ unaligned
+ 202 00da 9B88     		ldrh	r3, [r3, #4]	@ unaligned
+ 203 00dc 8B80     		strh	r3, [r1, #4]	@ unaligned
+ 204 00de 0AE0     		b	.L13
+ 205              	.L12:
+ 206              		.loc 1 73 0 discriminator 2
+ 207 00e0 3E4C     		ldr	r4, .L25+44
+ 208 00e2 2046     		mov	r0, r4
+ 209 00e4 FFF7FEFF 		bl	strlen
+ 210              	.LVL19:
+ 211 00e8 0246     		mov	r2, r0
+ 212 00ea 2118     		adds	r1, r4, r0
+ARM GAS  C:\Users\Tizian\AppData\Local\Temp\ccFyqBo1.s 			page 6
 
 
- 212              		.loc 1 74 0 is_stmt 1
- 213 0092 FFF7FEFF 		bl	Ctrl_RD_Read
- 214              	.LVL20:
- 215 0096 58B9     		cbnz	r0, .L15
- 216              		.loc 1 74 0 is_stmt 0 discriminator 1
- 217 0098 314C     		ldr	r4, .L23+32
- 218 009a 2046     		mov	r0, r4
- 219 009c FFF7FEFF 		bl	strlen
- 220              	.LVL21:
- 221 00a0 0246     		mov	r2, r0
- 222 00a2 2118     		adds	r1, r4, r0
- 223 00a4 2F4B     		ldr	r3, .L23+36
- 224 00a6 1868     		ldr	r0, [r3]	@ unaligned
- 225 00a8 A050     		str	r0, [r4, r2]	@ unaligned
- 226 00aa 9B88     		ldrh	r3, [r3, #4]	@ unaligned
- 227 00ac 8B80     		strh	r3, [r1, #4]	@ unaligned
- 228 00ae 0AE0     		b	.L16
- 229              	.L15:
- 230              		.loc 1 74 0 discriminator 2
- 231 00b0 2B4C     		ldr	r4, .L23+32
- 232 00b2 2046     		mov	r0, r4
- 233 00b4 FFF7FEFF 		bl	strlen
- 234              	.LVL22:
- 235 00b8 0246     		mov	r2, r0
- 236 00ba 2118     		adds	r1, r4, r0
- 237 00bc 2A4B     		ldr	r3, .L23+40
- 238 00be 1868     		ldr	r0, [r3]	@ unaligned
- 239 00c0 A050     		str	r0, [r4, r2]	@ unaligned
- 240 00c2 9B88     		ldrh	r3, [r3, #4]	@ unaligned
- 241 00c4 8B80     		strh	r3, [r1, #4]	@ unaligned
- 242              	.L16:
-  75:main.c        ****             if(!Ctrl_WR_Read()){strcat(out, "| x  ");}else{strcat(out, "|    ");}
- 243              		.loc 1 75 0 is_stmt 1
- 244 00c6 FFF7FEFF 		bl	Ctrl_WR_Read
- 245              	.LVL23:
- 246 00ca 58B9     		cbnz	r0, .L17
- 247              		.loc 1 75 0 is_stmt 0 discriminator 1
- 248 00cc 244C     		ldr	r4, .L23+32
- 249 00ce 2046     		mov	r0, r4
- 250 00d0 FFF7FEFF 		bl	strlen
- 251              	.LVL24:
- 252 00d4 0246     		mov	r2, r0
- 253 00d6 2118     		adds	r1, r4, r0
- 254 00d8 224B     		ldr	r3, .L23+36
- 255 00da 1868     		ldr	r0, [r3]	@ unaligned
- 256 00dc A050     		str	r0, [r4, r2]	@ unaligned
- 257 00de 9B88     		ldrh	r3, [r3, #4]	@ unaligned
- 258 00e0 8B80     		strh	r3, [r1, #4]	@ unaligned
- 259 00e2 0AE0     		b	.L18
- 260              	.L17:
- 261              		.loc 1 75 0 discriminator 2
- 262 00e4 1E4C     		ldr	r4, .L23+32
- 263 00e6 2046     		mov	r0, r4
- 264 00e8 FFF7FEFF 		bl	strlen
- 265              	.LVL25:
- 266 00ec 0246     		mov	r2, r0
- 267 00ee 2118     		adds	r1, r4, r0
-ARM GAS  C:\Users\nicoz\AppData\Local\Temp\ccQGMc1U.s 			page 7
+ 213 00ec 3D4B     		ldr	r3, .L25+52
+ 214 00ee 1868     		ldr	r0, [r3]	@ unaligned
+ 215 00f0 A050     		str	r0, [r4, r2]	@ unaligned
+ 216 00f2 9B88     		ldrh	r3, [r3, #4]	@ unaligned
+ 217 00f4 8B80     		strh	r3, [r1, #4]	@ unaligned
+ 218              	.L13:
+  74:main.c        ****             if(!Ctrl_WR_Read()){strcat(out, "| x  ");}else{strcat(out, "|    ");}
+ 219              		.loc 1 74 0 is_stmt 1
+ 220 00f6 FFF7FEFF 		bl	Ctrl_WR_Read
+ 221              	.LVL20:
+ 222 00fa 58B9     		cbnz	r0, .L14
+ 223              		.loc 1 74 0 is_stmt 0 discriminator 1
+ 224 00fc 374C     		ldr	r4, .L25+44
+ 225 00fe 2046     		mov	r0, r4
+ 226 0100 FFF7FEFF 		bl	strlen
+ 227              	.LVL21:
+ 228 0104 0246     		mov	r2, r0
+ 229 0106 2118     		adds	r1, r4, r0
+ 230 0108 354B     		ldr	r3, .L25+48
+ 231 010a 1868     		ldr	r0, [r3]	@ unaligned
+ 232 010c A050     		str	r0, [r4, r2]	@ unaligned
+ 233 010e 9B88     		ldrh	r3, [r3, #4]	@ unaligned
+ 234 0110 8B80     		strh	r3, [r1, #4]	@ unaligned
+ 235 0112 0AE0     		b	.L15
+ 236              	.L14:
+ 237              		.loc 1 74 0 discriminator 2
+ 238 0114 314C     		ldr	r4, .L25+44
+ 239 0116 2046     		mov	r0, r4
+ 240 0118 FFF7FEFF 		bl	strlen
+ 241              	.LVL22:
+ 242 011c 0246     		mov	r2, r0
+ 243 011e 2118     		adds	r1, r4, r0
+ 244 0120 304B     		ldr	r3, .L25+52
+ 245 0122 1868     		ldr	r0, [r3]	@ unaligned
+ 246 0124 A050     		str	r0, [r4, r2]	@ unaligned
+ 247 0126 9B88     		ldrh	r3, [r3, #4]	@ unaligned
+ 248 0128 8B80     		strh	r3, [r1, #4]	@ unaligned
+ 249              	.L15:
+  75:main.c        ****             if(!Ctrl_MREQ_Read()){strcat(out, "|  x  ");}else{strcat(out, "|     ");}
+ 250              		.loc 1 75 0 is_stmt 1
+ 251 012a FFF7FEFF 		bl	Ctrl_MREQ_Read
+ 252              	.LVL23:
+ 253 012e 68B9     		cbnz	r0, .L16
+ 254              		.loc 1 75 0 is_stmt 0 discriminator 1
+ 255 0130 2A4C     		ldr	r4, .L25+44
+ 256 0132 2046     		mov	r0, r4
+ 257 0134 FFF7FEFF 		bl	strlen
+ 258              	.LVL24:
+ 259 0138 0146     		mov	r1, r0
+ 260 013a 2218     		adds	r2, r4, r0
+ 261 013c 2A4B     		ldr	r3, .L25+56
+ 262 013e 1868     		ldr	r0, [r3]	@ unaligned
+ 263 0140 6050     		str	r0, [r4, r1]	@ unaligned
+ 264 0142 9988     		ldrh	r1, [r3, #4]	@ unaligned
+ 265 0144 9B79     		ldrb	r3, [r3, #6]	@ zero_extendqisi2
+ 266 0146 9180     		strh	r1, [r2, #4]	@ unaligned
+ 267 0148 9371     		strb	r3, [r2, #6]
+ARM GAS  C:\Users\Tizian\AppData\Local\Temp\ccFyqBo1.s 			page 7
 
 
- 268 00f0 1D4B     		ldr	r3, .L23+40
- 269 00f2 1868     		ldr	r0, [r3]	@ unaligned
- 270 00f4 A050     		str	r0, [r4, r2]	@ unaligned
- 271 00f6 9B88     		ldrh	r3, [r3, #4]	@ unaligned
- 272 00f8 8B80     		strh	r3, [r1, #4]	@ unaligned
- 273              	.L18:
-  76:main.c        ****             if(!Ctrl_MREQ_Read()){strcat(out, "|  x  ");}else{strcat(out, "|     ");}
- 274              		.loc 1 76 0 is_stmt 1
- 275 00fa FFF7FEFF 		bl	Ctrl_MREQ_Read
- 276              	.LVL26:
- 277 00fe 68B9     		cbnz	r0, .L19
- 278              		.loc 1 76 0 is_stmt 0 discriminator 1
- 279 0100 174C     		ldr	r4, .L23+32
- 280 0102 2046     		mov	r0, r4
- 281 0104 FFF7FEFF 		bl	strlen
- 282              	.LVL27:
- 283 0108 0146     		mov	r1, r0
- 284 010a 2218     		adds	r2, r4, r0
- 285 010c 174B     		ldr	r3, .L23+44
- 286 010e 1868     		ldr	r0, [r3]	@ unaligned
- 287 0110 6050     		str	r0, [r4, r1]	@ unaligned
- 288 0112 9988     		ldrh	r1, [r3, #4]	@ unaligned
- 289 0114 9B79     		ldrb	r3, [r3, #6]	@ zero_extendqisi2
- 290 0116 9180     		strh	r1, [r2, #4]	@ unaligned
- 291 0118 9371     		strb	r3, [r2, #6]
- 292 011a 0CE0     		b	.L20
- 293              	.L19:
- 294              		.loc 1 76 0 discriminator 2
- 295 011c 104C     		ldr	r4, .L23+32
- 296 011e 2046     		mov	r0, r4
- 297 0120 FFF7FEFF 		bl	strlen
- 298              	.LVL28:
- 299 0124 0146     		mov	r1, r0
- 300 0126 2218     		adds	r2, r4, r0
- 301 0128 114B     		ldr	r3, .L23+48
- 302 012a 1868     		ldr	r0, [r3]	@ unaligned
- 303 012c 6050     		str	r0, [r4, r1]	@ unaligned
- 304 012e 9988     		ldrh	r1, [r3, #4]	@ unaligned
- 305 0130 9B79     		ldrb	r3, [r3, #6]	@ zero_extendqisi2
- 306 0132 9180     		strh	r1, [r2, #4]	@ unaligned
- 307 0134 9371     		strb	r3, [r2, #6]
- 308              	.L20:
-  77:main.c        **** 
-  78:main.c        ****             //send the table entry to the PC
-  79:main.c        ****             UART_PutString(out);
- 309              		.loc 1 79 0 is_stmt 1
- 310 0136 0A48     		ldr	r0, .L23+32
- 311 0138 FFF7FEFF 		bl	UART_PutString
- 312              	.LVL29:
- 313 013c 7AE7     		b	.L12
- 314              	.L24:
- 315 013e 00BF     		.align	2
- 316              	.L23:
- 317 0140 00000000 		.word	Clock_ISR
- 318 0144 00000000 		.word	UART_RX_ISR
- 319 0148 00000000 		.word	.LC0
- 320 014c 7C000000 		.word	.LC1
-ARM GAS  C:\Users\nicoz\AppData\Local\Temp\ccQGMc1U.s 			page 8
+ 268 014a 0CE0     		b	.L17
+ 269              	.L16:
+ 270              		.loc 1 75 0 discriminator 2
+ 271 014c 234C     		ldr	r4, .L25+44
+ 272 014e 2046     		mov	r0, r4
+ 273 0150 FFF7FEFF 		bl	strlen
+ 274              	.LVL25:
+ 275 0154 0146     		mov	r1, r0
+ 276 0156 2218     		adds	r2, r4, r0
+ 277 0158 244B     		ldr	r3, .L25+60
+ 278 015a 1868     		ldr	r0, [r3]	@ unaligned
+ 279 015c 6050     		str	r0, [r4, r1]	@ unaligned
+ 280 015e 9988     		ldrh	r1, [r3, #4]	@ unaligned
+ 281 0160 9B79     		ldrb	r3, [r3, #6]	@ zero_extendqisi2
+ 282 0162 9180     		strh	r1, [r2, #4]	@ unaligned
+ 283 0164 9371     		strb	r3, [r2, #6]
+ 284              	.L17:
+  76:main.c        **** 
+  77:main.c        ****             //send the table entry to the PC
+  78:main.c        ****             UART_PutString(out);
+ 285              		.loc 1 78 0 is_stmt 1
+ 286 0166 1D48     		ldr	r0, .L25+44
+ 287 0168 FFF7FEFF 		bl	UART_PutString
+ 288              	.LVL26:
+ 289 016c 1AE0     		b	.L19
+ 290              	.L22:
+  79:main.c        ****         }
+  80:main.c        ****         while(write == 1){
+  81:main.c        ****             if(UART_GetRxBufferSize() > 0){
+ 291              		.loc 1 81 0
+ 292 016e FFF7FEFF 		bl	UART_GetRxBufferSize
+ 293              	.LVL27:
+ 294 0172 B8B1     		cbz	r0, .L19
+  82:main.c        ****                 input = UART_ReadRxData();
+ 295              		.loc 1 82 0
+ 296 0174 FFF7FEFF 		bl	UART_ReadRxData
+ 297              	.LVL28:
+ 298 0178 104B     		ldr	r3, .L25+12
+ 299 017a 1870     		strb	r0, [r3]
+  83:main.c        ****                 if(input == 'f'){
+ 300              		.loc 1 83 0
+ 301 017c 6628     		cmp	r0, #102
+ 302 017e 0BD1     		bne	.L20
+  84:main.c        ****                     write = 0;
+ 303              		.loc 1 84 0
+ 304 0180 0022     		movs	r2, #0
+ 305 0182 0F4B     		ldr	r3, .L25+16
+ 306 0184 1A70     		strb	r2, [r3]
+  85:main.c        ****                     UART_PutString("Writing to RAM\n");
+ 307              		.loc 1 85 0
+ 308 0186 1A48     		ldr	r0, .L25+64
+ 309 0188 FFF7FEFF 		bl	UART_PutString
+ 310              	.LVL29:
+  86:main.c        ****                     //To-Do Code for Writing to RAM
+  87:main.c        ****                     UART_PutArray(rxData, cnt);
+ 311              		.loc 1 87 0
+ 312 018c 0D4B     		ldr	r3, .L25+20
+ARM GAS  C:\Users\Tizian\AppData\Local\Temp\ccFyqBo1.s 			page 8
 
 
- 321 0150 00000000 		.word	scan
- 322 0154 00000000 		.word	data
- 323 0158 00000000 		.word	addr
- 324 015c A0000000 		.word	.LC2
- 325 0160 00000000 		.word	.LANCHOR0
- 326 0164 B4000000 		.word	.LC3
- 327 0168 BC000000 		.word	.LC4
- 328 016c C4000000 		.word	.LC5
- 329 0170 CC000000 		.word	.LC6
- 330              		.cfi_endproc
- 331              	.LFE66:
- 332              		.size	main, .-main
- 333              		.global	out
- 334              		.global	CMD
- 335              		.comm	addr,1,1
- 336              		.comm	data,1,1
- 337              		.comm	cnt,1,1
- 338              		.comm	input,1,1
- 339              		.comm	scan,1,1
- 340              		.data
- 341              		.align	2
- 342              		.type	CMD, %object
- 343              		.size	CMD, 4
- 344              	CMD:
- 345 0000 C3       		.byte	-61
- 346 0001 12       		.byte	18
- 347 0002 34       		.byte	52
- 348 0003 00       		.space	1
- 349              		.section	.rodata.str1.4,"aMS",%progbits,1
- 350              		.align	2
- 351              	.LC0:
- 352 0000 2A2A2A53 		.ascii	"***Simple Script for reading Data- and Address-Bus "
- 352      696D706C 
- 352      65205363 
- 352      72697074 
- 352      20666F72 
- 353 0033 6F662061 		.ascii	"of a Zilog Z80***\012Press 'c' for continious mode "
- 353      205A696C 
- 353      6F67205A 
- 353      38302A2A 
- 353      2A0A5072 
- 354 0063 6F722027 		.ascii	"or 's' for single step:\012\000"
- 354      73272066 
- 354      6F722073 
- 354      696E676C 
- 354      65207374 
- 355              	.LC1:
- 356 007c 20416464 		.ascii	" Addr | Data | M1 | RD | WR | MREQ\000"
- 356      72207C20 
- 356      44617461 
- 356      207C204D 
- 356      31207C20 
- 357 009f 00       		.space	1
- 358              	.LC2:
- 359 00a0 0A202025 		.ascii	"\012  %2x  |  %2x  \000"
- 359      32782020 
- 359      7C202025 
-ARM GAS  C:\Users\nicoz\AppData\Local\Temp\ccQGMc1U.s 			page 9
+ 313 018e 1978     		ldrb	r1, [r3]	@ zero_extendqisi2
+ 314 0190 1248     		ldr	r0, .L25+44
+ 315 0192 FFF7FEFF 		bl	UART_PutArray
+ 316              	.LVL30:
+  88:main.c        ****                     break;
+ 317              		.loc 1 88 0
+ 318 0196 45E7     		b	.L23
+ 319              	.L20:
+  89:main.c        ****                 } else {
+  90:main.c        ****                     rxData[cnt] = input;
+ 320              		.loc 1 90 0
+ 321 0198 0A4A     		ldr	r2, .L25+20
+ 322 019a 1378     		ldrb	r3, [r2]	@ zero_extendqisi2
+ 323 019c 0F49     		ldr	r1, .L25+44
+ 324 019e C854     		strb	r0, [r1, r3]
+  91:main.c        ****                     cnt++;
+ 325              		.loc 1 91 0
+ 326 01a0 0133     		adds	r3, r3, #1
+ 327 01a2 1370     		strb	r3, [r2]
+ 328              	.L19:
+  80:main.c        ****             if(UART_GetRxBufferSize() > 0){
+ 329              		.loc 1 80 0
+ 330 01a4 064B     		ldr	r3, .L25+16
+ 331 01a6 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
+ 332 01a8 012B     		cmp	r3, #1
+ 333 01aa E0D0     		beq	.L22
+ 334 01ac 3AE7     		b	.L23
+ 335              	.L26:
+ 336 01ae 00BF     		.align	2
+ 337              	.L25:
+ 338 01b0 00000000 		.word	Clock_ISR
+ 339 01b4 00000000 		.word	.LC0
+ 340 01b8 7C000000 		.word	.LC1
+ 341 01bc 00000000 		.word	input
+ 342 01c0 00000000 		.word	write
+ 343 01c4 00000000 		.word	cnt
+ 344 01c8 A0000000 		.word	.LC2
+ 345 01cc 00000000 		.word	scan
+ 346 01d0 00000000 		.word	data
+ 347 01d4 00000000 		.word	addr
+ 348 01d8 D4000000 		.word	.LC3
+ 349 01dc 00000000 		.word	.LANCHOR0
+ 350 01e0 E8000000 		.word	.LC4
+ 351 01e4 F0000000 		.word	.LC5
+ 352 01e8 F8000000 		.word	.LC6
+ 353 01ec 00010000 		.word	.LC7
+ 354 01f0 08010000 		.word	.LC8
+ 355              		.cfi_endproc
+ 356              	.LFE65:
+ 357              		.size	main, .-main
+ 358              		.global	out
+ 359              		.global	rxData
+ 360              		.comm	write,1,1
+ 361              		.comm	addr,1,1
+ 362              		.comm	data,1,1
+ 363              		.comm	cnt,1,1
+ 364              		.comm	input,1,1
+ARM GAS  C:\Users\Tizian\AppData\Local\Temp\ccFyqBo1.s 			page 9
 
 
- 359      32782020 
- 359      00
- 360 00b1 000000   		.space	3
- 361              	.LC3:
- 362 00b4 7C207820 		.ascii	"| x  \000"
- 362      2000
- 363 00ba 0000     		.space	2
- 364              	.LC4:
- 365 00bc 7C202020 		.ascii	"|    \000"
- 365      2000
- 366 00c2 0000     		.space	2
- 367              	.LC5:
- 368 00c4 7C202078 		.ascii	"|  x  \000"
- 368      202000
- 369 00cb 00       		.space	1
- 370              	.LC6:
- 371 00cc 7C202020 		.ascii	"|     \000"
- 371      202000
- 372              		.bss
- 373              		.align	2
- 374              		.set	.LANCHOR0,. + 0
- 375              		.type	out, %object
- 376              		.size	out, 0
- 377              	out:
- 378              		.text
- 379              	.Letext0:
- 380              		.file 2 "c:\\program files (x86)\\cypress\\psoc creator\\4.4\\psoc creator\\import\\gnu\\arm\\5.4.
- 381              		.file 3 "c:\\program files (x86)\\cypress\\psoc creator\\4.4\\psoc creator\\import\\gnu\\arm\\5.4.
- 382              		.file 4 "Generated_Source\\PSoC5/core_cm3.h"
- 383              		.file 5 "Generated_Source\\PSoC5/UART.h"
- 384              		.file 6 "Generated_Source\\PSoC5/Clock_Ctrl.h"
- 385              		.file 7 "Generated_Source\\PSoC5/CyLib.h"
- 386              		.file 8 "Generated_Source\\PSoC5/isr_1.h"
- 387              		.file 9 "Generated_Source\\PSoC5/isr_2.h"
- 388              		.file 10 "Generated_Source\\PSoC5/Data.h"
- 389              		.file 11 "Generated_Source\\PSoC5/Addr_LSB.h"
- 390              		.file 12 "c:\\program files (x86)\\cypress\\psoc creator\\4.4\\psoc creator\\import\\gnu\\arm\\5.4
- 391              		.file 13 "Generated_Source\\PSoC5/Ctrl_M1.h"
- 392              		.file 14 "Generated_Source\\PSoC5/Ctrl_RD.h"
- 393              		.file 15 "Generated_Source\\PSoC5/Ctrl_WR.h"
- 394              		.file 16 "Generated_Source\\PSoC5/Ctrl_MREQ.h"
- 395              		.file 17 "<built-in>"
- 396              		.section	.debug_info,"",%progbits
- 397              	.Ldebug_info0:
- 398 0000 65040000 		.4byte	0x465
- 399 0004 0400     		.2byte	0x4
- 400 0006 00000000 		.4byte	.Ldebug_abbrev0
- 401 000a 04       		.byte	0x4
- 402 000b 01       		.uleb128 0x1
- 403 000c 1D010000 		.4byte	.LASF41
- 404 0010 0C       		.byte	0xc
- 405 0011 B0020000 		.4byte	.LASF42
- 406 0015 22000000 		.4byte	.LASF43
- 407 0019 00000000 		.4byte	.Ldebug_ranges0+0
- 408 001d 00000000 		.4byte	0
- 409 0021 00000000 		.4byte	.Ldebug_line0
- 410 0025 02       		.uleb128 0x2
-ARM GAS  C:\Users\nicoz\AppData\Local\Temp\ccQGMc1U.s 			page 10
+ 365              		.comm	scan,1,1
+ 366              		.section	.rodata.str1.4,"aMS",%progbits,1
+ 367              		.align	2
+ 368              	.LC0:
+ 369 0000 2A2A2A53 		.ascii	"***Simple Script for reading Data- and Address-Bus "
+ 369      696D706C 
+ 369      65205363 
+ 369      72697074 
+ 369      20666F72 
+ 370 0033 6F662061 		.ascii	"of a Zilog Z80***\012Press 'c' for continious mode "
+ 370      205A696C 
+ 370      6F67205A 
+ 370      38302A2A 
+ 370      2A0A5072 
+ 371 0063 6F722027 		.ascii	"or 's' for single step:\012\000"
+ 371      73272066 
+ 371      6F722073 
+ 371      696E676C 
+ 371      65207374 
+ 372              	.LC1:
+ 373 007c 20416464 		.ascii	" Addr | Data | M1 | RD | WR | MREQ\000"
+ 373      72207C20 
+ 373      44617461 
+ 373      207C204D 
+ 373      31207C20 
+ 374 009f 00       		.space	1
+ 375              	.LC2:
+ 376 00a0 506C6561 		.ascii	"Please put your Programm in now! \012 Exit with 'f'"
+ 376      73652070 
+ 376      75742079 
+ 376      6F757220 
+ 376      50726F67 
+ 377 00d0 0A00     		.ascii	"\012\000"
+ 378 00d2 0000     		.space	2
+ 379              	.LC3:
+ 380 00d4 0A202025 		.ascii	"\012  %2x  |  %2x  \000"
+ 380      32782020 
+ 380      7C202025 
+ 380      32782020 
+ 380      00
+ 381 00e5 000000   		.space	3
+ 382              	.LC4:
+ 383 00e8 7C207820 		.ascii	"| x  \000"
+ 383      2000
+ 384 00ee 0000     		.space	2
+ 385              	.LC5:
+ 386 00f0 7C202020 		.ascii	"|    \000"
+ 386      2000
+ 387 00f6 0000     		.space	2
+ 388              	.LC6:
+ 389 00f8 7C202078 		.ascii	"|  x  \000"
+ 389      202000
+ 390 00ff 00       		.space	1
+ 391              	.LC7:
+ 392 0100 7C202020 		.ascii	"|     \000"
+ 392      202000
+ 393 0107 00       		.space	1
+ARM GAS  C:\Users\Tizian\AppData\Local\Temp\ccFyqBo1.s 			page 10
 
 
- 411 0026 01       		.byte	0x1
- 412 0027 06       		.byte	0x6
- 413 0028 F8020000 		.4byte	.LASF0
- 414 002c 03       		.uleb128 0x3
- 415 002d 0E000000 		.4byte	.LASF4
- 416 0031 02       		.byte	0x2
- 417 0032 1D       		.byte	0x1d
- 418 0033 37000000 		.4byte	0x37
- 419 0037 02       		.uleb128 0x2
- 420 0038 01       		.byte	0x1
- 421 0039 08       		.byte	0x8
- 422 003a 0F010000 		.4byte	.LASF1
- 423 003e 02       		.uleb128 0x2
- 424 003f 02       		.byte	0x2
- 425 0040 05       		.byte	0x5
- 426 0041 C6020000 		.4byte	.LASF2
- 427 0045 02       		.uleb128 0x2
- 428 0046 02       		.byte	0x2
- 429 0047 07       		.byte	0x7
- 430 0048 B2000000 		.4byte	.LASF3
- 431 004c 03       		.uleb128 0x3
- 432 004d 18000000 		.4byte	.LASF5
- 433 0051 02       		.byte	0x2
- 434 0052 3F       		.byte	0x3f
- 435 0053 57000000 		.4byte	0x57
- 436 0057 02       		.uleb128 0x2
- 437 0058 04       		.byte	0x4
- 438 0059 05       		.byte	0x5
- 439 005a E3020000 		.4byte	.LASF6
- 440 005e 02       		.uleb128 0x2
- 441 005f 04       		.byte	0x4
- 442 0060 07       		.byte	0x7
- 443 0061 B1010000 		.4byte	.LASF7
- 444 0065 02       		.uleb128 0x2
- 445 0066 08       		.byte	0x8
- 446 0067 05       		.byte	0x5
- 447 0068 00000000 		.4byte	.LASF8
- 448 006c 02       		.uleb128 0x2
- 449 006d 08       		.byte	0x8
- 450 006e 07       		.byte	0x7
- 451 006f 72020000 		.4byte	.LASF9
- 452 0073 04       		.uleb128 0x4
- 453 0074 04       		.byte	0x4
- 454 0075 05       		.byte	0x5
- 455 0076 696E7400 		.ascii	"int\000"
- 456 007a 02       		.uleb128 0x2
- 457 007b 04       		.byte	0x4
- 458 007c 07       		.byte	0x7
- 459 007d D2000000 		.4byte	.LASF10
- 460 0081 03       		.uleb128 0x3
- 461 0082 89020000 		.4byte	.LASF11
- 462 0086 03       		.byte	0x3
- 463 0087 18       		.byte	0x18
- 464 0088 2C000000 		.4byte	0x2c
- 465 008c 03       		.uleb128 0x3
- 466 008d 9F020000 		.4byte	.LASF12
- 467 0091 03       		.byte	0x3
-ARM GAS  C:\Users\nicoz\AppData\Local\Temp\ccQGMc1U.s 			page 11
+ 394              	.LC8:
+ 395 0108 57726974 		.ascii	"Writing to RAM\012\000"
+ 395      696E6720 
+ 395      746F2052 
+ 395      414D0A00 
+ 396              		.bss
+ 397              		.align	2
+ 398              		.set	.LANCHOR0,. + 0
+ 399              		.type	out, %object
+ 400              		.size	out, 0
+ 401              	out:
+ 402              		.type	rxData, %object
+ 403              		.size	rxData, 0
+ 404              	rxData:
+ 405              		.text
+ 406              	.Letext0:
+ 407              		.file 2 "c:\\program files (x86)\\cypress\\psoc creator\\4.4\\psoc creator\\import\\gnu\\arm\\5.4.
+ 408              		.file 3 "c:\\program files (x86)\\cypress\\psoc creator\\4.4\\psoc creator\\import\\gnu\\arm\\5.4.
+ 409              		.file 4 "Generated_Source\\PSoC5/core_cm3.h"
+ 410              		.file 5 "Generated_Source\\PSoC5/isr_1.h"
+ 411              		.file 6 "Generated_Source\\PSoC5/UART.h"
+ 412              		.file 7 "Generated_Source\\PSoC5/Clock_Ctrl.h"
+ 413              		.file 8 "Generated_Source\\PSoC5/CyLib.h"
+ 414              		.file 9 "c:\\program files (x86)\\cypress\\psoc creator\\4.4\\psoc creator\\import\\gnu\\arm\\5.4.
+ 415              		.file 10 "Generated_Source\\PSoC5/Ctrl_M1.h"
+ 416              		.file 11 "Generated_Source\\PSoC5/Ctrl_RD.h"
+ 417              		.file 12 "Generated_Source\\PSoC5/Ctrl_WR.h"
+ 418              		.file 13 "Generated_Source\\PSoC5/Ctrl_MREQ.h"
+ 419              		.file 14 "<built-in>"
+ 420              		.section	.debug_info,"",%progbits
+ 421              	.Ldebug_info0:
+ 422 0000 7D040000 		.4byte	0x47d
+ 423 0004 0400     		.2byte	0x4
+ 424 0006 00000000 		.4byte	.Ldebug_abbrev0
+ 425 000a 04       		.byte	0x4
+ 426 000b 01       		.uleb128 0x1
+ 427 000c 77000000 		.4byte	.LASF41
+ 428 0010 0C       		.byte	0xc
+ 429 0011 0B020000 		.4byte	.LASF42
+ 430 0015 24020000 		.4byte	.LASF43
+ 431 0019 00000000 		.4byte	.Ldebug_ranges0+0
+ 432 001d 00000000 		.4byte	0
+ 433 0021 00000000 		.4byte	.Ldebug_line0
+ 434 0025 02       		.uleb128 0x2
+ 435 0026 01       		.byte	0x1
+ 436 0027 06       		.byte	0x6
+ 437 0028 C0020000 		.4byte	.LASF0
+ 438 002c 03       		.uleb128 0x3
+ 439 002d 0E000000 		.4byte	.LASF4
+ 440 0031 02       		.byte	0x2
+ 441 0032 1D       		.byte	0x1d
+ 442 0033 37000000 		.4byte	0x37
+ 443 0037 02       		.uleb128 0x2
+ 444 0038 01       		.byte	0x1
+ 445 0039 08       		.byte	0x8
+ 446 003a 69000000 		.4byte	.LASF1
+ 447 003e 02       		.uleb128 0x2
+ARM GAS  C:\Users\Tizian\AppData\Local\Temp\ccFyqBo1.s 			page 11
 
 
- 468 0092 2C       		.byte	0x2c
- 469 0093 4C000000 		.4byte	0x4c
- 470 0097 02       		.uleb128 0x2
- 471 0098 04       		.byte	0x4
- 472 0099 04       		.byte	0x4
- 473 009a F8000000 		.4byte	.LASF13
- 474 009e 02       		.uleb128 0x2
- 475 009f 08       		.byte	0x8
- 476 00a0 04       		.byte	0x4
- 477 00a1 FA010000 		.4byte	.LASF14
- 478 00a5 02       		.uleb128 0x2
- 479 00a6 01       		.byte	0x1
- 480 00a7 08       		.byte	0x8
- 481 00a8 B7020000 		.4byte	.LASF15
- 482 00ac 02       		.uleb128 0x2
- 483 00ad 08       		.byte	0x8
- 484 00ae 04       		.byte	0x4
- 485 00af EC020000 		.4byte	.LASF16
- 486 00b3 02       		.uleb128 0x2
- 487 00b4 04       		.byte	0x4
- 488 00b5 07       		.byte	0x7
- 489 00b6 A7020000 		.4byte	.LASF17
- 490 00ba 05       		.uleb128 0x5
- 491 00bb 36020000 		.4byte	.LASF44
- 492 00bf 01       		.byte	0x1
- 493 00c0 16       		.byte	0x16
- 494 00c1 00000000 		.4byte	.LFB64
- 495 00c5 0C000000 		.4byte	.LFE64-.LFB64
- 496 00c9 01       		.uleb128 0x1
- 497 00ca 9C       		.byte	0x9c
- 498 00cb 06       		.uleb128 0x6
- 499 00cc 03010000 		.4byte	.LASF45
- 500 00d0 01       		.byte	0x1
- 501 00d1 19       		.byte	0x19
- 502 00d2 00000000 		.4byte	.LFB65
- 503 00d6 34000000 		.4byte	.LFE65-.LFB65
- 504 00da 01       		.uleb128 0x1
- 505 00db 9C       		.byte	0x9c
- 506 00dc 32010000 		.4byte	0x132
- 507 00e0 07       		.uleb128 0x7
- 508 00e1 06000000 		.4byte	.LVL0
- 509 00e5 9E030000 		.4byte	0x39e
- 510 00e9 08       		.uleb128 0x8
- 511 00ea 1A000000 		.4byte	.LVL1
- 512 00ee A9030000 		.4byte	0x3a9
- 513 00f2 FC000000 		.4byte	0xfc
- 514 00f6 09       		.uleb128 0x9
- 515 00f7 01       		.uleb128 0x1
- 516 00f8 50       		.byte	0x50
- 517 00f9 01       		.uleb128 0x1
- 518 00fa 31       		.byte	0x31
- 519 00fb 00       		.byte	0
- 520 00fc 08       		.uleb128 0x8
- 521 00fd 22000000 		.4byte	.LVL2
- 522 0101 A9030000 		.4byte	0x3a9
- 523 0105 0F010000 		.4byte	0x10f
- 524 0109 09       		.uleb128 0x9
-ARM GAS  C:\Users\nicoz\AppData\Local\Temp\ccQGMc1U.s 			page 12
+ 448 003f 02       		.byte	0x2
+ 449 0040 05       		.byte	0x5
+ 450 0041 8C020000 		.4byte	.LASF2
+ 451 0045 02       		.uleb128 0x2
+ 452 0046 02       		.byte	0x2
+ 453 0047 07       		.byte	0x7
+ 454 0048 22000000 		.4byte	.LASF3
+ 455 004c 03       		.uleb128 0x3
+ 456 004d 18000000 		.4byte	.LASF5
+ 457 0051 02       		.byte	0x2
+ 458 0052 3F       		.byte	0x3f
+ 459 0053 57000000 		.4byte	0x57
+ 460 0057 02       		.uleb128 0x2
+ 461 0058 04       		.byte	0x4
+ 462 0059 05       		.byte	0x5
+ 463 005a AB020000 		.4byte	.LASF6
+ 464 005e 02       		.uleb128 0x2
+ 465 005f 04       		.byte	0x4
+ 466 0060 07       		.byte	0x7
+ 467 0061 0B010000 		.4byte	.LASF7
+ 468 0065 02       		.uleb128 0x2
+ 469 0066 08       		.byte	0x8
+ 470 0067 05       		.byte	0x5
+ 471 0068 00000000 		.4byte	.LASF8
+ 472 006c 02       		.uleb128 0x2
+ 473 006d 08       		.byte	0x8
+ 474 006e 07       		.byte	0x7
+ 475 006f BE010000 		.4byte	.LASF9
+ 476 0073 04       		.uleb128 0x4
+ 477 0074 04       		.byte	0x4
+ 478 0075 05       		.byte	0x5
+ 479 0076 696E7400 		.ascii	"int\000"
+ 480 007a 02       		.uleb128 0x2
+ 481 007b 04       		.byte	0x4
+ 482 007c 07       		.byte	0x7
+ 483 007d 42000000 		.4byte	.LASF10
+ 484 0081 03       		.uleb128 0x3
+ 485 0082 D5010000 		.4byte	.LASF11
+ 486 0086 03       		.byte	0x3
+ 487 0087 18       		.byte	0x18
+ 488 0088 2C000000 		.4byte	0x2c
+ 489 008c 03       		.uleb128 0x3
+ 490 008d FA010000 		.4byte	.LASF12
+ 491 0091 03       		.byte	0x3
+ 492 0092 2C       		.byte	0x2c
+ 493 0093 4C000000 		.4byte	0x4c
+ 494 0097 02       		.uleb128 0x2
+ 495 0098 04       		.byte	0x4
+ 496 0099 04       		.byte	0x4
+ 497 009a 5E000000 		.4byte	.LASF13
+ 498 009e 02       		.uleb128 0x2
+ 499 009f 08       		.byte	0x8
+ 500 00a0 04       		.byte	0x4
+ 501 00a1 68010000 		.4byte	.LASF14
+ 502 00a5 02       		.uleb128 0x2
+ 503 00a6 01       		.byte	0x1
+ 504 00a7 08       		.byte	0x8
+ARM GAS  C:\Users\Tizian\AppData\Local\Temp\ccFyqBo1.s 			page 12
 
 
- 525 010a 01       		.uleb128 0x1
- 526 010b 50       		.byte	0x50
- 527 010c 01       		.uleb128 0x1
- 528 010d 32       		.byte	0x32
- 529 010e 00       		.byte	0
- 530 010f 08       		.uleb128 0x8
- 531 0110 28000000 		.4byte	.LVL3
- 532 0114 B4030000 		.4byte	0x3b4
- 533 0118 22010000 		.4byte	0x122
- 534 011c 09       		.uleb128 0x9
- 535 011d 01       		.uleb128 0x1
- 536 011e 50       		.byte	0x50
- 537 011f 01       		.uleb128 0x1
- 538 0120 3A       		.byte	0x3a
- 539 0121 00       		.byte	0
- 540 0122 0A       		.uleb128 0xa
- 541 0123 2E000000 		.4byte	.LVL4
- 542 0127 A9030000 		.4byte	0x3a9
- 543 012b 09       		.uleb128 0x9
- 544 012c 01       		.uleb128 0x1
- 545 012d 50       		.byte	0x50
- 546 012e 01       		.uleb128 0x1
- 547 012f 33       		.byte	0x33
- 548 0130 00       		.byte	0
- 549 0131 00       		.byte	0
- 550 0132 0B       		.uleb128 0xb
- 551 0133 31020000 		.4byte	.LASF46
- 552 0137 01       		.byte	0x1
- 553 0138 26       		.byte	0x26
- 554 0139 73000000 		.4byte	0x73
- 555 013d 00000000 		.4byte	.LFB66
- 556 0141 74010000 		.4byte	.LFE66-.LFB66
- 557 0145 01       		.uleb128 0x1
- 558 0146 9C       		.byte	0x9c
- 559 0147 EF020000 		.4byte	0x2ef
- 560 014b 08       		.uleb128 0x8
- 561 014c 08000000 		.4byte	.LVL5
- 562 0150 BF030000 		.4byte	0x3bf
- 563 0154 62010000 		.4byte	0x162
- 564 0158 09       		.uleb128 0x9
- 565 0159 01       		.uleb128 0x1
- 566 015a 50       		.byte	0x50
- 567 015b 05       		.uleb128 0x5
- 568 015c 03       		.byte	0x3
- 569 015d 00000000 		.4byte	Clock_ISR
- 570 0161 00       		.byte	0
- 571 0162 07       		.uleb128 0x7
- 572 0163 0C000000 		.4byte	.LVL6
- 573 0167 CA030000 		.4byte	0x3ca
- 574 016b 08       		.uleb128 0x8
- 575 016c 12000000 		.4byte	.LVL7
- 576 0170 D5030000 		.4byte	0x3d5
- 577 0174 82010000 		.4byte	0x182
- 578 0178 09       		.uleb128 0x9
- 579 0179 01       		.uleb128 0x1
- 580 017a 50       		.byte	0x50
- 581 017b 05       		.uleb128 0x5
-ARM GAS  C:\Users\nicoz\AppData\Local\Temp\ccQGMc1U.s 			page 13
+ 505 00a8 12020000 		.4byte	.LASF15
+ 506 00ac 02       		.uleb128 0x2
+ 507 00ad 08       		.byte	0x8
+ 508 00ae 04       		.byte	0x4
+ 509 00af B4020000 		.4byte	.LASF16
+ 510 00b3 02       		.uleb128 0x2
+ 511 00b4 04       		.byte	0x4
+ 512 00b5 07       		.byte	0x7
+ 513 00b6 02020000 		.4byte	.LASF17
+ 514 00ba 05       		.uleb128 0x5
+ 515 00bb A0010000 		.4byte	.LASF44
+ 516 00bf 01       		.byte	0x1
+ 517 00c0 18       		.byte	0x18
+ 518 00c1 00000000 		.4byte	.LFB64
+ 519 00c5 0C000000 		.4byte	.LFE64-.LFB64
+ 520 00c9 01       		.uleb128 0x1
+ 521 00ca 9C       		.byte	0x9c
+ 522 00cb 06       		.uleb128 0x6
+ 523 00cc 9B010000 		.4byte	.LASF45
+ 524 00d0 01       		.byte	0x1
+ 525 00d1 1C       		.byte	0x1c
+ 526 00d2 73000000 		.4byte	0x73
+ 527 00d6 00000000 		.4byte	.LFB65
+ 528 00da F4010000 		.4byte	.LFE65-.LFB65
+ 529 00de 01       		.uleb128 0x1
+ 530 00df 9C       		.byte	0x9c
+ 531 00e0 0C030000 		.4byte	0x30c
+ 532 00e4 07       		.uleb128 0x7
+ 533 00e5 08000000 		.4byte	.LVL0
+ 534 00e9 CC030000 		.4byte	0x3cc
+ 535 00ed FB000000 		.4byte	0xfb
+ 536 00f1 08       		.uleb128 0x8
+ 537 00f2 01       		.uleb128 0x1
+ 538 00f3 50       		.byte	0x50
+ 539 00f4 05       		.uleb128 0x5
+ 540 00f5 03       		.byte	0x3
+ 541 00f6 00000000 		.4byte	Clock_ISR
+ 542 00fa 00       		.byte	0
+ 543 00fb 09       		.uleb128 0x9
+ 544 00fc 0C000000 		.4byte	.LVL1
+ 545 0100 D7030000 		.4byte	0x3d7
+ 546 0104 09       		.uleb128 0x9
+ 547 0105 12000000 		.4byte	.LVL2
+ 548 0109 E2030000 		.4byte	0x3e2
+ 549 010d 07       		.uleb128 0x7
+ 550 010e 18000000 		.4byte	.LVL3
+ 551 0112 ED030000 		.4byte	0x3ed
+ 552 0116 24010000 		.4byte	0x124
+ 553 011a 08       		.uleb128 0x8
+ 554 011b 01       		.uleb128 0x1
+ 555 011c 50       		.byte	0x50
+ 556 011d 05       		.uleb128 0x5
+ 557 011e 03       		.byte	0x3
+ 558 011f 00000000 		.4byte	.LC0
+ 559 0123 00       		.byte	0
+ 560 0124 07       		.uleb128 0x7
+ 561 0125 1E000000 		.4byte	.LVL4
+ARM GAS  C:\Users\Tizian\AppData\Local\Temp\ccFyqBo1.s 			page 13
 
 
- 582 017c 03       		.byte	0x3
- 583 017d 00000000 		.4byte	UART_RX_ISR
- 584 0181 00       		.byte	0
- 585 0182 07       		.uleb128 0x7
- 586 0183 16000000 		.4byte	.LVL8
- 587 0187 E0030000 		.4byte	0x3e0
- 588 018b 07       		.uleb128 0x7
- 589 018c 1C000000 		.4byte	.LVL9
- 590 0190 EB030000 		.4byte	0x3eb
- 591 0194 08       		.uleb128 0x8
- 592 0195 22000000 		.4byte	.LVL10
- 593 0199 F6030000 		.4byte	0x3f6
- 594 019d AB010000 		.4byte	0x1ab
- 595 01a1 09       		.uleb128 0x9
- 596 01a2 01       		.uleb128 0x1
- 597 01a3 50       		.byte	0x50
- 598 01a4 05       		.uleb128 0x5
- 599 01a5 03       		.byte	0x3
- 600 01a6 00000000 		.4byte	.LC0
- 601 01aa 00       		.byte	0
- 602 01ab 08       		.uleb128 0x8
- 603 01ac 28000000 		.4byte	.LVL11
- 604 01b0 F6030000 		.4byte	0x3f6
- 605 01b4 C2010000 		.4byte	0x1c2
- 606 01b8 09       		.uleb128 0x9
- 607 01b9 01       		.uleb128 0x1
- 608 01ba 50       		.byte	0x50
- 609 01bb 05       		.uleb128 0x5
- 610 01bc 03       		.byte	0x3
- 611 01bd 7C000000 		.4byte	.LC1
- 612 01c1 00       		.byte	0
- 613 01c2 08       		.uleb128 0x8
- 614 01c3 2E000000 		.4byte	.LVL12
- 615 01c7 01040000 		.4byte	0x401
- 616 01cb D5010000 		.4byte	0x1d5
- 617 01cf 09       		.uleb128 0x9
- 618 01d0 01       		.uleb128 0x1
- 619 01d1 50       		.byte	0x50
- 620 01d2 01       		.uleb128 0x1
- 621 01d3 30       		.byte	0x30
- 622 01d4 00       		.byte	0
- 623 01d5 08       		.uleb128 0x8
- 624 01d6 34000000 		.4byte	.LVL13
- 625 01da A9030000 		.4byte	0x3a9
- 626 01de E8010000 		.4byte	0x1e8
- 627 01e2 09       		.uleb128 0x9
- 628 01e3 01       		.uleb128 0x1
- 629 01e4 50       		.byte	0x50
- 630 01e5 01       		.uleb128 0x1
- 631 01e6 33       		.byte	0x33
- 632 01e7 00       		.byte	0
- 633 01e8 07       		.uleb128 0x7
- 634 01e9 46000000 		.4byte	.LVL14
- 635 01ed 0C040000 		.4byte	0x40c
- 636 01f1 07       		.uleb128 0x7
- 637 01f2 4E000000 		.4byte	.LVL15
- 638 01f6 17040000 		.4byte	0x417
-ARM GAS  C:\Users\nicoz\AppData\Local\Temp\ccQGMc1U.s 			page 14
+ 562 0129 ED030000 		.4byte	0x3ed
+ 563 012d 3B010000 		.4byte	0x13b
+ 564 0131 08       		.uleb128 0x8
+ 565 0132 01       		.uleb128 0x1
+ 566 0133 50       		.byte	0x50
+ 567 0134 05       		.uleb128 0x5
+ 568 0135 03       		.byte	0x3
+ 569 0136 7C000000 		.4byte	.LC1
+ 570 013a 00       		.byte	0
+ 571 013b 07       		.uleb128 0x7
+ 572 013c 24000000 		.4byte	.LVL5
+ 573 0140 F8030000 		.4byte	0x3f8
+ 574 0144 4E010000 		.4byte	0x14e
+ 575 0148 08       		.uleb128 0x8
+ 576 0149 01       		.uleb128 0x1
+ 577 014a 50       		.byte	0x50
+ 578 014b 01       		.uleb128 0x1
+ 579 014c 33       		.byte	0x33
+ 580 014d 00       		.byte	0
+ 581 014e 09       		.uleb128 0x9
+ 582 014f 28000000 		.4byte	.LVL6
+ 583 0153 03040000 		.4byte	0x403
+ 584 0157 07       		.uleb128 0x7
+ 585 0158 3E000000 		.4byte	.LVL7
+ 586 015c F8030000 		.4byte	0x3f8
+ 587 0160 6A010000 		.4byte	0x16a
+ 588 0164 08       		.uleb128 0x8
+ 589 0165 01       		.uleb128 0x1
+ 590 0166 50       		.byte	0x50
+ 591 0167 01       		.uleb128 0x1
+ 592 0168 31       		.byte	0x31
+ 593 0169 00       		.byte	0
+ 594 016a 07       		.uleb128 0x7
+ 595 016b 46000000 		.4byte	.LVL8
+ 596 016f F8030000 		.4byte	0x3f8
+ 597 0173 7D010000 		.4byte	0x17d
+ 598 0177 08       		.uleb128 0x8
+ 599 0178 01       		.uleb128 0x1
+ 600 0179 50       		.byte	0x50
+ 601 017a 01       		.uleb128 0x1
+ 602 017b 32       		.byte	0x32
+ 603 017c 00       		.byte	0
+ 604 017d 07       		.uleb128 0x7
+ 605 017e 4C000000 		.4byte	.LVL9
+ 606 0182 0E040000 		.4byte	0x40e
+ 607 0186 90010000 		.4byte	0x190
+ 608 018a 08       		.uleb128 0x8
+ 609 018b 01       		.uleb128 0x1
+ 610 018c 50       		.byte	0x50
+ 611 018d 01       		.uleb128 0x1
+ 612 018e 3A       		.byte	0x3a
+ 613 018f 00       		.byte	0
+ 614 0190 07       		.uleb128 0x7
+ 615 0191 52000000 		.4byte	.LVL10
+ 616 0195 F8030000 		.4byte	0x3f8
+ 617 0199 A3010000 		.4byte	0x1a3
+ 618 019d 08       		.uleb128 0x8
+ARM GAS  C:\Users\Tizian\AppData\Local\Temp\ccFyqBo1.s 			page 14
 
 
- 639 01fa 08       		.uleb128 0x8
- 640 01fb 5E000000 		.4byte	.LVL16
- 641 01ff 22040000 		.4byte	0x422
- 642 0203 1A020000 		.4byte	0x21a
- 643 0207 09       		.uleb128 0x9
- 644 0208 01       		.uleb128 0x1
- 645 0209 50       		.byte	0x50
- 646 020a 05       		.uleb128 0x5
- 647 020b 03       		.byte	0x3
- 648 020c 00000000 		.4byte	.LANCHOR0
- 649 0210 09       		.uleb128 0x9
- 650 0211 01       		.uleb128 0x1
- 651 0212 51       		.byte	0x51
- 652 0213 05       		.uleb128 0x5
- 653 0214 03       		.byte	0x3
- 654 0215 A0000000 		.4byte	.LC2
- 655 0219 00       		.byte	0
- 656 021a 07       		.uleb128 0x7
- 657 021b 62000000 		.4byte	.LVL17
- 658 021f 2D040000 		.4byte	0x42d
- 659 0223 08       		.uleb128 0x8
- 660 0224 6C000000 		.4byte	.LVL18
- 661 0228 38040000 		.4byte	0x438
- 662 022c 37020000 		.4byte	0x237
- 663 0230 09       		.uleb128 0x9
- 664 0231 01       		.uleb128 0x1
- 665 0232 50       		.byte	0x50
- 666 0233 02       		.uleb128 0x2
- 667 0234 74       		.byte	0x74
- 668 0235 00       		.sleb128 0
- 669 0236 00       		.byte	0
- 670 0237 08       		.uleb128 0x8
- 671 0238 84000000 		.4byte	.LVL19
- 672 023c 38040000 		.4byte	0x438
- 673 0240 4B020000 		.4byte	0x24b
- 674 0244 09       		.uleb128 0x9
- 675 0245 01       		.uleb128 0x1
- 676 0246 50       		.byte	0x50
- 677 0247 02       		.uleb128 0x2
- 678 0248 74       		.byte	0x74
- 679 0249 00       		.sleb128 0
- 680 024a 00       		.byte	0
- 681 024b 07       		.uleb128 0x7
- 682 024c 96000000 		.4byte	.LVL20
- 683 0250 47040000 		.4byte	0x447
- 684 0254 08       		.uleb128 0x8
- 685 0255 A0000000 		.4byte	.LVL21
- 686 0259 38040000 		.4byte	0x438
- 687 025d 68020000 		.4byte	0x268
- 688 0261 09       		.uleb128 0x9
- 689 0262 01       		.uleb128 0x1
- 690 0263 50       		.byte	0x50
- 691 0264 02       		.uleb128 0x2
- 692 0265 74       		.byte	0x74
- 693 0266 00       		.sleb128 0
- 694 0267 00       		.byte	0
- 695 0268 08       		.uleb128 0x8
-ARM GAS  C:\Users\nicoz\AppData\Local\Temp\ccQGMc1U.s 			page 15
+ 619 019e 01       		.uleb128 0x1
+ 620 019f 50       		.byte	0x50
+ 621 01a0 01       		.uleb128 0x1
+ 622 01a1 33       		.byte	0x33
+ 623 01a2 00       		.byte	0
+ 624 01a3 07       		.uleb128 0x7
+ 625 01a4 5A000000 		.4byte	.LVL11
+ 626 01a8 F8030000 		.4byte	0x3f8
+ 627 01ac B6010000 		.4byte	0x1b6
+ 628 01b0 08       		.uleb128 0x8
+ 629 01b1 01       		.uleb128 0x1
+ 630 01b2 50       		.byte	0x50
+ 631 01b3 01       		.uleb128 0x1
+ 632 01b4 33       		.byte	0x33
+ 633 01b5 00       		.byte	0
+ 634 01b6 07       		.uleb128 0x7
+ 635 01b7 6C000000 		.4byte	.LVL12
+ 636 01bb ED030000 		.4byte	0x3ed
+ 637 01bf CD010000 		.4byte	0x1cd
+ 638 01c3 08       		.uleb128 0x8
+ 639 01c4 01       		.uleb128 0x1
+ 640 01c5 50       		.byte	0x50
+ 641 01c6 05       		.uleb128 0x5
+ 642 01c7 03       		.byte	0x3
+ 643 01c8 A0000000 		.4byte	.LC2
+ 644 01cc 00       		.byte	0
+ 645 01cd 07       		.uleb128 0x7
+ 646 01ce 8E000000 		.4byte	.LVL13
+ 647 01d2 19040000 		.4byte	0x419
+ 648 01d6 F7010000 		.4byte	0x1f7
+ 649 01da 08       		.uleb128 0x8
+ 650 01db 01       		.uleb128 0x1
+ 651 01dc 50       		.byte	0x50
+ 652 01dd 05       		.uleb128 0x5
+ 653 01de 03       		.byte	0x3
+ 654 01df 00000000 		.4byte	.LANCHOR0
+ 655 01e3 08       		.uleb128 0x8
+ 656 01e4 01       		.uleb128 0x1
+ 657 01e5 51       		.byte	0x51
+ 658 01e6 05       		.uleb128 0x5
+ 659 01e7 03       		.byte	0x3
+ 660 01e8 D4000000 		.4byte	.LC3
+ 661 01ec 08       		.uleb128 0x8
+ 662 01ed 01       		.uleb128 0x1
+ 663 01ee 52       		.byte	0x52
+ 664 01ef 01       		.uleb128 0x1
+ 665 01f0 30       		.byte	0x30
+ 666 01f1 08       		.uleb128 0x8
+ 667 01f2 01       		.uleb128 0x1
+ 668 01f3 53       		.byte	0x53
+ 669 01f4 01       		.uleb128 0x1
+ 670 01f5 31       		.byte	0x31
+ 671 01f6 00       		.byte	0
+ 672 01f7 09       		.uleb128 0x9
+ 673 01f8 92000000 		.4byte	.LVL14
+ 674 01fc 24040000 		.4byte	0x424
+ 675 0200 07       		.uleb128 0x7
+ARM GAS  C:\Users\Tizian\AppData\Local\Temp\ccFyqBo1.s 			page 15
 
 
- 696 0269 B8000000 		.4byte	.LVL22
- 697 026d 38040000 		.4byte	0x438
- 698 0271 7C020000 		.4byte	0x27c
- 699 0275 09       		.uleb128 0x9
- 700 0276 01       		.uleb128 0x1
- 701 0277 50       		.byte	0x50
- 702 0278 02       		.uleb128 0x2
- 703 0279 74       		.byte	0x74
- 704 027a 00       		.sleb128 0
- 705 027b 00       		.byte	0
- 706 027c 07       		.uleb128 0x7
- 707 027d CA000000 		.4byte	.LVL23
- 708 0281 52040000 		.4byte	0x452
- 709 0285 08       		.uleb128 0x8
- 710 0286 D4000000 		.4byte	.LVL24
- 711 028a 38040000 		.4byte	0x438
- 712 028e 99020000 		.4byte	0x299
- 713 0292 09       		.uleb128 0x9
- 714 0293 01       		.uleb128 0x1
- 715 0294 50       		.byte	0x50
- 716 0295 02       		.uleb128 0x2
- 717 0296 74       		.byte	0x74
- 718 0297 00       		.sleb128 0
- 719 0298 00       		.byte	0
- 720 0299 08       		.uleb128 0x8
- 721 029a EC000000 		.4byte	.LVL25
- 722 029e 38040000 		.4byte	0x438
- 723 02a2 AD020000 		.4byte	0x2ad
- 724 02a6 09       		.uleb128 0x9
- 725 02a7 01       		.uleb128 0x1
- 726 02a8 50       		.byte	0x50
- 727 02a9 02       		.uleb128 0x2
- 728 02aa 74       		.byte	0x74
- 729 02ab 00       		.sleb128 0
- 730 02ac 00       		.byte	0
- 731 02ad 07       		.uleb128 0x7
- 732 02ae FE000000 		.4byte	.LVL26
- 733 02b2 5D040000 		.4byte	0x45d
- 734 02b6 08       		.uleb128 0x8
- 735 02b7 08010000 		.4byte	.LVL27
- 736 02bb 38040000 		.4byte	0x438
- 737 02bf CA020000 		.4byte	0x2ca
- 738 02c3 09       		.uleb128 0x9
- 739 02c4 01       		.uleb128 0x1
- 740 02c5 50       		.byte	0x50
- 741 02c6 02       		.uleb128 0x2
- 742 02c7 74       		.byte	0x74
- 743 02c8 00       		.sleb128 0
- 744 02c9 00       		.byte	0
- 745 02ca 08       		.uleb128 0x8
- 746 02cb 24010000 		.4byte	.LVL28
- 747 02cf 38040000 		.4byte	0x438
- 748 02d3 DE020000 		.4byte	0x2de
- 749 02d7 09       		.uleb128 0x9
- 750 02d8 01       		.uleb128 0x1
- 751 02d9 50       		.byte	0x50
- 752 02da 02       		.uleb128 0x2
-ARM GAS  C:\Users\nicoz\AppData\Local\Temp\ccQGMc1U.s 			page 16
+ 676 0201 9C000000 		.4byte	.LVL15
+ 677 0205 2F040000 		.4byte	0x42f
+ 678 0209 14020000 		.4byte	0x214
+ 679 020d 08       		.uleb128 0x8
+ 680 020e 01       		.uleb128 0x1
+ 681 020f 50       		.byte	0x50
+ 682 0210 02       		.uleb128 0x2
+ 683 0211 74       		.byte	0x74
+ 684 0212 00       		.sleb128 0
+ 685 0213 00       		.byte	0
+ 686 0214 07       		.uleb128 0x7
+ 687 0215 B4000000 		.4byte	.LVL16
+ 688 0219 2F040000 		.4byte	0x42f
+ 689 021d 28020000 		.4byte	0x228
+ 690 0221 08       		.uleb128 0x8
+ 691 0222 01       		.uleb128 0x1
+ 692 0223 50       		.byte	0x50
+ 693 0224 02       		.uleb128 0x2
+ 694 0225 74       		.byte	0x74
+ 695 0226 00       		.sleb128 0
+ 696 0227 00       		.byte	0
+ 697 0228 09       		.uleb128 0x9
+ 698 0229 C6000000 		.4byte	.LVL17
+ 699 022d 3E040000 		.4byte	0x43e
+ 700 0231 07       		.uleb128 0x7
+ 701 0232 D0000000 		.4byte	.LVL18
+ 702 0236 2F040000 		.4byte	0x42f
+ 703 023a 45020000 		.4byte	0x245
+ 704 023e 08       		.uleb128 0x8
+ 705 023f 01       		.uleb128 0x1
+ 706 0240 50       		.byte	0x50
+ 707 0241 02       		.uleb128 0x2
+ 708 0242 74       		.byte	0x74
+ 709 0243 00       		.sleb128 0
+ 710 0244 00       		.byte	0
+ 711 0245 07       		.uleb128 0x7
+ 712 0246 E8000000 		.4byte	.LVL19
+ 713 024a 2F040000 		.4byte	0x42f
+ 714 024e 59020000 		.4byte	0x259
+ 715 0252 08       		.uleb128 0x8
+ 716 0253 01       		.uleb128 0x1
+ 717 0254 50       		.byte	0x50
+ 718 0255 02       		.uleb128 0x2
+ 719 0256 74       		.byte	0x74
+ 720 0257 00       		.sleb128 0
+ 721 0258 00       		.byte	0
+ 722 0259 09       		.uleb128 0x9
+ 723 025a FA000000 		.4byte	.LVL20
+ 724 025e 49040000 		.4byte	0x449
+ 725 0262 07       		.uleb128 0x7
+ 726 0263 04010000 		.4byte	.LVL21
+ 727 0267 2F040000 		.4byte	0x42f
+ 728 026b 76020000 		.4byte	0x276
+ 729 026f 08       		.uleb128 0x8
+ 730 0270 01       		.uleb128 0x1
+ 731 0271 50       		.byte	0x50
+ 732 0272 02       		.uleb128 0x2
+ARM GAS  C:\Users\Tizian\AppData\Local\Temp\ccFyqBo1.s 			page 16
 
 
- 753 02db 74       		.byte	0x74
- 754 02dc 00       		.sleb128 0
- 755 02dd 00       		.byte	0
- 756 02de 0A       		.uleb128 0xa
- 757 02df 3C010000 		.4byte	.LVL29
- 758 02e3 F6030000 		.4byte	0x3f6
- 759 02e7 09       		.uleb128 0x9
- 760 02e8 01       		.uleb128 0x1
- 761 02e9 50       		.byte	0x50
- 762 02ea 02       		.uleb128 0x2
- 763 02eb 74       		.byte	0x74
- 764 02ec 00       		.sleb128 0
- 765 02ed 00       		.byte	0
- 766 02ee 00       		.byte	0
- 767 02ef 0C       		.uleb128 0xc
- 768 02f0 D3010000 		.4byte	.LASF18
- 769 02f4 04       		.byte	0x4
- 770 02f5 1207     		.2byte	0x712
- 771 02f7 FB020000 		.4byte	0x2fb
- 772 02fb 0D       		.uleb128 0xd
- 773 02fc 8C000000 		.4byte	0x8c
- 774 0300 0E       		.uleb128 0xe
- 775 0301 21030000 		.4byte	.LASF19
- 776 0305 01       		.byte	0x1
- 777 0306 0E       		.byte	0xe
- 778 0307 81000000 		.4byte	0x81
- 779 030b 05       		.uleb128 0x5
- 780 030c 03       		.byte	0x3
- 781 030d 00000000 		.4byte	scan
- 782 0311 0E       		.uleb128 0xe
- 783 0312 AB010000 		.4byte	.LASF20
- 784 0316 01       		.byte	0x1
- 785 0317 0E       		.byte	0xe
- 786 0318 81000000 		.4byte	0x81
- 787 031c 05       		.uleb128 0x5
- 788 031d 03       		.byte	0x3
- 789 031e 00000000 		.4byte	input
- 790 0322 0F       		.uleb128 0xf
- 791 0323 636E7400 		.ascii	"cnt\000"
- 792 0327 01       		.byte	0x1
- 793 0328 0E       		.byte	0xe
- 794 0329 81000000 		.4byte	0x81
- 795 032d 05       		.uleb128 0x5
- 796 032e 03       		.byte	0x3
- 797 032f 00000000 		.4byte	cnt
- 798 0333 0E       		.uleb128 0xe
- 799 0334 FE000000 		.4byte	.LASF21
- 800 0338 01       		.byte	0x1
- 801 0339 0F       		.byte	0xf
- 802 033a 81000000 		.4byte	0x81
- 803 033e 05       		.uleb128 0x5
- 804 033f 03       		.byte	0x3
- 805 0340 00000000 		.4byte	data
- 806 0344 0E       		.uleb128 0xe
- 807 0345 C3010000 		.4byte	.LASF22
- 808 0349 01       		.byte	0x1
- 809 034a 0F       		.byte	0xf
-ARM GAS  C:\Users\nicoz\AppData\Local\Temp\ccQGMc1U.s 			page 17
+ 733 0273 74       		.byte	0x74
+ 734 0274 00       		.sleb128 0
+ 735 0275 00       		.byte	0
+ 736 0276 07       		.uleb128 0x7
+ 737 0277 1C010000 		.4byte	.LVL22
+ 738 027b 2F040000 		.4byte	0x42f
+ 739 027f 8A020000 		.4byte	0x28a
+ 740 0283 08       		.uleb128 0x8
+ 741 0284 01       		.uleb128 0x1
+ 742 0285 50       		.byte	0x50
+ 743 0286 02       		.uleb128 0x2
+ 744 0287 74       		.byte	0x74
+ 745 0288 00       		.sleb128 0
+ 746 0289 00       		.byte	0
+ 747 028a 09       		.uleb128 0x9
+ 748 028b 2E010000 		.4byte	.LVL23
+ 749 028f 54040000 		.4byte	0x454
+ 750 0293 07       		.uleb128 0x7
+ 751 0294 38010000 		.4byte	.LVL24
+ 752 0298 2F040000 		.4byte	0x42f
+ 753 029c A7020000 		.4byte	0x2a7
+ 754 02a0 08       		.uleb128 0x8
+ 755 02a1 01       		.uleb128 0x1
+ 756 02a2 50       		.byte	0x50
+ 757 02a3 02       		.uleb128 0x2
+ 758 02a4 74       		.byte	0x74
+ 759 02a5 00       		.sleb128 0
+ 760 02a6 00       		.byte	0
+ 761 02a7 07       		.uleb128 0x7
+ 762 02a8 54010000 		.4byte	.LVL25
+ 763 02ac 2F040000 		.4byte	0x42f
+ 764 02b0 BB020000 		.4byte	0x2bb
+ 765 02b4 08       		.uleb128 0x8
+ 766 02b5 01       		.uleb128 0x1
+ 767 02b6 50       		.byte	0x50
+ 768 02b7 02       		.uleb128 0x2
+ 769 02b8 74       		.byte	0x74
+ 770 02b9 00       		.sleb128 0
+ 771 02ba 00       		.byte	0
+ 772 02bb 07       		.uleb128 0x7
+ 773 02bc 6C010000 		.4byte	.LVL26
+ 774 02c0 ED030000 		.4byte	0x3ed
+ 775 02c4 CF020000 		.4byte	0x2cf
+ 776 02c8 08       		.uleb128 0x8
+ 777 02c9 01       		.uleb128 0x1
+ 778 02ca 50       		.byte	0x50
+ 779 02cb 02       		.uleb128 0x2
+ 780 02cc 74       		.byte	0x74
+ 781 02cd 00       		.sleb128 0
+ 782 02ce 00       		.byte	0
+ 783 02cf 09       		.uleb128 0x9
+ 784 02d0 72010000 		.4byte	.LVL27
+ 785 02d4 5F040000 		.4byte	0x45f
+ 786 02d8 09       		.uleb128 0x9
+ 787 02d9 78010000 		.4byte	.LVL28
+ 788 02dd 6A040000 		.4byte	0x46a
+ 789 02e1 07       		.uleb128 0x7
+ARM GAS  C:\Users\Tizian\AppData\Local\Temp\ccFyqBo1.s 			page 17
 
 
- 810 034b 81000000 		.4byte	0x81
- 811 034f 05       		.uleb128 0x5
- 812 0350 03       		.byte	0x3
- 813 0351 00000000 		.4byte	addr
- 814 0355 10       		.uleb128 0x10
- 815 0356 81000000 		.4byte	0x81
- 816 035a 65030000 		.4byte	0x365
- 817 035e 11       		.uleb128 0x11
- 818 035f B3000000 		.4byte	0xb3
- 819 0363 03       		.byte	0x3
- 820 0364 00       		.byte	0
- 821 0365 0F       		.uleb128 0xf
- 822 0366 434D4400 		.ascii	"CMD\000"
- 823 036a 01       		.byte	0x1
- 824 036b 10       		.byte	0x10
- 825 036c 55030000 		.4byte	0x355
- 826 0370 05       		.uleb128 0x5
- 827 0371 03       		.byte	0x3
- 828 0372 00000000 		.4byte	CMD
- 829 0376 10       		.uleb128 0x10
- 830 0377 A5000000 		.4byte	0xa5
- 831 037b 86030000 		.4byte	0x386
- 832 037f 12       		.uleb128 0x12
- 833 0380 86030000 		.4byte	0x386
- 834 0384 7F       		.sleb128 -1
- 835 0385 00       		.byte	0
- 836 0386 02       		.uleb128 0x2
- 837 0387 04       		.byte	0x4
- 838 0388 05       		.byte	0x5
- 839 0389 BC020000 		.4byte	.LASF23
- 840 038d 0F       		.uleb128 0xf
- 841 038e 6F757400 		.ascii	"out\000"
- 842 0392 01       		.byte	0x1
- 843 0393 12       		.byte	0x12
- 844 0394 76030000 		.4byte	0x376
- 845 0398 05       		.uleb128 0x5
- 846 0399 03       		.byte	0x3
- 847 039a 00000000 		.4byte	out
- 848 039e 13       		.uleb128 0x13
- 849 039f ED010000 		.4byte	.LASF24
- 850 03a3 ED010000 		.4byte	.LASF24
- 851 03a7 05       		.byte	0x5
- 852 03a8 71       		.byte	0x71
- 853 03a9 13       		.uleb128 0x13
- 854 03aa 20020000 		.4byte	.LASF25
- 855 03ae 20020000 		.4byte	.LASF25
- 856 03b2 06       		.byte	0x6
- 857 03b3 2F       		.byte	0x2f
- 858 03b4 13       		.uleb128 0x13
- 859 03b5 2E030000 		.4byte	.LASF26
- 860 03b9 2E030000 		.4byte	.LASF26
- 861 03bd 07       		.byte	0x7
- 862 03be 76       		.byte	0x76
- 863 03bf 13       		.uleb128 0x13
- 864 03c0 13030000 		.4byte	.LASF27
- 865 03c4 13030000 		.4byte	.LASF27
- 866 03c8 08       		.byte	0x8
-ARM GAS  C:\Users\nicoz\AppData\Local\Temp\ccQGMc1U.s 			page 18
+ 790 02e2 8C010000 		.4byte	.LVL29
+ 791 02e6 ED030000 		.4byte	0x3ed
+ 792 02ea F8020000 		.4byte	0x2f8
+ 793 02ee 08       		.uleb128 0x8
+ 794 02ef 01       		.uleb128 0x1
+ 795 02f0 50       		.byte	0x50
+ 796 02f1 05       		.uleb128 0x5
+ 797 02f2 03       		.byte	0x3
+ 798 02f3 08010000 		.4byte	.LC8
+ 799 02f7 00       		.byte	0
+ 800 02f8 0A       		.uleb128 0xa
+ 801 02f9 96010000 		.4byte	.LVL30
+ 802 02fd 75040000 		.4byte	0x475
+ 803 0301 08       		.uleb128 0x8
+ 804 0302 01       		.uleb128 0x1
+ 805 0303 50       		.byte	0x50
+ 806 0304 05       		.uleb128 0x5
+ 807 0305 03       		.byte	0x3
+ 808 0306 00000000 		.4byte	.LANCHOR0
+ 809 030a 00       		.byte	0
+ 810 030b 00       		.byte	0
+ 811 030c 0B       		.uleb128 0xb
+ 812 030d AA010000 		.4byte	.LASF18
+ 813 0311 04       		.byte	0x4
+ 814 0312 1207     		.2byte	0x712
+ 815 0314 18030000 		.4byte	0x318
+ 816 0318 0C       		.uleb128 0xc
+ 817 0319 8C000000 		.4byte	0x8c
+ 818 031d 0D       		.uleb128 0xd
+ 819 031e E9020000 		.4byte	.LASF19
+ 820 0322 01       		.byte	0x1
+ 821 0323 0E       		.byte	0xe
+ 822 0324 81000000 		.4byte	0x81
+ 823 0328 05       		.uleb128 0x5
+ 824 0329 03       		.byte	0x3
+ 825 032a 00000000 		.4byte	scan
+ 826 032e 0D       		.uleb128 0xd
+ 827 032f 05010000 		.4byte	.LASF20
+ 828 0333 01       		.byte	0x1
+ 829 0334 0E       		.byte	0xe
+ 830 0335 81000000 		.4byte	0x81
+ 831 0339 05       		.uleb128 0x5
+ 832 033a 03       		.byte	0x3
+ 833 033b 00000000 		.4byte	input
+ 834 033f 0E       		.uleb128 0xe
+ 835 0340 636E7400 		.ascii	"cnt\000"
+ 836 0344 01       		.byte	0x1
+ 837 0345 0E       		.byte	0xe
+ 838 0346 81000000 		.4byte	0x81
+ 839 034a 05       		.uleb128 0x5
+ 840 034b 03       		.byte	0x3
+ 841 034c 00000000 		.4byte	cnt
+ 842 0350 0D       		.uleb128 0xd
+ 843 0351 64000000 		.4byte	.LASF21
+ 844 0355 01       		.byte	0x1
+ 845 0356 0F       		.byte	0xf
+ 846 0357 81000000 		.4byte	0x81
+ARM GAS  C:\Users\Tizian\AppData\Local\Temp\ccFyqBo1.s 			page 18
 
 
- 867 03c9 18       		.byte	0x18
- 868 03ca 13       		.uleb128 0x13
- 869 03cb D0020000 		.4byte	.LASF28
- 870 03cf D0020000 		.4byte	.LASF28
- 871 03d3 08       		.byte	0x8
- 872 03d4 28       		.byte	0x28
- 873 03d5 13       		.uleb128 0x13
- 874 03d6 91020000 		.4byte	.LASF29
- 875 03da 91020000 		.4byte	.LASF29
- 876 03de 09       		.byte	0x9
- 877 03df 18       		.byte	0x18
- 878 03e0 13       		.uleb128 0x13
- 879 03e1 40020000 		.4byte	.LASF30
- 880 03e5 40020000 		.4byte	.LASF30
- 881 03e9 09       		.byte	0x9
- 882 03ea 28       		.byte	0x28
- 883 03eb 13       		.uleb128 0x13
- 884 03ec 53020000 		.4byte	.LASF31
- 885 03f0 53020000 		.4byte	.LASF31
- 886 03f4 05       		.byte	0x5
- 887 03f5 54       		.byte	0x54
- 888 03f6 13       		.uleb128 0x13
- 889 03f7 04030000 		.4byte	.LASF32
- 890 03fb 04030000 		.4byte	.LASF32
- 891 03ff 05       		.byte	0x5
- 892 0400 8B       		.byte	0x8b
- 893 0401 13       		.uleb128 0x13
- 894 0402 C8010000 		.4byte	.LASF33
- 895 0406 C8010000 		.4byte	.LASF33
- 896 040a 0A       		.byte	0xa
- 897 040b 26       		.byte	0x26
- 898 040c 13       		.uleb128 0x13
- 899 040d DF000000 		.4byte	.LASF34
- 900 0411 DF000000 		.4byte	.LASF34
- 901 0415 0A       		.byte	0xa
- 902 0416 29       		.byte	0x29
- 903 0417 13       		.uleb128 0x13
- 904 0418 01020000 		.4byte	.LASF35
- 905 041c 01020000 		.4byte	.LASF35
- 906 0420 0B       		.byte	0xb
- 907 0421 29       		.byte	0x29
- 908 0422 13       		.uleb128 0x13
- 909 0423 26030000 		.4byte	.LASF36
- 910 0427 26030000 		.4byte	.LASF36
- 911 042b 0C       		.byte	0xc
- 912 042c E7       		.byte	0xe7
- 913 042d 13       		.uleb128 0x13
- 914 042e C5000000 		.4byte	.LASF37
- 915 0432 C5000000 		.4byte	.LASF37
- 916 0436 0D       		.byte	0xd
- 917 0437 29       		.byte	0x29
- 918 0438 14       		.uleb128 0x14
- 919 0439 5E020000 		.4byte	.LASF47
- 920 043d 0F020000 		.4byte	.LASF48
- 921 0441 11       		.byte	0x11
- 922 0442 00       		.byte	0
- 923 0443 5E020000 		.4byte	.LASF47
-ARM GAS  C:\Users\nicoz\AppData\Local\Temp\ccQGMc1U.s 			page 19
+ 847 035b 05       		.uleb128 0x5
+ 848 035c 03       		.byte	0x3
+ 849 035d 00000000 		.4byte	data
+ 850 0361 0D       		.uleb128 0xd
+ 851 0362 1D010000 		.4byte	.LASF22
+ 852 0366 01       		.byte	0x1
+ 853 0367 0F       		.byte	0xf
+ 854 0368 81000000 		.4byte	0x81
+ 855 036c 05       		.uleb128 0x5
+ 856 036d 03       		.byte	0x3
+ 857 036e 00000000 		.4byte	addr
+ 858 0372 0D       		.uleb128 0xd
+ 859 0373 3B010000 		.4byte	.LASF23
+ 860 0377 01       		.byte	0x1
+ 861 0378 10       		.byte	0x10
+ 862 0379 81000000 		.4byte	0x81
+ 863 037d 05       		.uleb128 0x5
+ 864 037e 03       		.byte	0x3
+ 865 037f 00000000 		.4byte	write
+ 866 0383 0F       		.uleb128 0xf
+ 867 0384 81000000 		.4byte	0x81
+ 868 0388 93030000 		.4byte	0x393
+ 869 038c 10       		.uleb128 0x10
+ 870 038d 93030000 		.4byte	0x393
+ 871 0391 7F       		.sleb128 -1
+ 872 0392 00       		.byte	0
+ 873 0393 02       		.uleb128 0x2
+ 874 0394 04       		.byte	0x4
+ 875 0395 05       		.byte	0x5
+ 876 0396 6F010000 		.4byte	.LASF24
+ 877 039a 0D       		.uleb128 0xd
+ 878 039b 41010000 		.4byte	.LASF25
+ 879 039f 01       		.byte	0x1
+ 880 03a0 12       		.byte	0x12
+ 881 03a1 83030000 		.4byte	0x383
+ 882 03a5 05       		.uleb128 0x5
+ 883 03a6 03       		.byte	0x3
+ 884 03a7 00000000 		.4byte	rxData
+ 885 03ab 0F       		.uleb128 0xf
+ 886 03ac A5000000 		.4byte	0xa5
+ 887 03b0 BB030000 		.4byte	0x3bb
+ 888 03b4 10       		.uleb128 0x10
+ 889 03b5 93030000 		.4byte	0x393
+ 890 03b9 7F       		.sleb128 -1
+ 891 03ba 00       		.byte	0
+ 892 03bb 0E       		.uleb128 0xe
+ 893 03bc 6F757400 		.ascii	"out\000"
+ 894 03c0 01       		.byte	0x1
+ 895 03c1 14       		.byte	0x14
+ 896 03c2 AB030000 		.4byte	0x3ab
+ 897 03c6 05       		.uleb128 0x5
+ 898 03c7 03       		.byte	0x3
+ 899 03c8 00000000 		.4byte	out
+ 900 03cc 11       		.uleb128 0x11
+ 901 03cd DB020000 		.4byte	.LASF26
+ 902 03d1 DB020000 		.4byte	.LASF26
+ 903 03d5 05       		.byte	0x5
+ARM GAS  C:\Users\Tizian\AppData\Local\Temp\ccFyqBo1.s 			page 19
 
 
- 924 0447 13       		.uleb128 0x13
- 925 0448 65020000 		.4byte	.LASF38
- 926 044c 65020000 		.4byte	.LASF38
- 927 0450 0E       		.byte	0xe
- 928 0451 29       		.byte	0x29
- 929 0452 13       		.uleb128 0x13
- 930 0453 E0010000 		.4byte	.LASF39
- 931 0457 E0010000 		.4byte	.LASF39
- 932 045b 0F       		.byte	0xf
- 933 045c 29       		.byte	0x29
- 934 045d 13       		.uleb128 0x13
- 935 045e E9000000 		.4byte	.LASF40
- 936 0462 E9000000 		.4byte	.LASF40
- 937 0466 10       		.byte	0x10
- 938 0467 29       		.byte	0x29
- 939 0468 00       		.byte	0
- 940              		.section	.debug_abbrev,"",%progbits
- 941              	.Ldebug_abbrev0:
- 942 0000 01       		.uleb128 0x1
- 943 0001 11       		.uleb128 0x11
- 944 0002 01       		.byte	0x1
- 945 0003 25       		.uleb128 0x25
- 946 0004 0E       		.uleb128 0xe
- 947 0005 13       		.uleb128 0x13
- 948 0006 0B       		.uleb128 0xb
- 949 0007 03       		.uleb128 0x3
- 950 0008 0E       		.uleb128 0xe
- 951 0009 1B       		.uleb128 0x1b
- 952 000a 0E       		.uleb128 0xe
- 953 000b 55       		.uleb128 0x55
- 954 000c 17       		.uleb128 0x17
- 955 000d 11       		.uleb128 0x11
- 956 000e 01       		.uleb128 0x1
- 957 000f 10       		.uleb128 0x10
- 958 0010 17       		.uleb128 0x17
- 959 0011 00       		.byte	0
- 960 0012 00       		.byte	0
- 961 0013 02       		.uleb128 0x2
- 962 0014 24       		.uleb128 0x24
- 963 0015 00       		.byte	0
- 964 0016 0B       		.uleb128 0xb
- 965 0017 0B       		.uleb128 0xb
- 966 0018 3E       		.uleb128 0x3e
- 967 0019 0B       		.uleb128 0xb
- 968 001a 03       		.uleb128 0x3
- 969 001b 0E       		.uleb128 0xe
- 970 001c 00       		.byte	0
- 971 001d 00       		.byte	0
- 972 001e 03       		.uleb128 0x3
- 973 001f 16       		.uleb128 0x16
- 974 0020 00       		.byte	0
- 975 0021 03       		.uleb128 0x3
- 976 0022 0E       		.uleb128 0xe
- 977 0023 3A       		.uleb128 0x3a
- 978 0024 0B       		.uleb128 0xb
- 979 0025 3B       		.uleb128 0x3b
- 980 0026 0B       		.uleb128 0xb
-ARM GAS  C:\Users\nicoz\AppData\Local\Temp\ccQGMc1U.s 			page 20
+ 904 03d6 18       		.byte	0x18
+ 905 03d7 11       		.uleb128 0x11
+ 906 03d8 55010000 		.4byte	.LASF27
+ 907 03dc 55010000 		.4byte	.LASF27
+ 908 03e0 05       		.byte	0x5
+ 909 03e1 28       		.byte	0x28
+ 910 03e2 11       		.uleb128 0x11
+ 911 03e3 22010000 		.4byte	.LASF28
+ 912 03e7 22010000 		.4byte	.LASF28
+ 913 03eb 06       		.byte	0x6
+ 914 03ec 54       		.byte	0x54
+ 915 03ed 11       		.uleb128 0x11
+ 916 03ee CC020000 		.4byte	.LASF29
+ 917 03f2 CC020000 		.4byte	.LASF29
+ 918 03f6 06       		.byte	0x6
+ 919 03f7 8B       		.byte	0x8b
+ 920 03f8 11       		.uleb128 0x11
+ 921 03f9 8A010000 		.4byte	.LASF30
+ 922 03fd 8A010000 		.4byte	.LASF30
+ 923 0401 07       		.byte	0x7
+ 924 0402 2F       		.byte	0x2f
+ 925 0403 11       		.uleb128 0x11
+ 926 0404 17020000 		.4byte	.LASF31
+ 927 0408 17020000 		.4byte	.LASF31
+ 928 040c 06       		.byte	0x6
+ 929 040d 71       		.byte	0x71
+ 930 040e 11       		.uleb128 0x11
+ 931 040f F6020000 		.4byte	.LASF32
+ 932 0413 F6020000 		.4byte	.LASF32
+ 933 0417 08       		.byte	0x8
+ 934 0418 76       		.byte	0x76
+ 935 0419 11       		.uleb128 0x11
+ 936 041a EE020000 		.4byte	.LASF33
+ 937 041e EE020000 		.4byte	.LASF33
+ 938 0422 09       		.byte	0x9
+ 939 0423 E7       		.byte	0xe7
+ 940 0424 11       		.uleb128 0x11
+ 941 0425 35000000 		.4byte	.LASF34
+ 942 0429 35000000 		.4byte	.LASF34
+ 943 042d 0A       		.byte	0xa
+ 944 042e 29       		.byte	0x29
+ 945 042f 12       		.uleb128 0x12
+ 946 0430 B7010000 		.4byte	.LASF46
+ 947 0434 79010000 		.4byte	.LASF47
+ 948 0438 0E       		.byte	0xe
+ 949 0439 00       		.byte	0
+ 950 043a B7010000 		.4byte	.LASF46
+ 951 043e 11       		.uleb128 0x11
+ 952 043f DD010000 		.4byte	.LASF35
+ 953 0443 DD010000 		.4byte	.LASF35
+ 954 0447 0B       		.byte	0xb
+ 955 0448 29       		.byte	0x29
+ 956 0449 11       		.uleb128 0x11
+ 957 044a 48010000 		.4byte	.LASF36
+ 958 044e 48010000 		.4byte	.LASF36
+ 959 0452 0C       		.byte	0xc
+ 960 0453 29       		.byte	0x29
+ARM GAS  C:\Users\Tizian\AppData\Local\Temp\ccFyqBo1.s 			page 20
 
 
- 981 0027 49       		.uleb128 0x49
- 982 0028 13       		.uleb128 0x13
- 983 0029 00       		.byte	0
- 984 002a 00       		.byte	0
- 985 002b 04       		.uleb128 0x4
- 986 002c 24       		.uleb128 0x24
- 987 002d 00       		.byte	0
- 988 002e 0B       		.uleb128 0xb
- 989 002f 0B       		.uleb128 0xb
- 990 0030 3E       		.uleb128 0x3e
- 991 0031 0B       		.uleb128 0xb
- 992 0032 03       		.uleb128 0x3
- 993 0033 08       		.uleb128 0x8
- 994 0034 00       		.byte	0
- 995 0035 00       		.byte	0
- 996 0036 05       		.uleb128 0x5
- 997 0037 2E       		.uleb128 0x2e
- 998 0038 00       		.byte	0
- 999 0039 3F       		.uleb128 0x3f
- 1000 003a 19       		.uleb128 0x19
- 1001 003b 03       		.uleb128 0x3
- 1002 003c 0E       		.uleb128 0xe
- 1003 003d 3A       		.uleb128 0x3a
- 1004 003e 0B       		.uleb128 0xb
- 1005 003f 3B       		.uleb128 0x3b
- 1006 0040 0B       		.uleb128 0xb
- 1007 0041 27       		.uleb128 0x27
- 1008 0042 19       		.uleb128 0x19
- 1009 0043 11       		.uleb128 0x11
- 1010 0044 01       		.uleb128 0x1
- 1011 0045 12       		.uleb128 0x12
- 1012 0046 06       		.uleb128 0x6
- 1013 0047 40       		.uleb128 0x40
- 1014 0048 18       		.uleb128 0x18
- 1015 0049 9742     		.uleb128 0x2117
- 1016 004b 19       		.uleb128 0x19
- 1017 004c 00       		.byte	0
- 1018 004d 00       		.byte	0
- 1019 004e 06       		.uleb128 0x6
- 1020 004f 2E       		.uleb128 0x2e
- 1021 0050 01       		.byte	0x1
- 1022 0051 3F       		.uleb128 0x3f
- 1023 0052 19       		.uleb128 0x19
- 1024 0053 03       		.uleb128 0x3
- 1025 0054 0E       		.uleb128 0xe
- 1026 0055 3A       		.uleb128 0x3a
- 1027 0056 0B       		.uleb128 0xb
- 1028 0057 3B       		.uleb128 0x3b
- 1029 0058 0B       		.uleb128 0xb
- 1030 0059 27       		.uleb128 0x27
- 1031 005a 19       		.uleb128 0x19
- 1032 005b 11       		.uleb128 0x11
- 1033 005c 01       		.uleb128 0x1
- 1034 005d 12       		.uleb128 0x12
- 1035 005e 06       		.uleb128 0x6
- 1036 005f 40       		.uleb128 0x40
- 1037 0060 18       		.uleb128 0x18
-ARM GAS  C:\Users\nicoz\AppData\Local\Temp\ccQGMc1U.s 			page 21
+ 961 0454 11       		.uleb128 0x11
+ 962 0455 4F000000 		.4byte	.LASF37
+ 963 0459 4F000000 		.4byte	.LASF37
+ 964 045d 0D       		.byte	0xd
+ 965 045e 29       		.byte	0x29
+ 966 045f 11       		.uleb128 0x11
+ 967 0460 96020000 		.4byte	.LASF38
+ 968 0464 96020000 		.4byte	.LASF38
+ 969 0468 06       		.byte	0x6
+ 970 0469 73       		.byte	0x73
+ 971 046a 11       		.uleb128 0x11
+ 972 046b EA010000 		.4byte	.LASF39
+ 973 046f EA010000 		.4byte	.LASF39
+ 974 0473 06       		.byte	0x6
+ 975 0474 6F       		.byte	0x6f
+ 976 0475 11       		.uleb128 0x11
+ 977 0476 2D010000 		.4byte	.LASF40
+ 978 047a 2D010000 		.4byte	.LASF40
+ 979 047e 06       		.byte	0x6
+ 980 047f 8C       		.byte	0x8c
+ 981 0480 00       		.byte	0
+ 982              		.section	.debug_abbrev,"",%progbits
+ 983              	.Ldebug_abbrev0:
+ 984 0000 01       		.uleb128 0x1
+ 985 0001 11       		.uleb128 0x11
+ 986 0002 01       		.byte	0x1
+ 987 0003 25       		.uleb128 0x25
+ 988 0004 0E       		.uleb128 0xe
+ 989 0005 13       		.uleb128 0x13
+ 990 0006 0B       		.uleb128 0xb
+ 991 0007 03       		.uleb128 0x3
+ 992 0008 0E       		.uleb128 0xe
+ 993 0009 1B       		.uleb128 0x1b
+ 994 000a 0E       		.uleb128 0xe
+ 995 000b 55       		.uleb128 0x55
+ 996 000c 17       		.uleb128 0x17
+ 997 000d 11       		.uleb128 0x11
+ 998 000e 01       		.uleb128 0x1
+ 999 000f 10       		.uleb128 0x10
+ 1000 0010 17       		.uleb128 0x17
+ 1001 0011 00       		.byte	0
+ 1002 0012 00       		.byte	0
+ 1003 0013 02       		.uleb128 0x2
+ 1004 0014 24       		.uleb128 0x24
+ 1005 0015 00       		.byte	0
+ 1006 0016 0B       		.uleb128 0xb
+ 1007 0017 0B       		.uleb128 0xb
+ 1008 0018 3E       		.uleb128 0x3e
+ 1009 0019 0B       		.uleb128 0xb
+ 1010 001a 03       		.uleb128 0x3
+ 1011 001b 0E       		.uleb128 0xe
+ 1012 001c 00       		.byte	0
+ 1013 001d 00       		.byte	0
+ 1014 001e 03       		.uleb128 0x3
+ 1015 001f 16       		.uleb128 0x16
+ 1016 0020 00       		.byte	0
+ 1017 0021 03       		.uleb128 0x3
+ARM GAS  C:\Users\Tizian\AppData\Local\Temp\ccFyqBo1.s 			page 21
 
 
- 1038 0061 9742     		.uleb128 0x2117
- 1039 0063 19       		.uleb128 0x19
- 1040 0064 01       		.uleb128 0x1
- 1041 0065 13       		.uleb128 0x13
- 1042 0066 00       		.byte	0
- 1043 0067 00       		.byte	0
- 1044 0068 07       		.uleb128 0x7
- 1045 0069 898201   		.uleb128 0x4109
- 1046 006c 00       		.byte	0
- 1047 006d 11       		.uleb128 0x11
- 1048 006e 01       		.uleb128 0x1
- 1049 006f 31       		.uleb128 0x31
- 1050 0070 13       		.uleb128 0x13
- 1051 0071 00       		.byte	0
- 1052 0072 00       		.byte	0
- 1053 0073 08       		.uleb128 0x8
- 1054 0074 898201   		.uleb128 0x4109
- 1055 0077 01       		.byte	0x1
- 1056 0078 11       		.uleb128 0x11
- 1057 0079 01       		.uleb128 0x1
- 1058 007a 31       		.uleb128 0x31
- 1059 007b 13       		.uleb128 0x13
- 1060 007c 01       		.uleb128 0x1
- 1061 007d 13       		.uleb128 0x13
- 1062 007e 00       		.byte	0
- 1063 007f 00       		.byte	0
- 1064 0080 09       		.uleb128 0x9
- 1065 0081 8A8201   		.uleb128 0x410a
- 1066 0084 00       		.byte	0
- 1067 0085 02       		.uleb128 0x2
- 1068 0086 18       		.uleb128 0x18
- 1069 0087 9142     		.uleb128 0x2111
- 1070 0089 18       		.uleb128 0x18
- 1071 008a 00       		.byte	0
- 1072 008b 00       		.byte	0
- 1073 008c 0A       		.uleb128 0xa
- 1074 008d 898201   		.uleb128 0x4109
- 1075 0090 01       		.byte	0x1
- 1076 0091 11       		.uleb128 0x11
- 1077 0092 01       		.uleb128 0x1
- 1078 0093 31       		.uleb128 0x31
- 1079 0094 13       		.uleb128 0x13
- 1080 0095 00       		.byte	0
- 1081 0096 00       		.byte	0
- 1082 0097 0B       		.uleb128 0xb
- 1083 0098 2E       		.uleb128 0x2e
- 1084 0099 01       		.byte	0x1
- 1085 009a 3F       		.uleb128 0x3f
- 1086 009b 19       		.uleb128 0x19
- 1087 009c 03       		.uleb128 0x3
- 1088 009d 0E       		.uleb128 0xe
- 1089 009e 3A       		.uleb128 0x3a
- 1090 009f 0B       		.uleb128 0xb
- 1091 00a0 3B       		.uleb128 0x3b
- 1092 00a1 0B       		.uleb128 0xb
- 1093 00a2 27       		.uleb128 0x27
- 1094 00a3 19       		.uleb128 0x19
-ARM GAS  C:\Users\nicoz\AppData\Local\Temp\ccQGMc1U.s 			page 22
+ 1018 0022 0E       		.uleb128 0xe
+ 1019 0023 3A       		.uleb128 0x3a
+ 1020 0024 0B       		.uleb128 0xb
+ 1021 0025 3B       		.uleb128 0x3b
+ 1022 0026 0B       		.uleb128 0xb
+ 1023 0027 49       		.uleb128 0x49
+ 1024 0028 13       		.uleb128 0x13
+ 1025 0029 00       		.byte	0
+ 1026 002a 00       		.byte	0
+ 1027 002b 04       		.uleb128 0x4
+ 1028 002c 24       		.uleb128 0x24
+ 1029 002d 00       		.byte	0
+ 1030 002e 0B       		.uleb128 0xb
+ 1031 002f 0B       		.uleb128 0xb
+ 1032 0030 3E       		.uleb128 0x3e
+ 1033 0031 0B       		.uleb128 0xb
+ 1034 0032 03       		.uleb128 0x3
+ 1035 0033 08       		.uleb128 0x8
+ 1036 0034 00       		.byte	0
+ 1037 0035 00       		.byte	0
+ 1038 0036 05       		.uleb128 0x5
+ 1039 0037 2E       		.uleb128 0x2e
+ 1040 0038 00       		.byte	0
+ 1041 0039 3F       		.uleb128 0x3f
+ 1042 003a 19       		.uleb128 0x19
+ 1043 003b 03       		.uleb128 0x3
+ 1044 003c 0E       		.uleb128 0xe
+ 1045 003d 3A       		.uleb128 0x3a
+ 1046 003e 0B       		.uleb128 0xb
+ 1047 003f 3B       		.uleb128 0x3b
+ 1048 0040 0B       		.uleb128 0xb
+ 1049 0041 27       		.uleb128 0x27
+ 1050 0042 19       		.uleb128 0x19
+ 1051 0043 11       		.uleb128 0x11
+ 1052 0044 01       		.uleb128 0x1
+ 1053 0045 12       		.uleb128 0x12
+ 1054 0046 06       		.uleb128 0x6
+ 1055 0047 40       		.uleb128 0x40
+ 1056 0048 18       		.uleb128 0x18
+ 1057 0049 9742     		.uleb128 0x2117
+ 1058 004b 19       		.uleb128 0x19
+ 1059 004c 00       		.byte	0
+ 1060 004d 00       		.byte	0
+ 1061 004e 06       		.uleb128 0x6
+ 1062 004f 2E       		.uleb128 0x2e
+ 1063 0050 01       		.byte	0x1
+ 1064 0051 3F       		.uleb128 0x3f
+ 1065 0052 19       		.uleb128 0x19
+ 1066 0053 03       		.uleb128 0x3
+ 1067 0054 0E       		.uleb128 0xe
+ 1068 0055 3A       		.uleb128 0x3a
+ 1069 0056 0B       		.uleb128 0xb
+ 1070 0057 3B       		.uleb128 0x3b
+ 1071 0058 0B       		.uleb128 0xb
+ 1072 0059 27       		.uleb128 0x27
+ 1073 005a 19       		.uleb128 0x19
+ 1074 005b 49       		.uleb128 0x49
+ARM GAS  C:\Users\Tizian\AppData\Local\Temp\ccFyqBo1.s 			page 22
 
 
- 1095 00a4 49       		.uleb128 0x49
- 1096 00a5 13       		.uleb128 0x13
- 1097 00a6 8701     		.uleb128 0x87
- 1098 00a8 19       		.uleb128 0x19
- 1099 00a9 11       		.uleb128 0x11
- 1100 00aa 01       		.uleb128 0x1
- 1101 00ab 12       		.uleb128 0x12
- 1102 00ac 06       		.uleb128 0x6
- 1103 00ad 40       		.uleb128 0x40
- 1104 00ae 18       		.uleb128 0x18
- 1105 00af 9742     		.uleb128 0x2117
- 1106 00b1 19       		.uleb128 0x19
- 1107 00b2 01       		.uleb128 0x1
- 1108 00b3 13       		.uleb128 0x13
- 1109 00b4 00       		.byte	0
- 1110 00b5 00       		.byte	0
- 1111 00b6 0C       		.uleb128 0xc
- 1112 00b7 34       		.uleb128 0x34
- 1113 00b8 00       		.byte	0
- 1114 00b9 03       		.uleb128 0x3
- 1115 00ba 0E       		.uleb128 0xe
- 1116 00bb 3A       		.uleb128 0x3a
- 1117 00bc 0B       		.uleb128 0xb
- 1118 00bd 3B       		.uleb128 0x3b
- 1119 00be 05       		.uleb128 0x5
- 1120 00bf 49       		.uleb128 0x49
- 1121 00c0 13       		.uleb128 0x13
- 1122 00c1 3F       		.uleb128 0x3f
- 1123 00c2 19       		.uleb128 0x19
- 1124 00c3 3C       		.uleb128 0x3c
- 1125 00c4 19       		.uleb128 0x19
- 1126 00c5 00       		.byte	0
- 1127 00c6 00       		.byte	0
- 1128 00c7 0D       		.uleb128 0xd
- 1129 00c8 35       		.uleb128 0x35
- 1130 00c9 00       		.byte	0
- 1131 00ca 49       		.uleb128 0x49
- 1132 00cb 13       		.uleb128 0x13
- 1133 00cc 00       		.byte	0
- 1134 00cd 00       		.byte	0
- 1135 00ce 0E       		.uleb128 0xe
- 1136 00cf 34       		.uleb128 0x34
- 1137 00d0 00       		.byte	0
- 1138 00d1 03       		.uleb128 0x3
- 1139 00d2 0E       		.uleb128 0xe
- 1140 00d3 3A       		.uleb128 0x3a
- 1141 00d4 0B       		.uleb128 0xb
- 1142 00d5 3B       		.uleb128 0x3b
- 1143 00d6 0B       		.uleb128 0xb
- 1144 00d7 49       		.uleb128 0x49
- 1145 00d8 13       		.uleb128 0x13
- 1146 00d9 3F       		.uleb128 0x3f
- 1147 00da 19       		.uleb128 0x19
- 1148 00db 02       		.uleb128 0x2
- 1149 00dc 18       		.uleb128 0x18
- 1150 00dd 00       		.byte	0
- 1151 00de 00       		.byte	0
-ARM GAS  C:\Users\nicoz\AppData\Local\Temp\ccQGMc1U.s 			page 23
+ 1075 005c 13       		.uleb128 0x13
+ 1076 005d 8701     		.uleb128 0x87
+ 1077 005f 19       		.uleb128 0x19
+ 1078 0060 11       		.uleb128 0x11
+ 1079 0061 01       		.uleb128 0x1
+ 1080 0062 12       		.uleb128 0x12
+ 1081 0063 06       		.uleb128 0x6
+ 1082 0064 40       		.uleb128 0x40
+ 1083 0065 18       		.uleb128 0x18
+ 1084 0066 9742     		.uleb128 0x2117
+ 1085 0068 19       		.uleb128 0x19
+ 1086 0069 01       		.uleb128 0x1
+ 1087 006a 13       		.uleb128 0x13
+ 1088 006b 00       		.byte	0
+ 1089 006c 00       		.byte	0
+ 1090 006d 07       		.uleb128 0x7
+ 1091 006e 898201   		.uleb128 0x4109
+ 1092 0071 01       		.byte	0x1
+ 1093 0072 11       		.uleb128 0x11
+ 1094 0073 01       		.uleb128 0x1
+ 1095 0074 31       		.uleb128 0x31
+ 1096 0075 13       		.uleb128 0x13
+ 1097 0076 01       		.uleb128 0x1
+ 1098 0077 13       		.uleb128 0x13
+ 1099 0078 00       		.byte	0
+ 1100 0079 00       		.byte	0
+ 1101 007a 08       		.uleb128 0x8
+ 1102 007b 8A8201   		.uleb128 0x410a
+ 1103 007e 00       		.byte	0
+ 1104 007f 02       		.uleb128 0x2
+ 1105 0080 18       		.uleb128 0x18
+ 1106 0081 9142     		.uleb128 0x2111
+ 1107 0083 18       		.uleb128 0x18
+ 1108 0084 00       		.byte	0
+ 1109 0085 00       		.byte	0
+ 1110 0086 09       		.uleb128 0x9
+ 1111 0087 898201   		.uleb128 0x4109
+ 1112 008a 00       		.byte	0
+ 1113 008b 11       		.uleb128 0x11
+ 1114 008c 01       		.uleb128 0x1
+ 1115 008d 31       		.uleb128 0x31
+ 1116 008e 13       		.uleb128 0x13
+ 1117 008f 00       		.byte	0
+ 1118 0090 00       		.byte	0
+ 1119 0091 0A       		.uleb128 0xa
+ 1120 0092 898201   		.uleb128 0x4109
+ 1121 0095 01       		.byte	0x1
+ 1122 0096 11       		.uleb128 0x11
+ 1123 0097 01       		.uleb128 0x1
+ 1124 0098 31       		.uleb128 0x31
+ 1125 0099 13       		.uleb128 0x13
+ 1126 009a 00       		.byte	0
+ 1127 009b 00       		.byte	0
+ 1128 009c 0B       		.uleb128 0xb
+ 1129 009d 34       		.uleb128 0x34
+ 1130 009e 00       		.byte	0
+ 1131 009f 03       		.uleb128 0x3
+ARM GAS  C:\Users\Tizian\AppData\Local\Temp\ccFyqBo1.s 			page 23
 
 
- 1152 00df 0F       		.uleb128 0xf
- 1153 00e0 34       		.uleb128 0x34
- 1154 00e1 00       		.byte	0
- 1155 00e2 03       		.uleb128 0x3
- 1156 00e3 08       		.uleb128 0x8
- 1157 00e4 3A       		.uleb128 0x3a
- 1158 00e5 0B       		.uleb128 0xb
- 1159 00e6 3B       		.uleb128 0x3b
- 1160 00e7 0B       		.uleb128 0xb
- 1161 00e8 49       		.uleb128 0x49
- 1162 00e9 13       		.uleb128 0x13
- 1163 00ea 3F       		.uleb128 0x3f
- 1164 00eb 19       		.uleb128 0x19
- 1165 00ec 02       		.uleb128 0x2
- 1166 00ed 18       		.uleb128 0x18
- 1167 00ee 00       		.byte	0
- 1168 00ef 00       		.byte	0
- 1169 00f0 10       		.uleb128 0x10
- 1170 00f1 01       		.uleb128 0x1
- 1171 00f2 01       		.byte	0x1
- 1172 00f3 49       		.uleb128 0x49
- 1173 00f4 13       		.uleb128 0x13
- 1174 00f5 01       		.uleb128 0x1
- 1175 00f6 13       		.uleb128 0x13
- 1176 00f7 00       		.byte	0
- 1177 00f8 00       		.byte	0
- 1178 00f9 11       		.uleb128 0x11
- 1179 00fa 21       		.uleb128 0x21
- 1180 00fb 00       		.byte	0
- 1181 00fc 49       		.uleb128 0x49
- 1182 00fd 13       		.uleb128 0x13
- 1183 00fe 2F       		.uleb128 0x2f
- 1184 00ff 0B       		.uleb128 0xb
- 1185 0100 00       		.byte	0
- 1186 0101 00       		.byte	0
- 1187 0102 12       		.uleb128 0x12
- 1188 0103 21       		.uleb128 0x21
- 1189 0104 00       		.byte	0
- 1190 0105 49       		.uleb128 0x49
- 1191 0106 13       		.uleb128 0x13
- 1192 0107 2F       		.uleb128 0x2f
- 1193 0108 0D       		.uleb128 0xd
- 1194 0109 00       		.byte	0
- 1195 010a 00       		.byte	0
- 1196 010b 13       		.uleb128 0x13
- 1197 010c 2E       		.uleb128 0x2e
- 1198 010d 00       		.byte	0
- 1199 010e 3F       		.uleb128 0x3f
- 1200 010f 19       		.uleb128 0x19
- 1201 0110 3C       		.uleb128 0x3c
- 1202 0111 19       		.uleb128 0x19
- 1203 0112 6E       		.uleb128 0x6e
- 1204 0113 0E       		.uleb128 0xe
- 1205 0114 03       		.uleb128 0x3
- 1206 0115 0E       		.uleb128 0xe
- 1207 0116 3A       		.uleb128 0x3a
- 1208 0117 0B       		.uleb128 0xb
-ARM GAS  C:\Users\nicoz\AppData\Local\Temp\ccQGMc1U.s 			page 24
+ 1132 00a0 0E       		.uleb128 0xe
+ 1133 00a1 3A       		.uleb128 0x3a
+ 1134 00a2 0B       		.uleb128 0xb
+ 1135 00a3 3B       		.uleb128 0x3b
+ 1136 00a4 05       		.uleb128 0x5
+ 1137 00a5 49       		.uleb128 0x49
+ 1138 00a6 13       		.uleb128 0x13
+ 1139 00a7 3F       		.uleb128 0x3f
+ 1140 00a8 19       		.uleb128 0x19
+ 1141 00a9 3C       		.uleb128 0x3c
+ 1142 00aa 19       		.uleb128 0x19
+ 1143 00ab 00       		.byte	0
+ 1144 00ac 00       		.byte	0
+ 1145 00ad 0C       		.uleb128 0xc
+ 1146 00ae 35       		.uleb128 0x35
+ 1147 00af 00       		.byte	0
+ 1148 00b0 49       		.uleb128 0x49
+ 1149 00b1 13       		.uleb128 0x13
+ 1150 00b2 00       		.byte	0
+ 1151 00b3 00       		.byte	0
+ 1152 00b4 0D       		.uleb128 0xd
+ 1153 00b5 34       		.uleb128 0x34
+ 1154 00b6 00       		.byte	0
+ 1155 00b7 03       		.uleb128 0x3
+ 1156 00b8 0E       		.uleb128 0xe
+ 1157 00b9 3A       		.uleb128 0x3a
+ 1158 00ba 0B       		.uleb128 0xb
+ 1159 00bb 3B       		.uleb128 0x3b
+ 1160 00bc 0B       		.uleb128 0xb
+ 1161 00bd 49       		.uleb128 0x49
+ 1162 00be 13       		.uleb128 0x13
+ 1163 00bf 3F       		.uleb128 0x3f
+ 1164 00c0 19       		.uleb128 0x19
+ 1165 00c1 02       		.uleb128 0x2
+ 1166 00c2 18       		.uleb128 0x18
+ 1167 00c3 00       		.byte	0
+ 1168 00c4 00       		.byte	0
+ 1169 00c5 0E       		.uleb128 0xe
+ 1170 00c6 34       		.uleb128 0x34
+ 1171 00c7 00       		.byte	0
+ 1172 00c8 03       		.uleb128 0x3
+ 1173 00c9 08       		.uleb128 0x8
+ 1174 00ca 3A       		.uleb128 0x3a
+ 1175 00cb 0B       		.uleb128 0xb
+ 1176 00cc 3B       		.uleb128 0x3b
+ 1177 00cd 0B       		.uleb128 0xb
+ 1178 00ce 49       		.uleb128 0x49
+ 1179 00cf 13       		.uleb128 0x13
+ 1180 00d0 3F       		.uleb128 0x3f
+ 1181 00d1 19       		.uleb128 0x19
+ 1182 00d2 02       		.uleb128 0x2
+ 1183 00d3 18       		.uleb128 0x18
+ 1184 00d4 00       		.byte	0
+ 1185 00d5 00       		.byte	0
+ 1186 00d6 0F       		.uleb128 0xf
+ 1187 00d7 01       		.uleb128 0x1
+ 1188 00d8 01       		.byte	0x1
+ARM GAS  C:\Users\Tizian\AppData\Local\Temp\ccFyqBo1.s 			page 24
 
 
- 1209 0118 3B       		.uleb128 0x3b
- 1210 0119 0B       		.uleb128 0xb
- 1211 011a 00       		.byte	0
- 1212 011b 00       		.byte	0
- 1213 011c 14       		.uleb128 0x14
- 1214 011d 2E       		.uleb128 0x2e
- 1215 011e 00       		.byte	0
- 1216 011f 3F       		.uleb128 0x3f
- 1217 0120 19       		.uleb128 0x19
- 1218 0121 3C       		.uleb128 0x3c
- 1219 0122 19       		.uleb128 0x19
- 1220 0123 6E       		.uleb128 0x6e
- 1221 0124 0E       		.uleb128 0xe
- 1222 0125 03       		.uleb128 0x3
- 1223 0126 0E       		.uleb128 0xe
- 1224 0127 3A       		.uleb128 0x3a
- 1225 0128 0B       		.uleb128 0xb
- 1226 0129 3B       		.uleb128 0x3b
- 1227 012a 0B       		.uleb128 0xb
- 1228 012b 6E       		.uleb128 0x6e
- 1229 012c 0E       		.uleb128 0xe
- 1230 012d 00       		.byte	0
- 1231 012e 00       		.byte	0
- 1232 012f 00       		.byte	0
- 1233              		.section	.debug_aranges,"",%progbits
- 1234 0000 2C000000 		.4byte	0x2c
- 1235 0004 0200     		.2byte	0x2
- 1236 0006 00000000 		.4byte	.Ldebug_info0
- 1237 000a 04       		.byte	0x4
- 1238 000b 00       		.byte	0
- 1239 000c 0000     		.2byte	0
- 1240 000e 0000     		.2byte	0
- 1241 0010 00000000 		.4byte	.LFB64
- 1242 0014 0C000000 		.4byte	.LFE64-.LFB64
- 1243 0018 00000000 		.4byte	.LFB65
- 1244 001c 34000000 		.4byte	.LFE65-.LFB65
- 1245 0020 00000000 		.4byte	.LFB66
- 1246 0024 74010000 		.4byte	.LFE66-.LFB66
- 1247 0028 00000000 		.4byte	0
- 1248 002c 00000000 		.4byte	0
- 1249              		.section	.debug_ranges,"",%progbits
- 1250              	.Ldebug_ranges0:
- 1251 0000 00000000 		.4byte	.LFB64
- 1252 0004 0C000000 		.4byte	.LFE64
- 1253 0008 00000000 		.4byte	.LFB65
- 1254 000c 34000000 		.4byte	.LFE65
- 1255 0010 00000000 		.4byte	.LFB66
- 1256 0014 74010000 		.4byte	.LFE66
- 1257 0018 00000000 		.4byte	0
- 1258 001c 00000000 		.4byte	0
- 1259              		.section	.debug_line,"",%progbits
- 1260              	.Ldebug_line0:
- 1261 0000 C5020000 		.section	.debug_str,"MS",%progbits,1
- 1261      02004902 
- 1261      00000201 
- 1261      FB0E0D00 
- 1261      01010101 
-ARM GAS  C:\Users\nicoz\AppData\Local\Temp\ccQGMc1U.s 			page 25
+ 1189 00d9 49       		.uleb128 0x49
+ 1190 00da 13       		.uleb128 0x13
+ 1191 00db 01       		.uleb128 0x1
+ 1192 00dc 13       		.uleb128 0x13
+ 1193 00dd 00       		.byte	0
+ 1194 00de 00       		.byte	0
+ 1195 00df 10       		.uleb128 0x10
+ 1196 00e0 21       		.uleb128 0x21
+ 1197 00e1 00       		.byte	0
+ 1198 00e2 49       		.uleb128 0x49
+ 1199 00e3 13       		.uleb128 0x13
+ 1200 00e4 2F       		.uleb128 0x2f
+ 1201 00e5 0D       		.uleb128 0xd
+ 1202 00e6 00       		.byte	0
+ 1203 00e7 00       		.byte	0
+ 1204 00e8 11       		.uleb128 0x11
+ 1205 00e9 2E       		.uleb128 0x2e
+ 1206 00ea 00       		.byte	0
+ 1207 00eb 3F       		.uleb128 0x3f
+ 1208 00ec 19       		.uleb128 0x19
+ 1209 00ed 3C       		.uleb128 0x3c
+ 1210 00ee 19       		.uleb128 0x19
+ 1211 00ef 6E       		.uleb128 0x6e
+ 1212 00f0 0E       		.uleb128 0xe
+ 1213 00f1 03       		.uleb128 0x3
+ 1214 00f2 0E       		.uleb128 0xe
+ 1215 00f3 3A       		.uleb128 0x3a
+ 1216 00f4 0B       		.uleb128 0xb
+ 1217 00f5 3B       		.uleb128 0x3b
+ 1218 00f6 0B       		.uleb128 0xb
+ 1219 00f7 00       		.byte	0
+ 1220 00f8 00       		.byte	0
+ 1221 00f9 12       		.uleb128 0x12
+ 1222 00fa 2E       		.uleb128 0x2e
+ 1223 00fb 00       		.byte	0
+ 1224 00fc 3F       		.uleb128 0x3f
+ 1225 00fd 19       		.uleb128 0x19
+ 1226 00fe 3C       		.uleb128 0x3c
+ 1227 00ff 19       		.uleb128 0x19
+ 1228 0100 6E       		.uleb128 0x6e
+ 1229 0101 0E       		.uleb128 0xe
+ 1230 0102 03       		.uleb128 0x3
+ 1231 0103 0E       		.uleb128 0xe
+ 1232 0104 3A       		.uleb128 0x3a
+ 1233 0105 0B       		.uleb128 0xb
+ 1234 0106 3B       		.uleb128 0x3b
+ 1235 0107 0B       		.uleb128 0xb
+ 1236 0108 6E       		.uleb128 0x6e
+ 1237 0109 0E       		.uleb128 0xe
+ 1238 010a 00       		.byte	0
+ 1239 010b 00       		.byte	0
+ 1240 010c 00       		.byte	0
+ 1241              		.section	.debug_aranges,"",%progbits
+ 1242 0000 24000000 		.4byte	0x24
+ 1243 0004 0200     		.2byte	0x2
+ 1244 0006 00000000 		.4byte	.Ldebug_info0
+ 1245 000a 04       		.byte	0x4
+ARM GAS  C:\Users\Tizian\AppData\Local\Temp\ccFyqBo1.s 			page 25
 
 
- 1262              	.LASF8:
- 1263 0000 6C6F6E67 		.ascii	"long long int\000"
- 1263      206C6F6E 
- 1263      6720696E 
- 1263      7400
- 1264              	.LASF4:
- 1265 000e 5F5F7569 		.ascii	"__uint8_t\000"
- 1265      6E74385F 
- 1265      7400
- 1266              	.LASF5:
- 1267 0018 5F5F696E 		.ascii	"__int32_t\000"
- 1267      7433325F 
+ 1246 000b 00       		.byte	0
+ 1247 000c 0000     		.2byte	0
+ 1248 000e 0000     		.2byte	0
+ 1249 0010 00000000 		.4byte	.LFB64
+ 1250 0014 0C000000 		.4byte	.LFE64-.LFB64
+ 1251 0018 00000000 		.4byte	.LFB65
+ 1252 001c F4010000 		.4byte	.LFE65-.LFB65
+ 1253 0020 00000000 		.4byte	0
+ 1254 0024 00000000 		.4byte	0
+ 1255              		.section	.debug_ranges,"",%progbits
+ 1256              	.Ldebug_ranges0:
+ 1257 0000 00000000 		.4byte	.LFB64
+ 1258 0004 0C000000 		.4byte	.LFE64
+ 1259 0008 00000000 		.4byte	.LFB65
+ 1260 000c F4010000 		.4byte	.LFE65
+ 1261 0010 00000000 		.4byte	0
+ 1262 0014 00000000 		.4byte	0
+ 1263              		.section	.debug_line,"",%progbits
+ 1264              	.Ldebug_line0:
+ 1265 0000 9D020000 		.section	.debug_str,"MS",%progbits,1
+ 1265      02002602 
+ 1265      00000201 
+ 1265      FB0E0D00 
+ 1265      01010101 
+ 1266              	.LASF8:
+ 1267 0000 6C6F6E67 		.ascii	"long long int\000"
+ 1267      206C6F6E 
+ 1267      6720696E 
  1267      7400
- 1268              	.LASF43:
- 1269 0022 433A5C55 		.ascii	"C:\\Users\\nicoz\\OneDrive - HTL Anichstrasse\\Doku"
- 1269      73657273 
- 1269      5C6E6963 
- 1269      6F7A5C4F 
- 1269      6E654472 
- 1270 0051 6D656E74 		.ascii	"mente\\Schule\\Werkstaette\\SJ2024_25\\PsoC_Z80Boar"
- 1270      655C5363 
- 1270      68756C65 
- 1270      5C576572 
- 1270      6B737461 
- 1271 0080 645C5053 		.ascii	"d\\PSoC_Program\\PSoC_Z80_Toolbox\\BusAnalyzer.cyds"
- 1271      6F435F50 
- 1271      726F6772 
- 1271      616D5C50 
- 1271      536F435F 
- 1272 00b0 6E00     		.ascii	"n\000"
- 1273              	.LASF3:
- 1274 00b2 73686F72 		.ascii	"short unsigned int\000"
- 1274      7420756E 
- 1274      7369676E 
- 1274      65642069 
- 1274      6E7400
- 1275              	.LASF37:
- 1276 00c5 4374726C 		.ascii	"Ctrl_M1_Read\000"
- 1276      5F4D315F 
- 1276      52656164 
- 1276      00
- 1277              	.LASF10:
- 1278 00d2 756E7369 		.ascii	"unsigned int\000"
- 1278      676E6564 
- 1278      20696E74 
- 1278      00
- 1279              	.LASF34:
- 1280 00df 44617461 		.ascii	"Data_Read\000"
- 1280      5F526561 
- 1280      6400
- 1281              	.LASF40:
- 1282 00e9 4374726C 		.ascii	"Ctrl_MREQ_Read\000"
- 1282      5F4D5245 
- 1282      515F5265 
- 1282      616400
- 1283              	.LASF13:
- 1284 00f8 666C6F61 		.ascii	"float\000"
-ARM GAS  C:\Users\nicoz\AppData\Local\Temp\ccQGMc1U.s 			page 26
+ 1268              	.LASF4:
+ 1269 000e 5F5F7569 		.ascii	"__uint8_t\000"
+ 1269      6E74385F 
+ 1269      7400
+ 1270              	.LASF5:
+ 1271 0018 5F5F696E 		.ascii	"__int32_t\000"
+ 1271      7433325F 
+ 1271      7400
+ 1272              	.LASF3:
+ 1273 0022 73686F72 		.ascii	"short unsigned int\000"
+ 1273      7420756E 
+ 1273      7369676E 
+ 1273      65642069 
+ 1273      6E7400
+ 1274              	.LASF34:
+ 1275 0035 4374726C 		.ascii	"Ctrl_M1_Read\000"
+ 1275      5F4D315F 
+ 1275      52656164 
+ 1275      00
+ 1276              	.LASF10:
+ 1277 0042 756E7369 		.ascii	"unsigned int\000"
+ 1277      676E6564 
+ 1277      20696E74 
+ 1277      00
+ 1278              	.LASF37:
+ 1279 004f 4374726C 		.ascii	"Ctrl_MREQ_Read\000"
+ 1279      5F4D5245 
+ 1279      515F5265 
+ARM GAS  C:\Users\Tizian\AppData\Local\Temp\ccFyqBo1.s 			page 26
 
 
- 1284      7400
- 1285              	.LASF21:
- 1286 00fe 64617461 		.ascii	"data\000"
- 1286      00
- 1287              	.LASF45:
- 1288 0103 55415254 		.ascii	"UART_RX_ISR\000"
- 1288      5F52585F 
- 1288      49535200 
- 1289              	.LASF1:
- 1290 010f 756E7369 		.ascii	"unsigned char\000"
- 1290      676E6564 
- 1290      20636861 
- 1290      7200
- 1291              	.LASF41:
- 1292 011d 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
- 1292      43313120 
- 1292      352E342E 
- 1292      31203230 
- 1292      31363036 
- 1293 0150 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m3 -mthumb -g -O"
- 1293      20726576 
- 1293      6973696F 
- 1293      6E203233 
- 1293      37373135 
- 1294 0183 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
- 1294      66756E63 
- 1294      74696F6E 
- 1294      2D736563 
- 1294      74696F6E 
- 1295              	.LASF20:
- 1296 01ab 696E7075 		.ascii	"input\000"
- 1296      7400
- 1297              	.LASF7:
- 1298 01b1 6C6F6E67 		.ascii	"long unsigned int\000"
- 1298      20756E73 
- 1298      69676E65 
- 1298      6420696E 
- 1298      7400
- 1299              	.LASF22:
- 1300 01c3 61646472 		.ascii	"addr\000"
- 1300      00
- 1301              	.LASF33:
- 1302 01c8 44617461 		.ascii	"Data_Write\000"
- 1302      5F577269 
- 1302      746500
- 1303              	.LASF18:
- 1304 01d3 49544D5F 		.ascii	"ITM_RxBuffer\000"
- 1304      52784275 
- 1304      66666572 
- 1304      00
- 1305              	.LASF39:
- 1306 01e0 4374726C 		.ascii	"Ctrl_WR_Read\000"
- 1306      5F57525F 
- 1306      52656164 
- 1306      00
- 1307              	.LASF24:
- 1308 01ed 55415254 		.ascii	"UART_GetChar\000"
-ARM GAS  C:\Users\nicoz\AppData\Local\Temp\ccQGMc1U.s 			page 27
+ 1279      616400
+ 1280              	.LASF13:
+ 1281 005e 666C6F61 		.ascii	"float\000"
+ 1281      7400
+ 1282              	.LASF21:
+ 1283 0064 64617461 		.ascii	"data\000"
+ 1283      00
+ 1284              	.LASF1:
+ 1285 0069 756E7369 		.ascii	"unsigned char\000"
+ 1285      676E6564 
+ 1285      20636861 
+ 1285      7200
+ 1286              	.LASF41:
+ 1287 0077 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
+ 1287      43313120 
+ 1287      352E342E 
+ 1287      31203230 
+ 1287      31363036 
+ 1288 00aa 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m3 -mthumb -g -O"
+ 1288      20726576 
+ 1288      6973696F 
+ 1288      6E203233 
+ 1288      37373135 
+ 1289 00dd 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
+ 1289      66756E63 
+ 1289      74696F6E 
+ 1289      2D736563 
+ 1289      74696F6E 
+ 1290              	.LASF20:
+ 1291 0105 696E7075 		.ascii	"input\000"
+ 1291      7400
+ 1292              	.LASF7:
+ 1293 010b 6C6F6E67 		.ascii	"long unsigned int\000"
+ 1293      20756E73 
+ 1293      69676E65 
+ 1293      6420696E 
+ 1293      7400
+ 1294              	.LASF22:
+ 1295 011d 61646472 		.ascii	"addr\000"
+ 1295      00
+ 1296              	.LASF28:
+ 1297 0122 55415254 		.ascii	"UART_Start\000"
+ 1297      5F537461 
+ 1297      727400
+ 1298              	.LASF40:
+ 1299 012d 55415254 		.ascii	"UART_PutArray\000"
+ 1299      5F507574 
+ 1299      41727261 
+ 1299      7900
+ 1300              	.LASF23:
+ 1301 013b 77726974 		.ascii	"write\000"
+ 1301      6500
+ 1302              	.LASF25:
+ 1303 0141 72784461 		.ascii	"rxData\000"
+ 1303      746100
+ 1304              	.LASF36:
+ 1305 0148 4374726C 		.ascii	"Ctrl_WR_Read\000"
+ARM GAS  C:\Users\Tizian\AppData\Local\Temp\ccFyqBo1.s 			page 27
 
 
- 1308      5F476574 
- 1308      43686172 
- 1308      00
- 1309              	.LASF14:
- 1310 01fa 646F7562 		.ascii	"double\000"
- 1310      6C6500
- 1311              	.LASF35:
- 1312 0201 41646472 		.ascii	"Addr_LSB_Read\000"
- 1312      5F4C5342 
- 1312      5F526561 
- 1312      6400
- 1313              	.LASF48:
- 1314 020f 5F5F6275 		.ascii	"__builtin_strlen\000"
- 1314      696C7469 
- 1314      6E5F7374 
- 1314      726C656E 
- 1314      00
- 1315              	.LASF25:
- 1316 0220 436C6F63 		.ascii	"Clock_Ctrl_Write\000"
- 1316      6B5F4374 
- 1316      726C5F57 
- 1316      72697465 
- 1316      00
- 1317              	.LASF46:
- 1318 0231 6D61696E 		.ascii	"main\000"
- 1318      00
- 1319              	.LASF44:
- 1320 0236 436C6F63 		.ascii	"Clock_ISR\000"
- 1320      6B5F4953 
- 1320      5200
- 1321              	.LASF30:
- 1322 0240 6973725F 		.ascii	"isr_2_ClearPending\000"
- 1322      325F436C 
- 1322      65617250 
- 1322      656E6469 
- 1322      6E6700
- 1323              	.LASF31:
- 1324 0253 55415254 		.ascii	"UART_Start\000"
- 1324      5F537461 
- 1324      727400
- 1325              	.LASF47:
- 1326 025e 7374726C 		.ascii	"strlen\000"
- 1326      656E00
- 1327              	.LASF38:
- 1328 0265 4374726C 		.ascii	"Ctrl_RD_Read\000"
- 1328      5F52445F 
- 1328      52656164 
- 1328      00
- 1329              	.LASF9:
- 1330 0272 6C6F6E67 		.ascii	"long long unsigned int\000"
- 1330      206C6F6E 
- 1330      6720756E 
- 1330      7369676E 
- 1330      65642069 
- 1331              	.LASF11:
- 1332 0289 75696E74 		.ascii	"uint8_t\000"
- 1332      385F7400 
-ARM GAS  C:\Users\nicoz\AppData\Local\Temp\ccQGMc1U.s 			page 28
+ 1305      5F57525F 
+ 1305      52656164 
+ 1305      00
+ 1306              	.LASF27:
+ 1307 0155 6973725F 		.ascii	"isr_1_ClearPending\000"
+ 1307      315F436C 
+ 1307      65617250 
+ 1307      656E6469 
+ 1307      6E6700
+ 1308              	.LASF14:
+ 1309 0168 646F7562 		.ascii	"double\000"
+ 1309      6C6500
+ 1310              	.LASF24:
+ 1311 016f 7373697A 		.ascii	"ssizetype\000"
+ 1311      65747970 
+ 1311      6500
+ 1312              	.LASF47:
+ 1313 0179 5F5F6275 		.ascii	"__builtin_strlen\000"
+ 1313      696C7469 
+ 1313      6E5F7374 
+ 1313      726C656E 
+ 1313      00
+ 1314              	.LASF30:
+ 1315 018a 436C6F63 		.ascii	"Clock_Ctrl_Write\000"
+ 1315      6B5F4374 
+ 1315      726C5F57 
+ 1315      72697465 
+ 1315      00
+ 1316              	.LASF45:
+ 1317 019b 6D61696E 		.ascii	"main\000"
+ 1317      00
+ 1318              	.LASF44:
+ 1319 01a0 436C6F63 		.ascii	"Clock_ISR\000"
+ 1319      6B5F4953 
+ 1319      5200
+ 1320              	.LASF18:
+ 1321 01aa 49544D5F 		.ascii	"ITM_RxBuffer\000"
+ 1321      52784275 
+ 1321      66666572 
+ 1321      00
+ 1322              	.LASF46:
+ 1323 01b7 7374726C 		.ascii	"strlen\000"
+ 1323      656E00
+ 1324              	.LASF9:
+ 1325 01be 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 1325      206C6F6E 
+ 1325      6720756E 
+ 1325      7369676E 
+ 1325      65642069 
+ 1326              	.LASF11:
+ 1327 01d5 75696E74 		.ascii	"uint8_t\000"
+ 1327      385F7400 
+ 1328              	.LASF35:
+ 1329 01dd 4374726C 		.ascii	"Ctrl_RD_Read\000"
+ 1329      5F52445F 
+ 1329      52656164 
+ 1329      00
+ARM GAS  C:\Users\Tizian\AppData\Local\Temp\ccFyqBo1.s 			page 28
 
 
- 1333              	.LASF29:
- 1334 0291 6973725F 		.ascii	"isr_2_StartEx\000"
- 1334      325F5374 
- 1334      61727445 
- 1334      7800
- 1335              	.LASF12:
- 1336 029f 696E7433 		.ascii	"int32_t\000"
- 1336      325F7400 
- 1337              	.LASF17:
- 1338 02a7 73697A65 		.ascii	"sizetype\000"
- 1338      74797065 
- 1338      00
- 1339              	.LASF42:
- 1340 02b0 6D61696E 		.ascii	"main.c\000"
- 1340      2E6300
- 1341              	.LASF15:
- 1342 02b7 63686172 		.ascii	"char\000"
- 1342      00
- 1343              	.LASF23:
- 1344 02bc 7373697A 		.ascii	"ssizetype\000"
- 1344      65747970 
- 1344      6500
- 1345              	.LASF2:
- 1346 02c6 73686F72 		.ascii	"short int\000"
- 1346      7420696E 
- 1346      7400
- 1347              	.LASF28:
- 1348 02d0 6973725F 		.ascii	"isr_1_ClearPending\000"
- 1348      315F436C 
- 1348      65617250 
- 1348      656E6469 
- 1348      6E6700
- 1349              	.LASF6:
- 1350 02e3 6C6F6E67 		.ascii	"long int\000"
- 1350      20696E74 
- 1350      00
- 1351              	.LASF16:
- 1352 02ec 6C6F6E67 		.ascii	"long double\000"
- 1352      20646F75 
- 1352      626C6500 
- 1353              	.LASF0:
- 1354 02f8 7369676E 		.ascii	"signed char\000"
- 1354      65642063 
- 1354      68617200 
- 1355              	.LASF32:
- 1356 0304 55415254 		.ascii	"UART_PutString\000"
- 1356      5F507574 
- 1356      53747269 
- 1356      6E6700
- 1357              	.LASF27:
- 1358 0313 6973725F 		.ascii	"isr_1_StartEx\000"
- 1358      315F5374 
- 1358      61727445 
- 1358      7800
- 1359              	.LASF19:
- 1360 0321 7363616E 		.ascii	"scan\000"
- 1360      00
-ARM GAS  C:\Users\nicoz\AppData\Local\Temp\ccQGMc1U.s 			page 29
+ 1330              	.LASF39:
+ 1331 01ea 55415254 		.ascii	"UART_ReadRxData\000"
+ 1331      5F526561 
+ 1331      64527844 
+ 1331      61746100 
+ 1332              	.LASF12:
+ 1333 01fa 696E7433 		.ascii	"int32_t\000"
+ 1333      325F7400 
+ 1334              	.LASF17:
+ 1335 0202 73697A65 		.ascii	"sizetype\000"
+ 1335      74797065 
+ 1335      00
+ 1336              	.LASF42:
+ 1337 020b 6D61696E 		.ascii	"main.c\000"
+ 1337      2E6300
+ 1338              	.LASF15:
+ 1339 0212 63686172 		.ascii	"char\000"
+ 1339      00
+ 1340              	.LASF31:
+ 1341 0217 55415254 		.ascii	"UART_GetChar\000"
+ 1341      5F476574 
+ 1341      43686172 
+ 1341      00
+ 1342              	.LASF43:
+ 1343 0224 433A5C55 		.ascii	"C:\\Users\\Tizian\\Documents\\HTL\\24_25\\PBE\\Z80-"
+ 1343      73657273 
+ 1343      5C54697A 
+ 1343      69616E5C 
+ 1343      446F6375 
+ 1344 0250 44656275 		.ascii	"Debug-Board\\PSoC_Program\\PSoC_Z80_Toolbox\\BusAna"
+ 1344      672D426F 
+ 1344      6172645C 
+ 1344      50536F43 
+ 1344      5F50726F 
+ 1345 0280 6C797A65 		.ascii	"lyzer.cydsn\000"
+ 1345      722E6379 
+ 1345      64736E00 
+ 1346              	.LASF2:
+ 1347 028c 73686F72 		.ascii	"short int\000"
+ 1347      7420696E 
+ 1347      7400
+ 1348              	.LASF38:
+ 1349 0296 55415254 		.ascii	"UART_GetRxBufferSize\000"
+ 1349      5F476574 
+ 1349      52784275 
+ 1349      66666572 
+ 1349      53697A65 
+ 1350              	.LASF6:
+ 1351 02ab 6C6F6E67 		.ascii	"long int\000"
+ 1351      20696E74 
+ 1351      00
+ 1352              	.LASF16:
+ 1353 02b4 6C6F6E67 		.ascii	"long double\000"
+ 1353      20646F75 
+ 1353      626C6500 
+ 1354              	.LASF0:
+ 1355 02c0 7369676E 		.ascii	"signed char\000"
+ARM GAS  C:\Users\Tizian\AppData\Local\Temp\ccFyqBo1.s 			page 29
 
 
- 1361              	.LASF36:
- 1362 0326 73707269 		.ascii	"sprintf\000"
- 1362      6E746600 
- 1363              	.LASF26:
- 1364 032e 43794465 		.ascii	"CyDelay\000"
- 1364      6C617900 
- 1365              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran
+ 1355      65642063 
+ 1355      68617200 
+ 1356              	.LASF29:
+ 1357 02cc 55415254 		.ascii	"UART_PutString\000"
+ 1357      5F507574 
+ 1357      53747269 
+ 1357      6E6700
+ 1358              	.LASF26:
+ 1359 02db 6973725F 		.ascii	"isr_1_StartEx\000"
+ 1359      315F5374 
+ 1359      61727445 
+ 1359      7800
+ 1360              	.LASF19:
+ 1361 02e9 7363616E 		.ascii	"scan\000"
+ 1361      00
+ 1362              	.LASF33:
+ 1363 02ee 73707269 		.ascii	"sprintf\000"
+ 1363      6E746600 
+ 1364              	.LASF32:
+ 1365 02f6 43794465 		.ascii	"CyDelay\000"
+ 1365      6C617900 
+ 1366              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran

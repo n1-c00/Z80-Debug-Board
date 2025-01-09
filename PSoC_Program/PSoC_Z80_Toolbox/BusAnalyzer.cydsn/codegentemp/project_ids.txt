@@ -1,6 +1,6 @@
-C:\Users\nicoz\OneDrive - HTL Anichstrasse\Dokumente\Schule\Werkstaette\SJ2024_25\PsoC_Z80Board\PSoC_Program\PSoC_Z80_Toolbox\BusAnalyzer.cydsn\BusAnalyzer.cyprj|26fb1c51-c073-4103-a7d6-20899c5d307c
-C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\default\CyAnnotationLibrary\CyAnnotationLibrary.cylib\CyAnnotationLibrary.cyprj|8b938b4a-4628-48b4-8eeb-d01b79ac962f
-C:\Users\nicoz\OneDrive - HTL Anichstrasse\Dokumente\PSoC Creator\4.4\Downloads ( 4.4).cylib\Downloads ( 4.4).cyprj|254c80e2-16d8-496a-8dd8-c58aa3d553a4
-C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\cycomponentlibraryupdates\CyComponentLibraryUpdates.cylib\CyComponentLibraryUpdates.cyprj|0d1c10ca-21b6-4e3c-90d5-b0cfc61e39b8
-C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\CyComponentLibrary.cyprj|fed51058-c4ea-463d-a697-503136c9772c
-C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\CyPrimitives.cyprj|75f7f717-35a6-42f1-8928-379baaec084e
+C:\Users\Tizian\Documents\HTL\24_25\PBE\Z80-Debug-Board\PSoC_Program\PSoC_Z80_Toolbox\BusAnalyzer.cydsn\BusAnalyzer.cyprj|9a5be80b-3f6e-4fb2-acd0-90e0eb088c98
+C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\default\CyAnnotationLibrary\CyAnnotationLibrary.cylib\CyAnnotationLibrary.cyprj|092fd693-0620-495e-9423-47bfc5809a69
+C:\Users\Tizian\Documents\PSoC Creator\4.4\Downloads ( 4.4).cylib\Downloads ( 4.4).cyprj|4e77eae5-6af3-464f-94f2-4248513458de
+C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\cycomponentlibraryupdates\CyComponentLibraryUpdates.cylib\CyComponentLibraryUpdates.cyprj|a7d27787-569c-4171-865e-48a6e22a2763
+C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\CyComponentLibrary.cyprj|845348f3-36b2-4b24-82f7-fcc0bae9cc31
+C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\CyPrimitives.cyprj|e3f028eb-421b-4282-806d-9efe6ffe7167

@@ -1,4 +1,4 @@
-/* ========================================
+ /* ========================================
  *
  * Copyright YOUR COMPANY, THE YEAR
  * All Rights Reserved
@@ -13,7 +13,9 @@
 #include <stdio.h>
 uint8_t scan, input, cnt;
 uint8_t data, addr;
-uint8_t CMD[4] = {0xC3, 0x12, 0x34};
+uint8_t write;
+
+uint8_t rxData[]={};
 
 char out[] = {};
 
@@ -22,26 +24,11 @@ char out[] = {};
 CY_ISR(Clock_ISR){
     scan = 1;
 }
-CY_ISR(UART_RX_ISR){
-    //fetch Input from UART-Buffer
-    input = UART_GetChar();
-    
-    //take action depending on the char that was sent
-    switch(input){
-        case 0: break; //no new data sent
-        case 'c': Clock_Ctrl_Write(0b01); break; //set mux to the clock and pull the other input low
-        case 's': Clock_Ctrl_Write(0b10); CyDelay(10); Clock_Ctrl_Write(0b11); break; //pulse the line on the Mux 
-        default: break;
-        }
-}
 
 int main(void)
 {
     isr_1_StartEx(Clock_ISR);
     isr_1_ClearPending();
-    
-    isr_2_StartEx(UART_RX_ISR);
-    isr_2_ClearPending();
     
     CyGlobalIntEnable; /* Enable global interrupts. */
 
@@ -51,7 +38,7 @@ int main(void)
     UART_PutString("***Simple Script for reading Data- and Address-Bus of a Zilog Z80***\nPress 'c' for continious mode or 's' for single step:\n");
     UART_PutString(" Addr | Data | M1 | RD | WR | MREQ");
     
-    Data_Write(0x00);
+    //Data_Write(0x00);
 
     
     //default the clock to single step
@@ -59,14 +46,26 @@ int main(void)
     
     for(;;)
     {
+        //fetch Input from UART-Buffer
+        input = UART_GetChar();
+        
+        //take action depending on the char that was sent
+        switch(input){
+        case 0: break; //no new data sent
+        case 'c': Clock_Ctrl_Write(0b01); break; //set mux to the clock and pull the other input low
+        case 's': Clock_Ctrl_Write(0b10); CyDelay(10); Clock_Ctrl_Write(0b11); break; //pulse the line on the Mux 
+        case 'w': Clock_Ctrl_Write(0b11); write = 1; cnt = 0; UART_PutString("Please put your Programm in now! \n Exit with 'f'\n");  break; //toggle Write
+        default: break;
+        }
+        
         //when a new clock pulse is sent to the Z80, scan the Data and Address Lines and put the to the console
         if(scan == 1){
             //rest the scan flag
             scan = 0;
             
             //read the data- and address-bus and add them to the out string
-            data = Data_Read();
-            addr = Addr_LSB_Read();
+            data = 1; //Data_Read();
+            addr = 0; //Addr_LSB_Read();
             sprintf(out, "\n  %2x  |  %2x  ", addr, data);
             
             //check the control signals and add an x in the corresponding row
@@ -77,6 +76,21 @@ int main(void)
 
             //send the table entry to the PC
             UART_PutString(out);
+        }
+        while(write == 1){
+            if(UART_GetRxBufferSize() > 0){
+                input = UART_ReadRxData();
+                if(input == 'f'){
+                    write = 0;
+                    UART_PutString("Writing to RAM\n");
+                    //To-Do Code for Writing to RAM
+                    UART_PutArray(rxData, cnt);
+                    break;
+                } else {
+                    rxData[cnt] = input;
+                    cnt++;
+                }
+            }    
         }
     }
 }
