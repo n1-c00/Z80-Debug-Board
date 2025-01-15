@@ -1092,7 +1092,7 @@ END GROUP
 .debug_pubnames
  *(.debug_pubnames)
 
-.debug_info     0x00000000     0x4b61
+.debug_info     0x00000000     0x4b3c
  *(.debug_info .gnu.linkonce.wi.*)
  .debug_info    0x00000000      0x481 .\CortexM3\ARM_GCC_541\Debug\main.o
  .debug_info    0x00000481      0x4c9 .\CortexM3\ARM_GCC_541\Debug\cyfitter_cfg.o
@@ -1109,9 +1109,9 @@ END GROUP
  .debug_info    0x000039fe      0x11f .\CortexM3\ARM_GCC_541\Debug\BusAnalyzer.a(Ctrl_WR.o)
  .debug_info    0x00003b1d      0x11f .\CortexM3\ARM_GCC_541\Debug\BusAnalyzer.a(Ctrl_MREQ.o)
  .debug_info    0x00003c3c      0x2d2 .\CortexM3\ARM_GCC_541\Debug\BusAnalyzer.a(isr_1.o)
- .debug_info    0x00003f0e       0xb6 .\CortexM3\ARM_GCC_541\Debug\BusAnalyzer.a(CyBootAsmGnu.o)
- .debug_info    0x00003fc4      0x64d .\CortexM3\ARM_GCC_541\Debug\BusAnalyzer.a(CyFlash.o)
- .debug_info    0x00004611      0x550 .\CortexM3\ARM_GCC_541\Debug\BusAnalyzer.a(CySpc.o)
+ .debug_info    0x00003f0e       0x91 .\CortexM3\ARM_GCC_541\Debug\BusAnalyzer.a(CyBootAsmGnu.o)
+ .debug_info    0x00003f9f      0x64d .\CortexM3\ARM_GCC_541\Debug\BusAnalyzer.a(CyFlash.o)
+ .debug_info    0x000045ec      0x550 .\CortexM3\ARM_GCC_541\Debug\BusAnalyzer.a(CySpc.o)
 
 .debug_abbrev   0x00000000     0x140d
  *(.debug_abbrev)
@@ -1191,42 +1191,42 @@ END GROUP
  .debug_frame   0x00001754       0x20 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-nano-msizer.o)
  .debug_frame   0x00001774       0x5c c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-reent.o)
 
-.debug_str      0x00000000     0x1b1b
+.debug_str      0x00000000     0x1af6
  *(.debug_str)
- .debug_str     0x00000000      0x299 .\CortexM3\ARM_GCC_541\Debug\main.o
-                                0x2fe (size before relaxing)
- .debug_str     0x00000299      0x187 .\CortexM3\ARM_GCC_541\Debug\cyfitter_cfg.o
-                                0x335 (size before relaxing)
- .debug_str     0x00000420       0x75 .\CortexM3\ARM_GCC_541\Debug\cymetadata.o
-                                0x20a (size before relaxing)
- .debug_str     0x00000495      0x144 .\CortexM3\ARM_GCC_541\Debug\Cm3Start.o
-                                0x330 (size before relaxing)
- .debug_str     0x000005d9      0x84c .\CortexM3\ARM_GCC_541\Debug\BusAnalyzer.a(CyLib.o)
-                                0xa6d (size before relaxing)
- .debug_str     0x00000e25      0x365 .\CortexM3\ARM_GCC_541\Debug\BusAnalyzer.a(cyPm.o)
-                                0x759 (size before relaxing)
- .debug_str     0x0000118a      0x2e8 .\CortexM3\ARM_GCC_541\Debug\BusAnalyzer.a(UART.o)
-                                0x56a (size before relaxing)
- .debug_str     0x00001472       0x53 .\CortexM3\ARM_GCC_541\Debug\BusAnalyzer.a(UART_INT.o)
-                                0x278 (size before relaxing)
- .debug_str     0x000014c5       0x34 .\CortexM3\ARM_GCC_541\Debug\BusAnalyzer.a(Clock_Ctrl.o)
-                                0x1e4 (size before relaxing)
- .debug_str     0x000014f9      0x183 .\CortexM3\ARM_GCC_541\Debug\BusAnalyzer.a(UART_IntClock.o)
-                                0x35c (size before relaxing)
- .debug_str     0x0000167c       0x63 .\CortexM3\ARM_GCC_541\Debug\BusAnalyzer.a(Ctrl_M1.o)
-                                0x212 (size before relaxing)
- .debug_str     0x000016df       0x58 .\CortexM3\ARM_GCC_541\Debug\BusAnalyzer.a(Ctrl_RD.o)
-                                0x212 (size before relaxing)
- .debug_str     0x00001737       0x58 .\CortexM3\ARM_GCC_541\Debug\BusAnalyzer.a(Ctrl_WR.o)
-                                0x212 (size before relaxing)
- .debug_str     0x0000178f       0x60 .\CortexM3\ARM_GCC_541\Debug\BusAnalyzer.a(Ctrl_MREQ.o)
-                                0x21c (size before relaxing)
- .debug_str     0x000017ef       0xc5 .\CortexM3\ARM_GCC_541\Debug\BusAnalyzer.a(isr_1.o)
-                                0x2cc (size before relaxing)
- .debug_str     0x000018b4      0x1bb .\CortexM3\ARM_GCC_541\Debug\BusAnalyzer.a(CyFlash.o)
-                                0x3e6 (size before relaxing)
- .debug_str     0x00001a6f       0xac .\CortexM3\ARM_GCC_541\Debug\BusAnalyzer.a(CySpc.o)
-                                0x35e (size before relaxing)
+ .debug_str     0x00000000      0x274 .\CortexM3\ARM_GCC_541\Debug\main.o
+                                0x2d9 (size before relaxing)
+ .debug_str     0x00000274      0x187 .\CortexM3\ARM_GCC_541\Debug\cyfitter_cfg.o
+                                0x310 (size before relaxing)
+ .debug_str     0x000003fb       0x75 .\CortexM3\ARM_GCC_541\Debug\cymetadata.o
+                                0x1e5 (size before relaxing)
+ .debug_str     0x00000470      0x144 .\CortexM3\ARM_GCC_541\Debug\Cm3Start.o
+                                0x30b (size before relaxing)
+ .debug_str     0x000005b4      0x84c .\CortexM3\ARM_GCC_541\Debug\BusAnalyzer.a(CyLib.o)
+                                0xa48 (size before relaxing)
+ .debug_str     0x00000e00      0x365 .\CortexM3\ARM_GCC_541\Debug\BusAnalyzer.a(cyPm.o)
+                                0x734 (size before relaxing)
+ .debug_str     0x00001165      0x2e8 .\CortexM3\ARM_GCC_541\Debug\BusAnalyzer.a(UART.o)
+                                0x545 (size before relaxing)
+ .debug_str     0x0000144d       0x53 .\CortexM3\ARM_GCC_541\Debug\BusAnalyzer.a(UART_INT.o)
+                                0x253 (size before relaxing)
+ .debug_str     0x000014a0       0x34 .\CortexM3\ARM_GCC_541\Debug\BusAnalyzer.a(Clock_Ctrl.o)
+                                0x1bf (size before relaxing)
+ .debug_str     0x000014d4      0x183 .\CortexM3\ARM_GCC_541\Debug\BusAnalyzer.a(UART_IntClock.o)
+                                0x337 (size before relaxing)
+ .debug_str     0x00001657       0x63 .\CortexM3\ARM_GCC_541\Debug\BusAnalyzer.a(Ctrl_M1.o)
+                                0x1ed (size before relaxing)
+ .debug_str     0x000016ba       0x58 .\CortexM3\ARM_GCC_541\Debug\BusAnalyzer.a(Ctrl_RD.o)
+                                0x1ed (size before relaxing)
+ .debug_str     0x00001712       0x58 .\CortexM3\ARM_GCC_541\Debug\BusAnalyzer.a(Ctrl_WR.o)
+                                0x1ed (size before relaxing)
+ .debug_str     0x0000176a       0x60 .\CortexM3\ARM_GCC_541\Debug\BusAnalyzer.a(Ctrl_MREQ.o)
+                                0x1f7 (size before relaxing)
+ .debug_str     0x000017ca       0xc5 .\CortexM3\ARM_GCC_541\Debug\BusAnalyzer.a(isr_1.o)
+                                0x2a7 (size before relaxing)
+ .debug_str     0x0000188f      0x1bb .\CortexM3\ARM_GCC_541\Debug\BusAnalyzer.a(CyFlash.o)
+                                0x3c1 (size before relaxing)
+ .debug_str     0x00001a4a       0xac .\CortexM3\ARM_GCC_541\Debug\BusAnalyzer.a(CySpc.o)
+                                0x339 (size before relaxing)
 
 .debug_loc      0x00000000     0x1fe4
  *(.debug_loc)
@@ -1392,4 +1392,4 @@ END GROUP
 
 /DISCARD/
  *(.note.GNU-stack)
-OUTPUT(C:\Users\Tizian\Documents\HTL\24_25\PBE\Z80-Debug-Board\PSoC_Program\PSoC_Z80_Toolbox\BusAnalyzer.cydsn\CortexM3\ARM_GCC_541\Debug\BusAnalyzer.elf elf32-littlearm)
+OUTPUT(C:\Z80-Debug-Board\PSoC_Program\PSoC_Z80_Toolbox\BusAnalyzer.cydsn\CortexM3\ARM_GCC_541\Debug\BusAnalyzer.elf elf32-littlearm)

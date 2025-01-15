@@ -11,7 +11,7 @@
 */
 #include "project.h"
 #include <stdio.h>
-uint8_t scan, input, cnt;
+uint8_t scan, input, cnt, in;
 uint8_t data, addr;
 uint8_t write;
 
@@ -54,7 +54,6 @@ int main(void)
         case 0: break; //no new data sent
         case 'c': Clock_Ctrl_Write(0b01); break; //set mux to the clock and pull the other input low
         case 's': Clock_Ctrl_Write(0b10); CyDelay(10); Clock_Ctrl_Write(0b11); break; //pulse the line on the Mux 
-        case 'w': Clock_Ctrl_Write(0b11); write = 1; cnt = 0; UART_PutString("Please put your Programm in now! \n Exit with 'f'\n");  break; //toggle Write
         default: break;
         }
         
@@ -76,21 +75,6 @@ int main(void)
 
             //send the table entry to the PC
             UART_PutString(out);
-        }
-        while(write == 1){
-            if(UART_GetRxBufferSize() > 0){
-                input = UART_ReadRxData();
-                if(input == 'f'){
-                    write = 0;
-                    UART_PutString("Writing to RAM\n");
-                    //To-Do Code for Writing to RAM
-                    UART_PutArray(rxData, cnt);
-                    break;
-                } else {
-                    rxData[cnt] = input;
-                    cnt++;
-                }
-            }    
         }
     }
 }

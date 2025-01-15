@@ -1,5 +1,5 @@
--- Project:   C:\Users\Tizian\Documents\HTL\24_25\PBE\Z80-Debug-Board\PSoC_Program\PSoC_Z80_Toolbox\BusAnalyzer.cydsn\BusAnalyzer.cyprj
--- Generated: 01/08/2025 15:35:08
+-- Project:   C:\Z80-Debug-Board\PSoC_Program\PSoC_Z80_Toolbox\BusAnalyzer.cydsn\BusAnalyzer.cyprj
+-- Generated: 01/09/2025 21:50:01
 -- PSoC Creator  4.4
 
 ENTITY BusAnalyzer IS

@@ -1,10 +1,10 @@
-C:/Users/Tizian/Documents/HTL/24_25/PBE/Z80-Debug-Board/PSoC_Program/PSoC_Z80_Toolbox/BusAnalyzer.cydsn/CortexM3/ARM_GCC_541/Debug/CyBootAsmGnu.o : C:/Users/Tizian/Documents/HTL/24_25/PBE/Z80-Debug-Board/PSoC_Program/PSoC_Z80_Toolbox/BusAnalyzer.cydsn/Generated_Source/PSoC5/CyBootAsmGnu.s C:/Users/Tizian/Documents/HTL/24_25/PBE/Z80-Debug-Board/PSoC_Program/PSoC_Z80_Toolbox/BusAnalyzer.cydsn/Generated_Source/PSoC5/cydevicegnu.inc C:/Users/Tizian/Documents/HTL/24_25/PBE/Z80-Debug-Board/PSoC_Program/PSoC_Z80_Toolbox/BusAnalyzer.cydsn/Generated_Source/PSoC5/cydevicegnu_trm.inc C:/Users/Tizian/Documents/HTL/24_25/PBE/Z80-Debug-Board/PSoC_Program/PSoC_Z80_Toolbox/BusAnalyzer.cydsn/Generated_Source/PSoC5/cyfittergnu.inc 
+C:/Z80-Debug-Board/PSoC_Program/PSoC_Z80_Toolbox/BusAnalyzer.cydsn/CortexM3/ARM_GCC_541/Debug/CyBootAsmGnu.o : C:/Z80-Debug-Board/PSoC_Program/PSoC_Z80_Toolbox/BusAnalyzer.cydsn/Generated_Source/PSoC5/CyBootAsmGnu.s C:/Z80-Debug-Board/PSoC_Program/PSoC_Z80_Toolbox/BusAnalyzer.cydsn/Generated_Source/PSoC5/cydevicegnu.inc C:/Z80-Debug-Board/PSoC_Program/PSoC_Z80_Toolbox/BusAnalyzer.cydsn/Generated_Source/PSoC5/cydevicegnu_trm.inc C:/Z80-Debug-Board/PSoC_Program/PSoC_Z80_Toolbox/BusAnalyzer.cydsn/Generated_Source/PSoC5/cyfittergnu.inc 
 
-C:/Users/Tizian/Documents/HTL/24_25/PBE/Z80-Debug-Board/PSoC_Program/PSoC_Z80_Toolbox/BusAnalyzer.cydsn/Generated_Source/PSoC5/CyBootAsmGnu.s : 
+C:/Z80-Debug-Board/PSoC_Program/PSoC_Z80_Toolbox/BusAnalyzer.cydsn/Generated_Source/PSoC5/CyBootAsmGnu.s : 
 
-C:/Users/Tizian/Documents/HTL/24_25/PBE/Z80-Debug-Board/PSoC_Program/PSoC_Z80_Toolbox/BusAnalyzer.cydsn/Generated_Source/PSoC5/cydevicegnu.inc : 
+C:/Z80-Debug-Board/PSoC_Program/PSoC_Z80_Toolbox/BusAnalyzer.cydsn/Generated_Source/PSoC5/cydevicegnu.inc : 
 
-C:/Users/Tizian/Documents/HTL/24_25/PBE/Z80-Debug-Board/PSoC_Program/PSoC_Z80_Toolbox/BusAnalyzer.cydsn/Generated_Source/PSoC5/cydevicegnu_trm.inc : 
+C:/Z80-Debug-Board/PSoC_Program/PSoC_Z80_Toolbox/BusAnalyzer.cydsn/Generated_Source/PSoC5/cydevicegnu_trm.inc : 
 
-C:/Users/Tizian/Documents/HTL/24_25/PBE/Z80-Debug-Board/PSoC_Program/PSoC_Z80_Toolbox/BusAnalyzer.cydsn/Generated_Source/PSoC5/cyfittergnu.inc : 
+C:/Z80-Debug-Board/PSoC_Program/PSoC_Z80_Toolbox/BusAnalyzer.cydsn/Generated_Source/PSoC5/cyfittergnu.inc : 
 

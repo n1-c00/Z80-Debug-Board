@@ -1,6 +1,7 @@
-C:\Users\Tizian\Documents\HTL\24_25\PBE\Z80-Debug-Board\PSoC_Program\PSoC_Z80_Toolbox\BusAnalyzer.cydsn\BusAnalyzer.cyprj|9a5be80b-3f6e-4fb2-acd0-90e0eb088c98
-C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\default\CyAnnotationLibrary\CyAnnotationLibrary.cylib\CyAnnotationLibrary.cyprj|092fd693-0620-495e-9423-47bfc5809a69
-C:\Users\Tizian\Documents\PSoC Creator\4.4\Downloads ( 4.4).cylib\Downloads ( 4.4).cyprj|4e77eae5-6af3-464f-94f2-4248513458de
-C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\cycomponentlibraryupdates\CyComponentLibraryUpdates.cylib\CyComponentLibraryUpdates.cyprj|a7d27787-569c-4171-865e-48a6e22a2763
-C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\CyComponentLibrary.cyprj|845348f3-36b2-4b24-82f7-fcc0bae9cc31
-C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\CyPrimitives.cyprj|e3f028eb-421b-4282-806d-9efe6ffe7167
+C:\Z80-Debug-Board\PSoC_Program\PSoC_Z80_Toolbox\BusAnalyzer.cydsn\BusAnalyzer.cyprj|376bf48b-2ed1-4313-bedc-109cada0f448
+C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\default\CyAnnotationLibrary\CyAnnotationLibrary.cylib\CyAnnotationLibrary.cyprj|8f3eb3d2-0fc5-4afc-99f3-1601cdd01a48
+C:\Users\nicoz\OneDrive - HTL Anichstrasse\Dokumente\PSoC Creator\4.4\Downloads ( 4.4).cylib\Downloads ( 4.4).cyprj|31b4a4cd-b3f0-4f04-9b38-e16f13d73300
+C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\cycomponentlibraryupdates\CyComponentLibraryUpdates.cylib\CyComponentLibraryUpdates.cyprj|d845c223-3c06-4792-9e52-de363063ad22
+C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\CyComponentLibrary.cyprj|f6d4b80c-92e5-4d28-89d7-b1aa0dd95a66
+C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\CyPrimitives.cyprj|d69bf269-e511-4bf1-a434-9fec84bcf3a9
+C:\Z80-Debug-Board\PSoC_Program\PSoC_Z80_Toolbox\UART_to_RAM.cydsn\UART_to_RAM.cyprj|6e31ed7f-2eca-4467-bab7-6a6d6937c9e2
