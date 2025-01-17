@@ -1,3 +1,3 @@
 # Z80-Playground
 
-Board for playing around with the classic Zilog Z80 being interfaced by a PSoC5LP
+A wild collection of docs/Schematics/PCBs. The end goal is to have a PSoC5-driven debugger for the Z80
