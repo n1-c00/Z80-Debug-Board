@@ -1,0 +1,8 @@
+C:\Z80-Debug-Board\PSoC_Program\PSoC_Z80_Toolbox\BusAnalyzer.cydsn\BusAnalyzer.cyprj|61c4153b-e311-4421-b5f0-c43697424359
+C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\default\CyAnnotationLibrary\CyAnnotationLibrary.cylib\CyAnnotationLibrary.cyprj|53d642b0-63f2-4625-bb83-490b711ef377
+C:\Users\nicoz\OneDrive - HTL Anichstrasse\Dokumente\PSoC Creator\4.4\Downloads ( 4.4).cylib\Downloads ( 4.4).cyprj|69ff55b0-d71b-4d0c-921a-e829ebb3849f
+C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\cycomponentlibraryupdates\CyComponentLibraryUpdates.cylib\CyComponentLibraryUpdates.cyprj|764b1a7e-16d2-4fae-8712-7ed0682dd2c0
+C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\CyComponentLibrary.cyprj|157027da-3407-4657-a974-123c3d50f123
+C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\CyPrimitives.cyprj|b56766a2-aa25-453f-87d8-19fd9555a72f
+C:\Z80-Debug-Board\PSoC_Program\PSoC_Z80_Toolbox\UART_to_RAM.cydsn\UART_to_RAM.cyprj|5e625fc4-71e2-499d-857b-3a3e20988304
+C:\Z80-Debug-Board\PSoC_Program\PSoC_Z80_Toolbox\ROM_in_PSoC.cydsn\ROM_in_PSoC.cyprj|197be3e2-c3a6-4d75-b9e0-3c13364c9eb9
