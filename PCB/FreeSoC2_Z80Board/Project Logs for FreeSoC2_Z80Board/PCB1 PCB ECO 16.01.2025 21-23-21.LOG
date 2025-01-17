@@ -1,0 +1,5 @@
+Removed Pin From Net: NetName=Reset Pin=ArduinoLR-3
+Removed Pin From Net: NetName=M1 Pin=ArduinoLR-4
+Added Pin To Net: NetName=M1 Pin=ArduinoLR-3
+Added Pin To Net: NetName=Reset Pin=ArduinoLR-4
+Added Member To Class: ClassName=Sheet1 Member=Component P3.x Header 6X2

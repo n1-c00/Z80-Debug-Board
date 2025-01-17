@@ -1,0 +1,27 @@
+Removed Pin From Net: NetName=Reset Pin=ArduinoLR-1
+Removed Pin From Net: NetName=M1 Pin=ArduinoLR-2
+Removed Pin From Net: NetName=BUSACK Pin=ArduinoLR-3
+Removed Pin From Net: NetName=Write Pin=ArduinoLR-4
+Removed Pin From Net: NetName=Read Pin=ArduinoLR-5
+Removed Pin From Net: NetName=IOREQ Pin=ArduinoLR-6
+Removed Pin From Net: NetName=MREQ Pin=ArduinoLR-7
+Removed Pin From Net: NetName=HALT Pin=ArduinoLR-8
+Removed Pin From Net: NetName=Clock Pin=ArduinoUR-3
+Removed Pin From Net: NetName=WAIT Pin=ArduinoUR-4
+Removed Pin From Net: NetName=BUSRQ Pin=ArduinoUR-5
+Removed Pin From Net: NetName=NMI Pin=ArduinoUR-7
+Change Component Designator: OldDesignator=P3.x NewDesignator=P5.x
+Change Component Designator: OldDesignator=P5.x NewDesignator=P3.x
+Added Pin To Net: NetName=WAIT Pin=ArduinoLR-2
+Added Pin To Net: NetName=Reset Pin=ArduinoLR-3
+Added Pin To Net: NetName=M1 Pin=ArduinoLR-4
+Added Pin To Net: NetName=BUSRQ Pin=ArduinoLR-5
+Added Pin To Net: NetName=BUSACK Pin=ArduinoLR-6
+Added Pin To Net: NetName=Write Pin=ArduinoLR-7
+Added Pin To Net: NetName=Read Pin=ArduinoLR-8
+Added Pin To Net: NetName=IOREQ Pin=ArduinoUR-2
+Added Pin To Net: NetName=MREQ Pin=ArduinoUR-3
+Added Pin To Net: NetName=HALT Pin=ArduinoUR-4
+Added Pin To Net: NetName=NMI Pin=ArduinoUR-5
+Added Pin To Net: NetName=Clock Pin=ArduinoUR-7
+Added Member To Class: ClassName=Sheet1 Member=Component P5.x Header 6X2

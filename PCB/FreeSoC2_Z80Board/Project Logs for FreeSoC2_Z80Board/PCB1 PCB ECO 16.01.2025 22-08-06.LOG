@@ -1,0 +1,14 @@
+Removed Pin From Net: NetName=WAIT Pin=ArduinoLR-7
+Removed Pin From Net: NetName=M1 Pin=ArduinoLR-8
+Removed Pin From Net: NetName=Reset Pin=ArduinoUR-3
+Removed Pin From Net: NetName=BUSRQ Pin=ArduinoUR-4
+Removed Pin From Net: NetName=BUSACK Pin=ArduinoUR-5
+Removed Pin From Net: NetName=Write Pin=ArduinoUR-6
+Removed Pin From Net: NetName=Read Pin=ArduinoUR-7
+Added Pin To Net: NetName=Read Pin=ArduinoLR-7
+Added Pin To Net: NetName=Write Pin=ArduinoLR-8
+Added Pin To Net: NetName=M1 Pin=ArduinoUR-3
+Added Pin To Net: NetName=Reset Pin=ArduinoUR-4
+Added Pin To Net: NetName=BUSRQ Pin=ArduinoUR-5
+Added Pin To Net: NetName=WAIT Pin=ArduinoUR-6
+Added Pin To Net: NetName=BUSACK Pin=ArduinoUR-7
